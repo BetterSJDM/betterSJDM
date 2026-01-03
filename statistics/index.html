@@ -11,11 +11,11 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="San Jose del Monte City, Bulacan statistics and data. View CMCI Competitive Index rankings, population demographics, economic dynamism, government efficiency, infrastructure, and barangay data visualizations.">
+    <meta name="description" content="San Jose del Monte City, Bulacan statistics and data. View CMCI Competitive Index rankings, population demographics, government efficiency, infrastructure, resiliency, innovation, and barangay data visualizations.">
 
     <!-- SEO Meta Tags -->
     <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="SJDM statistics, San Jose del Monte statistics, CMCI competitive index, population data, demographics, economic dynamism, government efficiency, infrastructure, resiliency, innovation, Bulacan data, barangay population, LGU SJDM data, component city">
+    <meta name="keywords" content="SJDM statistics, San Jose del Monte statistics, CMCI competitive index, population data, demographics, government efficiency, infrastructure, resiliency, innovation, Bulacan data, barangay population, LGU SJDM data, component city">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bettersjdm/statistics/">
 
@@ -440,68 +440,6 @@
             </div>
         </section>
 
-        <!-- Economic Indicators -->
-        <section class="stats-section stats-economy animate-on-scroll">
-            <div class="container">
-                <div class="section-header-minimal">
-                    <span class="section-tag"><i class="bi bi-briefcase-fill"></i> Economy</span>
-                    <h2>Economic Indicators</h2>
-                    <p>Key economic data and business statistics</p>
-                </div>
-
-                <div class="economy-grid">
-                    <div class="economy-card">
-                        <div class="economy-icon"><i class="bi bi-shop"></i></div>
-                        <div class="economy-content">
-                            <div class="economy-value" data-count="15000">0</div>
-                            <div class="economy-label">Registered Businesses</div>
-                            <div class="economy-trend"><i class="bi bi-arrow-up"></i> Growing commercial sector</div>
-                        </div>
-                    </div>
-                    <div class="economy-card">
-                        <div class="economy-icon"><i class="bi bi-tree-fill"></i></div>
-                        <div class="economy-content">
-                            <div class="economy-value">2,800 ha</div>
-                            <div class="economy-label">Agricultural Land</div>
-                            <div class="economy-trend">Rice, Corn & Root Crops</div>
-                        </div>
-                    </div>
-                    <div class="economy-card">
-                        <div class="economy-icon"><i class="bi bi-person-check-fill"></i></div>
-                        <div class="economy-content">
-                            <div class="economy-value">92.3%</div>
-                            <div class="economy-label">Employment Rate</div>
-                            <div class="economy-trend">Labor Force Participation</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sectors-chart animate-on-scroll">
-                    <h4>Economic Sectors</h4>
-                    <div class="sector-bars">
-                        <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Trade & Commerce</span><span class="sector-pct">45%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="45"></div></div>
-                        </div>
-                        <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Services</span><span class="sector-pct">30%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="30"></div></div>
-                        </div>
-                        <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Industry</span><span class="sector-pct">15%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="15"></div></div>
-                        </div>
-                        <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Agriculture</span><span class="sector-pct">10%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="10"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="data-source"><i class="bi bi-info-circle"></i> Source: LGU SJDM Estimates - 2024</p>
-            </div>
-        </section>
-
         <!-- Poverty Statistics -->
         <section class="stats-section stats-poverty animate-on-scroll">
             <div class="container">
@@ -553,7 +491,6 @@
                 <!-- Pillar Selection Tabs -->
                 <div class="cmci-tabs">
                     <button type="button" class="cmci-tab active" data-pillar="overview"><i class="bi bi-grid-3x3-gap"></i> Overview</button>
-                    <button type="button" class="cmci-tab" data-pillar="economic-dynamism"><i class="bi bi-graph-up-arrow"></i> Economic Dynamism</button>
                     <button type="button" class="cmci-tab" data-pillar="government-efficiency"><i class="bi bi-building-check"></i> Government Efficiency</button>
                     <button type="button" class="cmci-tab" data-pillar="infrastructure"><i class="bi bi-building-gear"></i> Infrastructure</button>
                     <button type="button" class="cmci-tab" data-pillar="resiliency"><i class="bi bi-shield-check"></i> Resiliency</button>
@@ -563,12 +500,6 @@
                 <!-- Overview Panel -->
                 <div class="cmci-panel active" id="panel-overview">
                     <div class="cmci-overview-grid">
-                        <div class="cmci-pillar-card" data-pillar="economic-dynamism">
-                            <div class="pillar-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                            <h4>Economic Dynamism</h4>
-                            <div class="pillar-score">0.23</div>
-                            <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -16%</div>
-                        </div>
                         <div class="cmci-pillar-card" data-pillar="government-efficiency">
                             <div class="pillar-icon"><i class="bi bi-building-check"></i></div>
                             <h4>Government Efficiency</h4>
@@ -599,43 +530,6 @@
                         <h4><i class="bi bi-bar-chart-line"></i> Key Indicators Trend (2016-2024)</h4>
                         <div class="chart-wrapper">
                             <canvas id="cmciOverviewChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Economic Dynamism Panel -->
-                <div class="cmci-panel" id="panel-economic-dynamism">
-                    <div class="cmci-indicator-grid">
-                        <div class="cmci-indicator-card">
-                            <div class="indicator-header"><i class="bi bi-currency-exchange"></i> Local Economy Size</div>
-                            <div class="indicator-value">0.1336</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="13.36"></div></div>
-                        </div>
-                        <div class="cmci-indicator-card">
-                            <div class="indicator-header"><i class="bi bi-graph-up"></i> Local Economy Growth</div>
-                            <div class="indicator-value">0.0106</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="1.06"></div></div>
-                        </div>
-                        <div class="cmci-indicator-card">
-                            <div class="indicator-header"><i class="bi bi-shop"></i> Active Establishments</div>
-                            <div class="indicator-value">0.7730</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="77.30"></div></div>
-                        </div>
-                        <div class="cmci-indicator-card">
-                            <div class="indicator-header"><i class="bi bi-shield-check"></i> Safety Compliant Business</div>
-                            <div class="indicator-value">0.7397</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="73.97"></div></div>
-                        </div>
-                        <div class="cmci-indicator-card">
-                            <div class="indicator-header"><i class="bi bi-people"></i> Employment Generation</div>
-                            <div class="indicator-value">0.1068</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="10.68"></div></div>
-                        </div>
-                    </div>
-                    <div class="cmci-chart-container">
-                        <h4><i class="bi bi-graph-up"></i> Economic Dynamism Trend</h4>
-                        <div class="chart-wrapper">
-                            <canvas id="cmciEconomicChart"></canvas>
                         </div>
                     </div>
                 </div>
