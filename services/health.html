@@ -12,32 +12,32 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Access health services in Solano, Nueva Vizcaya including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU Solano.">
-    <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="health services Solano, medical consultation, vaccination, immunization, maternal care, health center, rural health unit, Solano Nueva Vizcaya, public health">
+    <meta name="description" content="Access health services in San Jose del Monte City,  including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU SJDM.">
+    <meta name="author" content="Jerald A. Pascual">
+    <meta name="keywords" content="health services San Jose del Monte City, medical consultation, vaccination, immunization, maternal care, health center, rural health unit, San Jose del Monte City Bulacan, public health">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/services/health">
-    
+    <link rel="canonical" href="https://bettersjdm/services/health">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/services/health">
-    <meta property="og:title" content="Health Services | BetterSolano.org">
-    <meta property="og:description" content="Access health services in Solano, Nueva Vizcaya including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU Solano.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/services/health">
+    <meta property="og:title" content="Health Services | BetterSJDM">
+    <meta property="og:description" content="Access health services in San Jose del Monte City,  including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU SJDM.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:locale" content="en_PH">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://bettersolano.org/services/health">
-    <meta name="twitter:title" content="Health Services | BetterSolano.org">
-    <meta name="twitter:description" content="Access health services in Solano, Nueva Vizcaya including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU Solano.">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <title>Health Services | BetterSolano.org</title>
+    <meta name="twitter:url" content="https://bettersjdm/services/health">
+    <meta name="twitter:title" content="Health Services | BetterSJDM">
+    <meta name="twitter:description" content="Access health services in San Jose del Monte City,  including medical consultations, vaccinations, maternal care, immunizations, and health programs from LGU SJDM.">
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <title>Health Services | BetterSJDM</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -57,35 +57,59 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hotline Bar -->
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
-                
+
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item">
-                        <i class="bi bi-shield-fill"></i>
-                        <span>Police: 0927 400 8033</span>
-                    </a>
-                    <a href="tel:09162840885" class="hotline-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>MSWDO: 0916 284 0885</span>
-                    </a>
-                    <a href="tel:09360620305" class="hotline-item">
-                        <i class="bi bi-fire"></i>
-                        <span>Fire: 0936 062 0305</span>
-                    </a>
-                    <a href="tel:0906188086" class="hotline-item">
-                        <i class="bi bi-building"></i>
-                        <span>DILG: 0906 188 086</span>
-                    </a>
-                    <a href="tel:09263833744" class="hotline-item">
+                    <a href="tel:09366000119" class="hotline-item">
                         <i class="bi bi-exclamation-triangle-fill"></i>
-                        <span>MDRRMO: 0926 383 3744</span>
+                        <span>CDRRMO: 0936 600 0119</span>
                     </a>
-                    <a href="tel:09068195569" class="hotline-item">
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
                         <i class="bi bi-truck"></i>
-                        <span>R2TMC: 0906 819 5569</span>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
                     </a>
                 </div>
             </div>
@@ -96,12 +120,11 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo-container">
-                <a href="../"><img src="../assets/images/logo/better-solano-logo.svg" alt="Municipality of Solano Logo"
+                <a href="../"><img src="../assets/images/logo/better-sjdm-logo.png" alt="City of San Jose del Monte Logo"
                         class="logo-img"></a>
             </div>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../" data-i18n="nav-home">Home</a></li>
                     <li class="has-dropdown">
                         <a href="./" class="active" data-i18n="nav-services">Services</a>
                         <ul class="dropdown-menu">
@@ -127,18 +150,76 @@
                         </ul>
                     </li>
                     <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search services" title="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
@@ -150,9 +231,9 @@
                         <span class="rate-display">1 USD = ₱ --</span>
                     </span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -183,37 +264,115 @@
         </section>
         <section class="section">
             <div class="container">
+                <h2 class="section-title-sm"><i class="bi bi-hospital"></i> City Health Office (CHO) Services</h2>
+                <p class="section-desc">Contact: <strong>044-919-7370 Local 1119</strong> | Hotline: <strong>0956 986 9417</strong> | Email: <a href="mailto:chocsjdmbulacan@gmail.com">chocsjdmbulacan@gmail.com</a></p>
+
                 <div class="grid grid-3">
+                    <!-- Immunization -->
                     <div class="service-item-card">
-                        <h3 class="service-item-title"><i class="bi bi-hospital"></i> Medical Consultation</h3>
-                        <p class="service-item-desc">Free consultation at Rural Health Units</p>
+                        <h3 class="service-item-title"><i class="bi bi-shield-plus"></i> Expanded Program on Immunization</h3>
+                        <p class="service-item-desc">Free vaccines for childhood diseases (0-12 months old)</p>
                         <div class="service-item-meta">
                             <span><strong>Fee:</strong> Free</span>
-                            <span><strong>Time:</strong> Walk-in</span>
+                            <span><strong>Time:</strong> 46 minutes</span>
+                        </div>
+                        <div class="requirements-list">
+                            <strong>Schedule:</strong> Wednesday, 8:00 AM - 12:00 NN
+                            <ul>
+                                <li>Physical presence of patient</li>
+                                <li>Medical record from Barangay Health Station</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- Health Certificate -->
                     <div class="service-item-card">
-                        <h3 class="service-item-title"><i class="bi bi-shield-plus"></i> Vaccination Programs</h3>
-                        <p class="service-item-desc">Immunization services for children and adults</p>
+                        <h3 class="service-item-title"><i class="bi bi-file-earmark-medical"></i> Health Certificate</h3>
+                        <p class="service-item-desc">For employment, food handlers, and business requirements</p>
+                        <div class="service-item-meta">
+                            <span><strong>Fee:</strong> ₱50</span>
+                            <span><strong>Time:</strong> 52 minutes</span>
+                        </div>
+                        <div class="requirements-list">
+                            <strong>Requirements:</strong>
+                            <ul>
+                                <li>Chest X-ray Result (DOH Accredited)</li>
+                                <li>Urinalysis</li>
+                                <li>Fecalysis</li>
+                                <li>Official Receipt from Treasury</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Dental Services -->
+                    <div class="service-item-card">
+                        <h3 class="service-item-title"><i class="bi bi-emoji-smile"></i> Dental Health Services</h3>
+                        <p class="service-item-desc">Oral health care, tooth extraction, and dental advice</p>
                         <div class="service-item-meta">
                             <span><strong>Fee:</strong> Free</span>
-                            <span><strong>Time:</strong> Schedule varies</span>
+                            <span><strong>Time:</strong> 1 hr 16 mins</span>
+                        </div>
+                        <div class="requirements-list">
+                            <strong>Schedule:</strong> Mon-Fri, 8:00 AM - 12:00 NN (by appointment)
+                            <ul>
+                                <li>Physical presence of patient</li>
+                                <li>Dental record from Barangay Health Station</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- Maternal Care -->
                     <div class="service-item-card">
                         <h3 class="service-item-title"><i class="bi bi-heart"></i> Maternal Care</h3>
-                        <p class="service-item-desc">Prenatal and postnatal health services</p>
+                        <p class="service-item-desc">Prenatal and postnatal health services for mothers</p>
                         <div class="service-item-meta">
                             <span><strong>Fee:</strong> Free</span>
                             <span><strong>Time:</strong> By appointment</span>
                         </div>
+                        <div class="requirements-list">
+                            <strong>Services include:</strong>
+                            <ul>
+                                <li>Prenatal checkups</li>
+                                <li>Iron and folic acid supplements</li>
+                                <li>Tetanus toxoid vaccination</li>
+                                <li>Health education and counseling</li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <!-- Medical Services -->
                     <div class="service-item-card">
-                        <h3 class="service-item-title"><i class="bi bi-prescription2"></i> Medicine Assistance</h3>
-                        <p class="service-item-desc">Financial assistance for medicines through MSWDO</p>
+                        <h3 class="service-item-title"><i class="bi bi-hospital"></i> Medical Services</h3>
+                        <p class="service-item-desc">General consultation and treatment at City Health Centers</p>
                         <div class="service-item-meta">
-                            <span><strong>Fee:</strong> Free (subsidy)</span>
-                            <span><strong>Time:</strong> 1-3 days</span>
+                            <span><strong>Fee:</strong> Free</span>
+                            <span><strong>Time:</strong> Walk-in</span>
+                        </div>
+                        <div class="requirements-list">
+                            <strong>Available at 15 City Health Centers:</strong>
+                            <ul>
+                                <li>Vital signs and initial assessment</li>
+                                <li>Doctor consultation</li>
+                                <li>Medicine dispensing (if available)</li>
+                                <li>Referral to hospital if needed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exhumation/Transfer Permit -->
+                    <div class="service-item-card">
+                        <h3 class="service-item-title"><i class="bi bi-file-text"></i> Exhumation/Transfer Permit</h3>
+                        <p class="service-item-desc">Permit for exhumation or transfer of remains</p>
+                        <div class="service-item-meta">
+                            <span><strong>Fee:</strong> ₱100-200</span>
+                            <span><strong>Time:</strong> 52 minutes</span>
+                        </div>
+                        <div class="requirements-list">
+                            <strong>Requirements:</strong>
+                            <ul>
+                                <li>Registered Death Certificate (PSA/LCR)</li>
+                                <li>Official Receipt from Treasury</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -225,20 +384,28 @@
             <div class="container">
                 <div class="health-stats-grid">
                     <div class="health-stat-card">
-                        <span class="health-stat-num">88</span>
+                        <span class="health-stat-num">94</span>
                         <span class="health-stat-label">Total Health Facilities</span>
                     </div>
                     <div class="health-stat-card">
-                        <span class="health-stat-num">3</span>
-                        <span class="health-stat-label">Major Hospitals</span>
+                        <span class="health-stat-num">10</span>
+                        <span class="health-stat-label">Total Hospitals</span>
                     </div>
                     <div class="health-stat-card">
-                        <span class="health-stat-num">22</span>
+                        <span class="health-stat-num">4</span>
+                        <span class="health-stat-label">Major Hospitals (Level 2+)</span>
+                    </div>
+                    <div class="health-stat-card">
+                        <span class="health-stat-num">81</span>
                         <span class="health-stat-label">Barangay Health Stations</span>
                     </div>
                     <div class="health-stat-card">
+                        <span class="health-stat-num">12</span>
+                        <span class="health-stat-label">City Health Centers</span>
+                    </div>
+                    <div class="health-stat-card">
                         <span class="health-stat-num">1</span>
-                        <span class="health-stat-label">Municipal Health Office</span>
+                        <span class="health-stat-label">City Health Office</span>
                     </div>
                 </div>
             </div>
@@ -247,51 +414,131 @@
         <!-- Hospitals Directory -->
         <section class="section section-compact">
             <div class="container">
-                <h2 class="section-title"><i class="bi bi-hospital"></i> Hospitals in Solano</h2>
+                <h2 class="section-title"><i class="bi bi-hospital"></i> Hospitals & Medical Facilities in San Jose del Monte City</h2>
+                <p class="section-subtitle">10 PhilHealth-accredited hospitals and medical facilities (Level 2, Level 1, and Infirmaries)</p>
+
+                <h3 style="font-size: 0.9375rem; font-weight: 600; margin: 20px 0 12px 0; color: var(--color-primary);">Level 2 Hospitals (4 facilities)</h3>
                 <div class="health-facilities-grid">
                     <div class="health-facility-card health-facility-card--hospital">
-                        <div class="health-facility-badge">Tertiary Hospital</div>
-                        <h3>PLTCI-Luis A. Tiam Medical Center</h3>
-                        <p class="health-facility-desc">A tertiary level, PhilHealth-accredited private hospital providing comprehensive medical services.</p>
+                        <div class="health-facility-badge">Level 2 Hospital</div>
+                        <h3>Healthway QualiMed Hospital — San Jose del Monte</h3>
+                        <p class="health-facility-desc">105 beds • Private multi-specialty hospital (QualiMed/Healthway network)</p>
                         <div class="health-facility-meta">
-                            <span><i class="bi bi-geo-alt"></i> National Highway, Solano</span>
+                            <span><i class="bi bi-geo-alt"></i> Altaraza Town Center, Brgy. Tungkong Mangga</span>
+                            <span><i class="bi bi-telephone"></i> (044) 307-0000</span>
                         </div>
                     </div>
                     <div class="health-facility-card health-facility-card--hospital">
-                        <div class="health-facility-badge">Private Hospital</div>
-                        <h3>Medical Mission Group Hospital & Health Services Cooperative</h3>
-                        <p class="health-facility-desc">Also known as New MMG Hospital, providing quality healthcare services to the community.</p>
+                        <div class="health-facility-badge">Level 2 Hospital</div>
+                        <h3>Grace Medical Center (Grace General Hospital)</h3>
+                        <p class="health-facility-desc">45 beds • Private general hospital</p>
                         <div class="health-facility-meta">
-                            <span><i class="bi bi-geo-alt"></i> Bintawan Road, Brgy. Quezon</span>
+                            <span><i class="bi bi-geo-alt"></i> Lot 02 Blk 01 Quirino Hwy Ext., Brgy. Mulawin (Francisco Homes)</span>
+                            <span><i class="bi bi-telephone"></i> (0917) 592-7789</span>
                         </div>
                     </div>
                     <div class="health-facility-card health-facility-card--hospital">
-                        <div class="health-facility-badge">Medical Center</div>
-                        <h3>SALUBRIS, INC. (Salubris Medical Center)</h3>
-                        <p class="health-facility-desc">Private medical center offering various healthcare and diagnostic services.</p>
+                        <div class="health-facility-badge">Level 2 Hospital</div>
+                        <h3>San Jose del Monte — Muzon Medical Center, Inc.</h3>
+                        <p class="health-facility-desc">50 beds • Private general hospital</p>
                         <div class="health-facility-meta">
-                            <span><i class="bi bi-geo-alt"></i> National Highway, Solano</span>
+                            <span><i class="bi bi-geo-alt"></i> 122 Carriedo St., Brgy. Muzon</span>
+                            <span><i class="bi bi-telephone"></i> 0936-926-4003</span>
+                        </div>
+                    </div>
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Level 2 Hospital</div>
+                        <h3>Skyline Hospital and Medical Center</h3>
+                        <p class="health-facility-desc">65 beds • Private medical center</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> Skyline Dr. cor. Quirino Hwy, Brgy. Tungkong Mangga</span>
+                            <span><i class="bi bi-telephone"></i> 0917-817-2890</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 0.9375rem; font-weight: 600; margin: 20px 0 12px 0; color: var(--color-primary);">Level 1 Hospitals (3 facilities)</h3>
+                <div class="health-facilities-grid">
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Level 1 Hospital</div>
+                        <h3>Brigino General Hospital, Inc.</h3>
+                        <p class="health-facility-desc">60 beds • Private general hospital</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> 20 Quirino Hwy, Pecsonville Subdiv., Brgy. Tungkong Mangga</span>
+                            <span><i class="bi bi-telephone"></i> (044) 815-4456</span>
+                        </div>
+                    </div>
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Level 1 Hospital</div>
+                        <h3>Kairos Maternity & General Hospital</h3>
+                        <p class="health-facility-desc">36 beds • Private maternity & general hospital</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> National Rd., Brgy. Muzon (Marilao–SJDM Rd area)</span>
+                            <span><i class="bi bi-telephone"></i> (044) 815-4653 / 0917-516-7358</span>
+                        </div>
+                    </div>
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Level 1 Hospital (Public)</div>
+                        <h3>Ospital ng Lungsod ng San Jose del Monte (OLSJDM)</h3>
+                        <p class="health-facility-desc">120 beds • City (LGU) hospital</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> Bagong Buhay I</span>
+                            <span><i class="bi bi-telephone"></i> (044) 471-7025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 0.9375rem; font-weight: 600; margin: 20px 0 12px 0; color: var(--color-primary);">Infirmaries & Dispensaries (3 facilities)</h3>
+                <div class="health-facilities-grid">
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Infirmary</div>
+                        <h3>Dr. Eduardo V. Roquero Memorial Hospital</h3>
+                        <p class="health-facility-desc">17 beds • Private infirmary/memorial hospital</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> Brgy. San Pedro / Dr. Eduardo V. Roquero Sr. Ave. area</span>
+                            <span><i class="bi bi-telephone"></i> (044) 815-3562</span>
+                        </div>
+                    </div>
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Infirmary</div>
+                        <h3>Holistic Care General Hospital Corp.</h3>
+                        <p class="health-facility-desc">6 beds • Private infirmary</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> Block 25 Lot 9, San Martin IV, Area C</span>
+                        </div>
+                    </div>
+                    <div class="health-facility-card health-facility-card--hospital">
+                        <div class="health-facility-badge">Infirmary</div>
+                        <h3>SJP Infirmary Diagnostic & Pharmacy</h3>
+                        <p class="health-facility-desc">12 beds • Private infirmary, diagnostic & pharmacy</p>
+                        <div class="health-facility-meta">
+                            <span><i class="bi bi-geo-alt"></i> Daang Barrio, Poblacion I, District I</span>
+                            <span><i class="bi bi-telephone"></i> (044) 462-4908 / 0920-480-3529</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Municipal Health Office -->
+        <!-- City Health Office -->
         <section class="section section-compact bg-alt">
             <div class="container">
-                <h2 class="section-title"><i class="bi bi-building"></i> Municipal Health Office</h2>
+                <h2 class="section-title"><i class="bi bi-building"></i> City Health Office</h2>
                 <div class="health-mho-card">
                     <div class="health-mho-content">
-                        <h3>Solano Municipal Health Office</h3>
-                        <p>The Municipal Health Office provides primary healthcare services including a lying-in facility and laboratory services. It serves as the main public health center for the municipality.</p>
+                        <h3>San Jose del Monte City Health Office</h3>
+                        <p>The City Health Office provides comprehensive primary healthcare services to all residents of San Jose del Monte City. Services listed in the 2025 Citizen's Charter:</p>
                         <div class="health-mho-services">
-                            <span><i class="bi bi-check-circle"></i> Lying-in Facility</span>
-                            <span><i class="bi bi-check-circle"></i> Laboratory Services</span>
-                            <span><i class="bi bi-check-circle"></i> Immunization</span>
-                            <span><i class="bi bi-check-circle"></i> Prenatal Care</span>
+                            <span><i class="bi bi-check-circle"></i> Antiretroviral Therapy (ART) Treatment</span>
+                            <span><i class="bi bi-check-circle"></i> Dental Health Services</span>
+                            <span><i class="bi bi-check-circle"></i> Environmental Health and Sanitation</span>
+                            <span><i class="bi bi-check-circle"></i> Expanded Program of Immunization</span>
                             <span><i class="bi bi-check-circle"></i> Family Planning</span>
-                            <span><i class="bi bi-check-circle"></i> TB-DOTS</span>
+                            <span><i class="bi bi-check-circle"></i> HIV Testing</span>
+                            <span><i class="bi bi-check-circle"></i> Maternal Care</span>
+                            <span><i class="bi bi-check-circle"></i> Medical Certificate</span>
+                            <span><i class="bi bi-check-circle"></i> Medical Services</span>
+                            <span><i class="bi bi-check-circle"></i> Physical Therapy and Rehabilitation</span>
                         </div>
                     </div>
                 </div>
@@ -302,30 +549,70 @@
         <section class="section section-compact">
             <div class="container">
                 <h2 class="section-title"><i class="bi bi-plus-circle"></i> Barangay Health Stations</h2>
-                <p class="section-subtitle">22 Barangay Health Stations/Centers serving all barangays of Solano</p>
+                <p class="section-subtitle">81 Barangay Health Stations serving all barangays of San Jose del Monte City (65 listed below, additional units in large barangays)</p>
                 <div class="health-bhs-grid">
-                    <div class="health-bhs-item"><span>Aggub BHS</span></div>
-                    <div class="health-bhs-item"><span>Bagahabag BHS</span></div>
-                    <div class="health-bhs-item"><span>Bangaan BHS</span></div>
-                    <div class="health-bhs-item"><span>Bangar BHS</span></div>
-                    <div class="health-bhs-item"><span>Buenavista BHS</span></div>
-                    <div class="health-bhs-item"><span>Calaocan BHS</span></div>
-                    <div class="health-bhs-item"><span>Commando BHS</span></div>
-                    <div class="health-bhs-item"><span>Concepcion BHS</span></div>
-                    <div class="health-bhs-item"><span>Curifang BHS</span></div>
-                    <div class="health-bhs-item"><span>Dadap BHS</span></div>
-                    <div class="health-bhs-item"><span>Lactawan BHS</span></div>
-                    <div class="health-bhs-item"><span>Nangalisan BHS</span></div>
-                    <div class="health-bhs-item"><span>Ocapon BHS</span></div>
-                    <div class="health-bhs-item"><span>Osmeña BHS</span></div>
-                    <div class="health-bhs-item"><span>Paitan BHS</span></div>
-                    <div class="health-bhs-item"><span>Pilar BHS</span></div>
-                    <div class="health-bhs-item"><span>Poblacion BHS</span></div>
-                    <div class="health-bhs-item"><span>Quezon BHS</span></div>
-                    <div class="health-bhs-item"><span>Quirino BHS</span></div>
-                    <div class="health-bhs-item"><span>Roxas BHS</span></div>
-                    <div class="health-bhs-item"><span>Tucal BHS</span></div>
-                    <div class="health-bhs-item"><span>Uddiawan BHS</span></div>
+                    <div class="health-bhs-item"><span>BHS - Assumption</span></div>
+                    <div class="health-bhs-item"><span>BHS - Bagong Buhay I</span></div>
+                    <div class="health-bhs-item"><span>BHS - Bagong Buhay II</span></div>
+                    <div class="health-bhs-item"><span>BHS - Bagong Buhay III</span></div>
+                    <div class="health-bhs-item"><span>BHS - Citrus</span></div>
+                    <div class="health-bhs-item"><span>BHS - Ciudad Real</span></div>
+                    <div class="health-bhs-item"><span>BHS - Dulong Bayan</span></div>
+                    <div class="health-bhs-item"><span>BHS - Fatima I</span></div>
+                    <div class="health-bhs-item"><span>BHS - Fatima II</span></div>
+                    <div class="health-bhs-item"><span>BHS - Fatima III</span></div>
+                    <div class="health-bhs-item"><span>BHS - Fatima IV</span></div>
+                    <div class="health-bhs-item"><span>BHS - Fatima V</span></div>
+                    <div class="health-bhs-item"><span>BHS - Francisco Homes (Guijo)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Francisco Homes (Mulawin)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Francisco Homes (Narra)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Francisco Homes (Yakal)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Gaya-Gaya</span></div>
+                    <div class="health-bhs-item"><span>Graceville BHS (Graceville I/II)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Gumaoc Central</span></div>
+                    <div class="health-bhs-item"><span>BHS - Gumaoc East</span></div>
+                    <div class="health-bhs-item"><span>BHS - Gumaoc West</span></div>
+                    <div class="health-bhs-item"><span>BHS - Kaybanban</span></div>
+                    <div class="health-bhs-item"><span>BHS - Kaypian</span></div>
+                    <div class="health-bhs-item"><span>BHS - Lawang Pari</span></div>
+                    <div class="health-bhs-item"><span>BHS - Maharlika</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan I</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan II</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan III</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan IV</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan Proper (Towerville)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Minuyan V</span></div>
+                    <div class="health-bhs-item"><span>BHS - Muzon Proper</span></div>
+                    <div class="health-bhs-item"><span>BHS - Muzon East</span></div>
+                    <div class="health-bhs-item"><span>BHS - Muzon West</span></div>
+                    <div class="health-bhs-item"><span>BHS - Muzon South</span></div>
+                    <div class="health-bhs-item"><span>BHS - Paradise (Tungkong Mangga)</span></div>
+                    <div class="health-bhs-item"><span>BHS - Poblacion</span></div>
+                    <div class="health-bhs-item"><span>BHS - Poblacion I</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Isidro</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Manuel</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Martin de Porres</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Martin I</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Martin II</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Martin III</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Martin IV</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Pedro</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Rafael I</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Rafael II</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Rafael III</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Rafael IV</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Rafael V</span></div>
+                    <div class="health-bhs-item"><span>BHS - San Roque</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santa Cruz I</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santa Cruz II</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santa Cruz III</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santa Cruz IV</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santa Cruz V</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santo Cristo</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santo Nino I</span></div>
+                    <div class="health-bhs-item"><span>BHS - Santo Nino II</span></div>
+                    <div class="health-bhs-item"><span>BHS - Sapang Palay Proper</span></div>
+                    <div class="health-bhs-item"><span>BHS - Tungkong Mangga</span></div>
                 </div>
             </div>
         </section>
@@ -334,19 +621,17 @@
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -358,24 +643,23 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
                     <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
                 </div>
             </div>
@@ -385,6 +669,7 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 
 </html>

@@ -1,21 +1,21 @@
-/* Responsive Styles - Better Solano */
+/* Responsive Styles - BetterSJDM */
 
 /* Large Desktop */
 @media (min-width: 1200px) {
     .container {
         max-width: 1200px;
     }
-    
+
     .grid-4 {
         grid-template-columns: repeat(4, 1fr);
         gap: var(--spacing-md);
     }
-    
+
     .grid-3 {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--spacing-md);
     }
-    
+
     .grid-2 {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-lg);
@@ -27,7 +27,7 @@
     .container {
         max-width: 960px;
     }
-    
+
     .grid-4 {
         grid-template-columns: repeat(4, 1fr);
         gap: var(--spacing-sm);
@@ -41,31 +41,21 @@
     }
 
     .header-inner {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: var(--spacing-sm);
     }
 
+    /* Hide desktop nav and show mobile toggle */
     .main-nav {
-        order: 3;
-        width: 100%;
-        display: none;
-        padding-top: var(--spacing-sm);
-        border-top: 1px solid var(--color-bg-alt);
-        margin-top: var(--spacing-sm);
+        display: none !important;
     }
 
-    .main-nav.active {
-        display: block;
+    .header-actions {
+        display: none !important;
     }
 
-    .main-nav ul {
-        flex-direction: column;
-        gap: var(--spacing-xs);
-    }
-    
-    .main-nav a {
-        display: block;
-        padding: var(--spacing-xs) 0;
+    .mobile-menu-toggle {
+        display: flex;
     }
 
     .hero-section {
@@ -79,7 +69,7 @@
     h2 {
         font-size: 1.75rem;
     }
-    
+
     h3 {
         font-size: 1.375rem;
     }
@@ -94,37 +84,37 @@
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
-    
+
     .grid-2 {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
-    
+
     /* Section spacing */
     .section {
         padding: var(--spacing-lg) 0;
     }
-    
+
     /* Card spacing */
     .card {
         padding: var(--spacing-md);
     }
-    
+
     /* Official cards */
     .official-card {
         padding: var(--spacing-md);
     }
-    
+
     .official-photo i {
         font-size: 5rem !important;
     }
-    
+
     /* Footer */
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-lg);
     }
-    
+
     /* Service content */
     .service-content {
         grid-template-columns: 1fr;
@@ -149,19 +139,19 @@
     .container {
         padding: 0 var(--spacing-sm);
     }
-    
+
     h1 {
         font-size: 1.75rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     h3 {
         font-size: 1.25rem;
     }
-    
+
     h4 {
         font-size: 1.125rem;
     }
@@ -178,11 +168,11 @@
         gap: var(--spacing-md);
         text-align: center;
     }
-    
+
     .footer-col {
         margin-bottom: var(--spacing-md);
     }
-    
+
     .social-links {
         justify-content: center;
     }
@@ -192,141 +182,141 @@
         padding: 12px 16px;
         padding-right: 45px;
     }
-    
+
     .search-btn {
         width: 36px;
         height: 36px;
     }
-    
+
     /* Section spacing */
     .section {
         padding: var(--spacing-md) 0;
     }
-    
+
     /* Card spacing */
     .card {
         padding: var(--spacing-sm);
     }
-    
+
     .card-icon {
         font-size: 1.75rem;
     }
-    
+
     /* Hero section */
     .hero-actions {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
-    
+
     .hero-actions .btn {
         width: 100%;
     }
-    
+
     /* Official cards */
     .official-card {
         padding: var(--spacing-sm);
     }
-    
+
     .official-photo i {
         font-size: 4rem !important;
     }
-    
+
     /* Councilor cards */
     .councilor-card {
         padding: var(--spacing-sm);
     }
-    
+
     .councilor-card i {
         font-size: 2rem !important;
     }
-    
+
     /* Buttons */
     .btn {
         padding: 10px 20px;
         font-size: 0.9375rem;
     }
-    
+
     .btn-sm {
         padding: 6px 12px;
         font-size: 0.8125rem;
     }
-    
+
     /* Section header */
     .section-header {
         flex-direction: column;
         gap: var(--spacing-sm);
         text-align: center;
     }
-    
+
     /* Data table */
     .data-table {
         font-size: 0.875rem;
     }
-    
+
     .data-table th,
     .data-table td {
         padding: var(--spacing-xs);
     }
-    
+
     /* Progress bar */
     .progress-bar {
         height: 20px;
     }
-    
+
     .progress-fill {
         font-size: 0.75rem;
     }
-    
+
     /* Project header */
     .project-header {
         flex-direction: column;
         gap: var(--spacing-xs);
     }
-    
+
     /* FAQ items */
     .faq-item {
         padding: var(--spacing-sm);
     }
-    
+
     .faq-item h4 {
         font-size: 1rem;
     }
-    
+
     /* Breadcrumbs */
     .breadcrumbs {
         font-size: 0.8125rem;
     }
-    
+
     /* Language selector */
     .lang-selector {
         gap: 2px;
     }
-    
+
     .lang-btn {
         padding: 4px 8px;
         font-size: 0.6875rem;
     }
-    
+
     /* Contact form */
     .contact-form {
         padding: var(--spacing-md);
     }
-    
+
     /* Info boxes */
     .info-box {
         padding: var(--spacing-sm);
     }
-    
+
     /* Display icons */
     .display-3 {
         font-size: 2.5rem;
     }
-    
+
     /* Barangay items */
     .barangay-item {
         padding: var(--spacing-sm);
     }
-    
+
     .barangay-item h4 {
         font-size: 0.9375rem;
     }
@@ -337,33 +327,33 @@
     .container {
         padding: 0 var(--spacing-xs);
     }
-    
+
     h1 {
         font-size: 1.5rem;
     }
-    
+
     h2 {
         font-size: 1.375rem;
     }
-    
+
     .logo-img {
         height: 40px;
     }
-    
+
     .header-actions {
         gap: var(--spacing-xs);
     }
-    
+
     /* Cards */
     .card {
         padding: var(--spacing-xs);
     }
-    
+
     /* Budget overview cards */
     .card p[style*="font-size: 2rem"] {
         font-size: 1.5rem !important;
     }
-    
+
     .card p[style*="font-size: 3rem"] {
         font-size: 2rem !important;
     }
@@ -392,7 +382,7 @@
     .header-actions {
         order: 2;
     }
-    
+
     .logo-container {
         order: 1;
     }
@@ -434,16 +424,16 @@
     .btn {
         display: none !important;
     }
-    
+
     .section {
         padding: 1rem 0;
     }
-    
+
     .card {
         box-shadow: none;
         border: 1px solid #ddd;
     }
-    
+
     a {
         color: #000;
         text-decoration: underline;
@@ -455,11 +445,11 @@
     .card {
         border: 2px solid var(--color-text);
     }
-    
+
     .btn {
         border-width: 2px;
     }
-    
+
     a:focus-visible {
         outline: 3px solid var(--color-text);
     }
@@ -475,3 +465,289 @@
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ==================== TABLE RESPONSIVE FIXES ==================== */
+
+/* Ensure all tables are contained and scrollable on mobile */
+@media (max-width: 767px) {
+    .table-responsive,
+    .data-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -16px;
+        padding: 0 16px;
+        max-width: calc(100% + 32px);
+    }
+
+    .data-table,
+    .ordinance-table,
+    .resolution-table,
+    .process-table,
+    .fee-table,
+    .vehicle-table,
+    .equipment-table,
+    .personnel-table,
+    table:not(.simple-table) {
+        min-width: 550px;
+        font-size: 0.8125rem;
+        width: 100%;
+    }
+
+    .data-table th,
+    .data-table td,
+    .process-table th,
+    .process-table td,
+    .fee-table th,
+    .fee-table td {
+        padding: 10px 12px;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    /* Service cards grid fix */
+    .service-card-grid,
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Container overflow prevention */
+    .container {
+        overflow-x: hidden;
+    }
+
+    .section {
+        overflow-x: hidden;
+    }
+
+    /* Cards fix */
+    .info-card,
+    .service-card,
+    .office-card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Fix long text overflow */
+    .service-title,
+    .card-title,
+    h3, h4 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* ==================== KEY PERSONNEL LAYOUT FIX ==================== */
+
+@media (max-width: 767px) {
+    .key-personnel-grid,
+    .personnel-grid,
+    .officials-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .key-personnel-card,
+    .personnel-card {
+        padding: 16px;
+    }
+
+    .personnel-photo,
+    .key-personnel-photo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ==================== CIVIL REGISTRAR CONTAINER FIX ==================== */
+
+@media (max-width: 767px) {
+    .service-requirements,
+    .service-steps,
+    .service-info-box,
+    .requirements-list,
+    .steps-list {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .requirements-list li,
+    .steps-list li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Fix flex containers that may overflow */
+    .service-meta,
+    .service-details-meta {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .service-meta-item {
+        flex: 1 1 45%;
+        min-width: 120px;
+    }
+}
+
+/* ==================== LEGISLATIVE TABLE FIX ==================== */
+
+@media (max-width: 767px) {
+    .ordinance-table,
+    .resolution-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .ordinance-table th,
+    .ordinance-table td,
+    .resolution-table th,
+    .resolution-table td {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    /* Scroll indicator for tables */
+    .table-responsive::after {
+        content: '← Scroll →';
+        display: block;
+        text-align: center;
+        font-size: 0.6875rem;
+        color: var(--color-text-light);
+        padding: 8px 0 4px;
+    }
+}
+
+/* ==================== GENERAL MOBILE FIXES ==================== */
+
+@media (max-width: 640px) {
+    /* Fix any overflowing elements */
+    img, video, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix wide code blocks or pre elements */
+    pre, code {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    /* Grid fixes */
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Button full width on mobile */
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+}
+
+/* ==================== SERVICE CARDS MOBILE FIX ==================== */
+
+@media (max-width: 767px) {
+    /* Office cards grid - single column on mobile */
+    .office-cards-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .office-card {
+        padding: 16px;
+    }
+
+    .office-card-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+    }
+
+    .office-card-icon i {
+        font-size: 1.25rem;
+    }
+
+    .office-card-desc {
+        font-size: 0.8125rem;
+        line-height: 1.4;
+    }
+
+    /* Service item cards */
+    .service-item-card {
+        padding: 14px;
+    }
+
+    .service-item-title {
+        font-size: 0.9375rem;
+    }
+
+    .service-item-desc {
+        font-size: 0.8125rem;
+    }
+
+    .service-item-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* ==================== FEE BOX MOBILE FIX ==================== */
+
+@media (max-width: 767px) {
+    .fee-box {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+
+    .fee-amount {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .fee-label,
+    .fee-value {
+        display: block;
+    }
+
+    .fee-time {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+/* ==================== QUICK STATS MOBILE FIX ==================== */
+
+@media (max-width: 575px) {
+    .quick-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .stat-card,
+    .quick-stat-card {
+        padding: 12px !important;
+    }
+
+    .stat-card i,
+    .quick-stat-card i {
+        font-size: 1.5rem !important;
+    }
+
+    .stat-card p,
+    .quick-stat-card p {
+        font-size: 0.9rem !important;
+    }
+}
+
+

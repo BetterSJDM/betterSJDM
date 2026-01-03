@@ -261,63 +261,63 @@
     .leg-hero {
         padding: 40px 0 48px;
     }
-    
+
     .leg-hero h1 {
         font-size: 1.75rem;
     }
-    
+
     .leg-categories {
         padding: 48px 0;
     }
-    
+
     .leg-categories-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-    
+
     .leg-category-card {
         padding: 24px;
     }
-    
+
     .leg-category-icon {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
         margin-bottom: 16px;
     }
-    
+
     .leg-category-content h2 {
         font-size: 1.25rem;
     }
-    
+
     .leg-info {
         padding: 40px 0;
     }
-    
+
     .leg-info-cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    
+
     .leg-info-header h2 {
         font-size: 1.25rem;
     }
-    
+
     .leg-info-card {
         padding: 14px;
     }
-    
+
     .leg-info-card-icon {
         width: 32px;
         height: 32px;
         font-size: 0.875rem;
         margin-bottom: 10px;
     }
-    
+
     .leg-info-card h3 {
         font-size: 0.8125rem;
     }
-    
+
     .leg-info-card p {
         font-size: 0.6875rem;
     }
@@ -327,19 +327,19 @@
     .leg-hero {
         padding: 36px 0 44px;
     }
-    
+
     .leg-hero h1 {
         font-size: 1.5rem;
     }
-    
+
     .leg-hero p {
         font-size: 0.9375rem;
     }
-    
+
     .leg-category-card {
         padding: 20px;
     }
-    
+
     .leg-category-icon {
         width: 52px;
         height: 52px;
@@ -347,37 +347,37 @@
         border-radius: 14px;
         margin-bottom: 12px;
     }
-    
+
     .leg-category-content h2 {
         font-size: 1.125rem;
         margin-bottom: 8px;
     }
-    
+
     .leg-category-content p {
         font-size: 0.875rem;
         margin-bottom: 16px;
     }
-    
+
     .leg-info-cards {
         grid-template-columns: 1fr;
     }
-    
+
     .leg-info-card {
         flex-direction: row;
         align-items: flex-start;
         gap: 12px;
         padding: 12px;
     }
-    
+
     .leg-info-card-icon {
         margin-bottom: 0;
         flex-shrink: 0;
     }
-    
+
     .leg-info-card h3 {
         font-size: 0.8125rem;
     }
-    
+
     .leg-info-card p {
         font-size: 0.75rem;
     }
@@ -563,7 +563,7 @@
     .leg-process {
         padding: 40px 0;
     }
-    
+
     .leg-process-tabs {
         flex-direction: column;
         align-items: stretch;
@@ -572,25 +572,25 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .leg-tab-btn {
         justify-content: center;
         padding: 10px 20px;
     }
-    
+
     .leg-flow-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    
+
     .leg-flow-card {
         padding: 14px 12px 12px;
     }
-    
+
     .leg-flow-card h4 {
         font-size: 0.75rem;
     }
-    
+
     .leg-flow-card p {
         font-size: 0.6875rem;
     }
@@ -600,32 +600,156 @@
     .leg-process-header h2 {
         font-size: 1.25rem;
     }
-    
+
     .leg-flow-container {
         grid-template-columns: 1fr;
     }
-    
+
     .leg-flow-card {
         flex-direction: row;
         align-items: flex-start;
         gap: 12px;
         padding: 12px;
     }
-    
+
     .leg-flow-number {
         margin-bottom: 0;
         margin-top: 2px;
     }
-    
+
     .leg-flow-card-content {
         flex: 1;
     }
-    
+
     .leg-flow-card h4 {
         font-size: 0.8125rem;
     }
-    
+
     .leg-flow-card p {
         font-size: 0.75rem;
+    }
+}
+
+/* ==================== LEGISLATIVE PROCESS STEPS ==================== */
+
+.legislative-steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legislative-step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.legislative-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 48px;
+    bottom: -24px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), rgba(0, 50, 160, 0.2));
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-nav);
+    position: relative;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.step-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 8px 0;
+}
+
+.step-content p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0 0 8px 0;
+}
+
+.step-content p:last-child:not(.step-legal) {
+    margin-bottom: 0;
+}
+
+.step-content ul {
+    margin: 8px 0;
+    padding-left: 1.25rem;
+}
+
+.step-content ul li {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.step-legal {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    background: rgba(0, 50, 160, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+/* Responsive for legislative steps */
+@media (max-width: 640px) {
+    .legislative-step {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .legislative-step:not(:last-child)::before {
+        left: 16px;
+        top: 40px;
+        bottom: -20px;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 0.875rem;
+    }
+
+    .step-content {
+        padding: 16px 18px;
+    }
+
+    .step-content h4 {
+        font-size: 0.9375rem;
+    }
+
+    .step-content p,
+    .step-content ul li {
+        font-size: 0.8125rem;
     }
 }

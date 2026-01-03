@@ -1,6 +1,6 @@
-/**
+    /**
  * Transparency Page - Charts & Animations
- * Better Solano Portal
+ * Better SJDM Portal
  */
 
 // Brand colors
@@ -32,7 +32,7 @@ function initScrollAnimations() {
             }
         });
     }, { threshold: 0.2 });
-    
+
     document.querySelectorAll('.animate-on-scroll, .metric-card').forEach(el => {
         observer.observe(el);
     });
@@ -59,7 +59,7 @@ function animateBars(container) {
 function createIncomeChart() {
     const ctx = document.getElementById('incomeChart');
     if (!ctx) return;
-    
+
     charts.income = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -118,7 +118,7 @@ function createIncomeChart() {
 function createExpenditureChart() {
     const ctx = document.getElementById('expenditureChart');
     if (!ctx) return;
-    
+
     charts.expenditure = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -179,18 +179,18 @@ function initCharts() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const chartId = entry.target.id;
-                
+
                 if (chartId === 'incomeChart' && !charts.income) {
                     createIncomeChart();
                 } else if (chartId === 'expenditureChart' && !charts.expenditure) {
                     createExpenditureChart();
                 }
-                
+
                 chartObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
-    
+
     document.querySelectorAll('canvas').forEach(canvas => {
         chartObserver.observe(canvas);
     });

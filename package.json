@@ -1,27 +1,35 @@
 {
   "name": "bs-web",
   "version": "1.1.8",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "description": "BetterSJDM - Official Portal for LGU San Jose del Monte City",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
-    "build": "bash build.sh",
+    "dev": "python -m http.server 8000",
+    "build": "node build.js",
+    "build:bash": "bash build.sh",
     "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
-    "serve": "python3 -m http.server 8000",
-    "serve:dist": "cd dist && python3 -m http.server 8080",
+    "serve": "python -m http.server 8000",
+    "serve:dist": "cd dist && python -m http.server 8080",
     "version:major": "bash scripts/version.sh major",
     "version:minor": "bash scripts/version.sh minor",
     "version:patch": "bash scripts/version.sh patch",
     "version:check": "bash scripts/version.sh"
   },
   "keywords": [
-    "solano",
-    "nueva-vizcaya",
+    "sjdm",
+    "san-jose-del-monte",
+    "bulacan",
+    "component-city",
     "government",
     "lgu"
   ],
-  "author": "Ramon Logan Jr.",
+  "author": "Jerald A. Pascual",
   "license": "MIT",
+  "metadata": {
+    "attribution": "Ramon Logan Jr.",
+    "contentLicense": "CC-BY-4.0",
+    "licenseDetails": "Code is MIT licensed, content (text, images, datasets, documentation) is CC BY 4.0 licensed. See LICENSE-README.md for details."
+  },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
     "html-minifier-terser": "^7.2.0",

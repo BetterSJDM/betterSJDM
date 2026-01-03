@@ -1,4 +1,4 @@
-/* Better Solano - Main JavaScript */
+/* Better SJDM - Main JavaScript */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Prevent double-click on navigation and header links from causing unintended behavior
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
             }
         });
-        
+
         // Handle double-click explicitly
         link.addEventListener('dblclick', (e) => {
             e.preventDefault();
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
+
     // Prevent double-click text selection on entire header
     const siteHeader = document.querySelector('.site-header');
     if (siteHeader) {
@@ -33,34 +33,83 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Mobile Menu Toggle
-    const createMobileMenu = () => {
-        const headerInner = document.querySelector('.header-inner');
-        const nav = document.querySelector('.main-nav');
+    const initMobileMenu = () => {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileClose = document.querySelector('.mobile-menu-close');
+        const mobileSearchInput = document.getElementById('mobileSearchInput');
 
-        if (!headerInner || !nav) return;
+        if (!mobileToggle || !mobileMenu) return;
 
-        const toggleBtn = document.createElement('button');
-        toggleBtn.className = 'mobile-menu-toggle btn btn-secondary';
-        toggleBtn.innerHTML = '<i class="bi bi-list"></i>';
-        toggleBtn.setAttribute('aria-label', 'Toggle Navigation');
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        const openMenu = () => {
+            mobileMenu.classList.add('active');
+            if (mobileOverlay) mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            mobileToggle.setAttribute('aria-expanded', 'true');
+        };
 
-        const actions = document.querySelector('.header-actions');
-        if (actions) {
-            headerInner.insertBefore(toggleBtn, actions);
-        } else {
-            headerInner.appendChild(toggleBtn);
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            if (mobileOverlay) mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        mobileToggle.addEventListener('click', openMenu);
+
+        if (mobileClose) {
+            mobileClose.addEventListener('click', closeMenu);
         }
 
-        toggleBtn.addEventListener('click', () => {
-            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-            toggleBtn.setAttribute('aria-expanded', !isExpanded);
-            nav.classList.toggle('active');
-            toggleBtn.innerHTML = isExpanded ? '<i class="bi bi-list"></i>' : '<i class="bi bi-x-lg"></i>';
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Handle dropdowns in mobile menu
+        const mobileDropdowns = mobileMenu.querySelectorAll('.has-dropdown > a');
+        mobileDropdowns.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const parent = link.parentElement;
+                const isOpen = parent.classList.contains('open');
+
+                // Close all other dropdowns
+                mobileMenu.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
+
+                // Toggle current
+                if (!isOpen) {
+                    parent.classList.add('open');
+                }
+
+                e.preventDefault();
+            });
+        });
+
+        // Mobile search - open global search modal
+        if (mobileSearchInput) {
+            mobileSearchInput.addEventListener('focus', () => {
+                closeMenu();
+                const searchModal = document.getElementById('searchModal');
+                const globalSearchInput = document.getElementById('global-search-input');
+                if (searchModal) {
+                    searchModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    if (globalSearchInput) {
+                        setTimeout(() => globalSearchInput.focus(), 100);
+                    }
+                }
+            });
+        }
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMenu();
+            }
         });
     };
 
-    createMobileMenu();
+    initMobileMenu();
 
     // Language handling is now managed by TranslationEngine in translations.js
     // The TranslationEngine initializes automatically and handles:
@@ -77,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // FAQ Accordion Functionality
     const initAccordion = () => {
         const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-        
+
         if (accordionTriggers.length === 0) return;
 
         accordionTriggers.forEach(trigger => {
@@ -85,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const accordionItem = this.closest('.accordion-item');
                 const isActive = accordionItem.classList.contains('active');
                 const accordionContent = accordionItem.querySelector('.accordion-content');
-                
+
                 // Close all other accordion items (optional - remove for multi-open)
                 const allItems = document.querySelectorAll('.accordion-item');
                 allItems.forEach(item => {
@@ -127,12 +176,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Education Category Accordion
     const initEduAccordion = () => {
         const categoryHeaders = document.querySelectorAll('.edu-category-header');
-        
+
         categoryHeaders.forEach(header => {
             header.addEventListener('click', function() {
                 const content = this.nextElementSibling;
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                
+
                 if (isExpanded) {
                     content.hidden = true;
                     this.setAttribute('aria-expanded', 'false');

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="City General Services Office - Repair of government property buildings/facilities, reproduction of forms and documents, requisition and issuance of inventory items in San Jose del Monte City.">
+    <meta name="author" content="Jerald A. Pascual">
+    <meta name="keywords" content="City General Services San Jose del Monte City, government property repair, forms reproduction, inventory requisition, supplies management, internal services, G2G">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bettersjdm/service-details/city-general-services">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bettersjdm/service-details/city-general-services">
+    <meta property="og:title" content="City General Services Office | BetterSJDM">
+    <meta property="og:description" content="Repair of government property buildings/facilities, reproduction of forms and documents, requisition and issuance of inventory items in San Jose del Monte City.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>City General Services Office | BetterSJDM</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/accessibility.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <style>
+        .mgso-section { padding: 40px 0; }
+        .mgso-section.alt-bg { background: var(--color-bg-alt); }
+        .section-header { margin-bottom: 20px; }
+        .section-header h2 { font-size: 1.125rem; color: var(--color-text); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+        .section-header h2 i { color: var(--color-primary); font-size: 1rem; }
+        .section-header p { color: var(--color-text-light); font-size: 0.8125rem; margin: 0; }
+        .quick-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+        .stat-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 12px; text-align: center; }
+        .stat-card i { font-size: 1rem; color: var(--color-primary); margin-bottom: 4px; }
+        .stat-card h4 { font-size: 0.625rem; color: var(--color-text-light); margin-bottom: 2px; font-weight: 500; text-transform: uppercase; }
+        .stat-card p { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); margin: 0; }
+        .process-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); font-size: 0.75rem; }
+        .process-table th { background: var(--color-primary); color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.6875rem; text-transform: uppercase; }
+        .process-table td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.04); vertical-align: top; }
+        .process-table tr:last-child td { border-bottom: none; }
+        .process-table tr:hover { background: rgba(0,50,160,0.02); }
+        .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; border-radius: 4px; margin-right: 6px; }
+        .personnel-tag { display: inline-block; background: rgba(0,50,160,0.08); color: var(--color-primary); padding: 2px 6px; border-radius: 4px; font-size: 0.625rem; font-weight: 500; margin: 1px 0; }
+        .time-tag { color: var(--color-text-light); font-size: 0.6875rem; }
+        .service-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; justify-content: center; }
+        .service-tab { padding: 8px 16px; background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: var(--color-text); cursor: pointer; transition: all 0.2s ease; }
+        .service-tab:hover { border-color: var(--color-primary); }
+        .service-tab.active { background: var(--color-primary); border-color: var(--color-primary); color: white; }
+        .service-content { display: none; }
+        .service-content.active { display: block; }
+        .req-box { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 14px; }
+        .req-box h4 { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .req-box h4 i { color: var(--color-primary); }
+        .req-list { list-style: none; padding: 0; margin: 0; }
+        .req-list li { font-size: 0.75rem; color: var(--color-text); padding: 4px 0; display: flex; align-items: flex-start; gap: 6px; }
+        .req-list li i { color: var(--color-primary); font-size: 0.625rem; margin-top: 3px; flex-shrink: 0; }
+        .utility-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .utility-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 14px; }
+        .utility-card h4 { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+        .utility-card h4 i { color: var(--color-primary); }
+        .utility-card .provider { font-size: 0.6875rem; color: var(--color-text-light); margin-bottom: 4px; }
+        .utility-card .account { font-size: 0.75rem; color: var(--color-text); font-weight: 500; }
+        .vehicle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .vehicle-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 12px; }
+        .vehicle-card h4 { font-size: 0.75rem; font-weight: 600; color: var(--color-text); margin-bottom: 4px; }
+        .vehicle-card p { font-size: 0.6875rem; color: var(--color-text-light); margin: 0; }
+        .staff-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .staff-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 12px; }
+        .staff-card h4 { font-size: 0.75rem; font-weight: 600; color: var(--color-text); margin-bottom: 2px; }
+        .staff-card p { font-size: 0.6875rem; color: var(--color-text-light); margin: 0; }
+        @media (max-width: 992px) { .utility-grid, .staff-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .quick-stats { grid-template-columns: repeat(2, 1fr); } .process-table { font-size: 0.6875rem; } }
+        @media (max-width: 575px) { .quick-stats, .utility-grid, .vehicle-grid, .staff-grid { grid-template-columns: 1fr; } .service-tabs { flex-direction: column; } .service-tab { text-align: center; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotline Bar -->
+    <div class="hotline-bar">
+        <div class="container">
+            <div class="hotline-inner">
+                <div class="hotline-items">
+                    <a href="tel:09366000119" class="hotline-item">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        <span>CDRRMO: 0936 600 0119</span>
+                    </a>
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
+                        <i class="bi bi-truck"></i>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-container"><a href="../"><img src="../assets/images/logo/better-sjdm-logo.png" alt="Better SJDM Logo" class="logo-img"></a></div>
+        <nav class="main-nav" aria-label="Main Navigation"><ul>
+            <li class="has-dropdown">
+                <a href="../services/" class="active">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../services/certificates.html">Certificates</a></li>
+                    <li><a href="../services/business.html">Business</a></li>
+                    <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                    <li><a href="../services/social-services.html">Social Services</a></li>
+                    <li><a href="../services/health.html">Health</a></li>
+                    <li><a href="../services/agriculture.html">Agriculture</a></li>
+                    <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                    <li><a href="../services/education.html">Education</a></li>
+                    <li><a href="../services/public-safety.html">Public Safety</a></li>
+                    <li><a href="../services/environment.html">Environment</a></li>
+                </ul>
+            </li>
+            <li><a href="../government/">Government</a></li>
+            <li><a href="../statistics/">Statistics</a></li>
+            <li class="has-dropdown"><a href="../legislative/">Legislative</a><ul class="dropdown-menu">
+                <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+            </ul></li>
+            <li><a href="../budget/">Transparency</a></li>
+            <li><a href="../calendar/">Calendar</a></li>
+            <li><a href="../contact/">Contact</a></li>
+        </ul></nav>
+        <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search services" title="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button><div class="lang-selector">
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
+        </div></div>
+    
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
+    <div class="info-bar" role="complementary"><div class="container"><div class="info-bar-inner">
+        <div class="info-bar-item info-bar-rates"><i class="bi bi-currency-exchange"></i><span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span></div>
+        <div class="info-bar-item info-bar-weather"><i class="bi bi-thermometer-half"></i><span class="weather-location">SJDM</span><span class="weather-temp">--°C</span></div>
+        <div class="info-bar-item info-bar-datetime"><i class="bi bi-calendar3"></i><span class="date-value">--- --, ----</span><span class="datetime-separator">•</span><i class="bi bi-clock"></i><span class="time-value">--:-- --</span><span class="time-label">PHT</span></div>
+    </div></div></div>
+
+    <main id="main-content">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="../">Home</a><span>/</span>
+                <a href="../services/">Services</a><span>/</span>
+                <a href="../services/infrastructure.html">Infrastructure</a><span>/</span>
+                <span aria-current="page">City General Services Office</span>
+            </nav>
+        </div>
+
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <span class="page-header-badge"><i class="bi bi-gear-wide-connected"></i> General Services</span>
+                    <h1>City General Services Office</h1>
+                    <p class="page-header-desc">Repair of government property, reproduction of forms and documents, requisition and issuance of inventory items (Internal G2G Services)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="mgso-section">
+            <div class="container">
+                <div class="quick-stats">
+                    <div class="stat-card"><i class="bi bi-building"></i><h4>Office</h4><p>City GSO</p></div>
+                    <div class="stat-card"><i class="bi bi-gear"></i><h4>Type</h4><p>Internal G2G</p></div>
+                    <div class="stat-card"><i class="bi bi-clock"></i><h4>Repair</h4><p>2hrs-5 days</p></div>
+                    <div class="stat-card"><i class="bi bi-calendar-check"></i><h4>Reproduction</h4><p>22 mins/ream</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Tabs -->
+        <section class="mgso-section alt-bg">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <h2 style="justify-content: center;"><i class="bi bi-grid-3x3-gap"></i> General Services Office Functions</h2>
+                    <p>Select a service category to view details</p>
+                </div>
+                <div class="service-tabs">
+                    <button type="button" class="service-tab active" data-tab="repair">Service 1: Property Repair</button>
+                    <button type="button" class="service-tab" data-tab="reproduction">Service 2: Forms Reproduction</button>
+                    <button type="button" class="service-tab" data-tab="requisition">Service 3: Inventory Requisition</button>
+                </div>
+
+                <!-- Service 1: Repair of Government Property Buildings/Facilities -->
+                <div class="service-content active" id="repair">
+                    <div class="section-header">
+                        <h2><i class="bi bi-tools"></i> Service 1: Repair of Government Property Buildings/Facilities (Major Repair)</h2>
+                        <p>Highly Technical - Internal Service (G2G) - For all LGU CSJDM offices including national offices</p>
+                    </div>
+                    <div class="req-box" style="margin-bottom: 14px;">
+                        <h4><i class="bi bi-file-text"></i> Requirements</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Request for Repair and Maintenance Slip (secured from GSO-Administrative Division)</li>
+                        </ul>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="process-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%;">Step</th>
+                                    <th style="width: 30%;">Client Steps</th>
+                                    <th style="width: 30%;">Agency Action</th>
+                                    <th style="width: 15%;">Duration</th>
+                                    <th style="width: 20%;">Personnel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="step-badge">1</span></td>
+                                    <td>Submit Request for Repair and Maintenance Slip</td>
+                                    <td>Receive, check and record all information</td>
+                                    <td><span class="time-tag">5 mins per request</span></td>
+                                    <td><span class="personnel-tag">Ma. Theresa Bobis</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">2</span></td>
+                                    <td>-</td>
+                                    <td>Forward request slip to Construction and Maintenance Foreman (C&M Foreman)</td>
+                                    <td><span class="time-tag">5 mins</span></td>
+                                    <td><span class="personnel-tag">Ms. Bobis / Mr. Francisco</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">3</span></td>
+                                    <td>-</td>
+                                    <td>Upon initial evaluation, issue JOB ORDER Form with instructions to staff for site inspection</td>
+                                    <td><span class="time-tag">10 mins</span></td>
+                                    <td><span class="personnel-tag">C&M Foreman</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">4</span></td>
+                                    <td>-</td>
+                                    <td>Evaluation of the Extent of Work to be done</td>
+                                    <td><span class="time-tag">15 mins</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">5</span></td>
+                                    <td>-</td>
+                                    <td>Prepare the Job Order Slip</td>
+                                    <td><span class="time-tag">10 mins</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">6</span></td>
+                                    <td>-</td>
+                                    <td>Prepare SAI/RIS for supplies and materials needed for repair</td>
+                                    <td><span class="time-tag">10 mins per job order</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">7</span></td>
+                                    <td>-</td>
+                                    <td>Forward SAI/RIS/Request Slip to Storekeeper</td>
+                                    <td><span class="time-tag">5 mins</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">8</span></td>
+                                    <td>-</td>
+                                    <td>Receive the available supplies to be used</td>
+                                    <td><span class="time-tag">10 mins</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">9</span></td>
+                                    <td>-</td>
+                                    <td>If all needed materials/supplies are available, proceed to necessary repair as stated in Job Order</td>
+                                    <td><span class="time-tag"><strong>Major:</strong> 5 days<br><strong>Minor:</strong> 2 days<br><strong>Immediate:</strong> 2 hours</span></td>
+                                    <td><span class="personnel-tag">Laborer, Electrician, Carpenter, Plumber</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="req-box" style="margin-top: 14px;">
+                        <h4><i class="bi bi-clock-history"></i> Total Processing Time</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Major Repair:</strong> 5 days 1 hour 10 minutes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Minor Repair:</strong> 2 days 1 hour 10 minutes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Immediate Repair:</strong> 3 hours 10 minutes</li>
+                            <li><i class="bi bi-currency-peso"></i> <strong>Fee:</strong> NONE (FREE - Internal Service)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Reproduction of Various Forms and Documents -->
+                <div class="service-content" id="reproduction">
+                    <div class="section-header">
+                        <h2><i class="bi bi-printer"></i> Service 2: Reproduction of Various Forms and Documents</h2>
+                        <p>Simple - G2G Service - For LGU CSJDM offices and national offices in CSJDM</p>
+                    </div>
+                    <div class="req-box" style="margin-bottom: 14px;">
+                        <h4><i class="bi bi-file-text"></i> Requirements</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Duly signed and accomplished Request Form (secured from GSO-Administrative Section)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Forms/documents to be reproduced (forwarded by requesting office)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Paper/s to be used (provided by requesting office)</li>
+                        </ul>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="process-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%;">Step</th>
+                                    <th style="width: 35%;">Client Steps</th>
+                                    <th style="width: 35%;">Agency Action</th>
+                                    <th style="width: 15%;">Duration</th>
+                                    <th style="width: 10%;">Personnel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="step-badge">1</span></td>
+                                    <td>Submit duly signed and accomplished Request Form</td>
+                                    <td>Receive, review and evaluate the Request Form as well as the documents to be reproduced</td>
+                                    <td><span class="time-tag">2 mins per request</span></td>
+                                    <td><span class="personnel-tag">Repro Machine Operator III</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">2</span></td>
+                                    <td>Endorse the type of paper to be used for reproduction</td>
+                                    <td>Endorse the Request Form to the Head of GSO for approval</td>
+                                    <td><span class="time-tag">5 mins per request</span></td>
+                                    <td><span class="personnel-tag">Repro Machine Operator III</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">3</span></td>
+                                    <td>-</td>
+                                    <td>Reproduce the forms or document</td>
+                                    <td><span class="time-tag">15 mins per ream</span></td>
+                                    <td><span class="personnel-tag">Machine Operator, GSO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="req-box" style="margin-top: 14px;">
+                        <h4><i class="bi bi-clock-history"></i> Total Processing Time</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Total Time:</strong> 22 minutes per ream</li>
+                            <li><i class="bi bi-currency-peso"></i> <strong>Fee:</strong> NONE (FREE - G2G Service)</li>
+                            <li><i class="bi bi-info-circle"></i> <strong>Purpose:</strong> To save budget by catering reproduction in-house instead of procuring service from outside sources</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Requisition and Issuance of Inventory Items -->
+                <div class="service-content" id="requisition">
+                    <div class="section-header">
+                        <h2><i class="bi bi-box-seam"></i> Service 3: Requisition and Issuance of Inventory Items</h2>
+                        <p>Complex - G2G Service - For LGU CSJDM offices and national offices in CSJDM</p>
+                    </div>
+                    <div class="req-box" style="margin-bottom: 14px;">
+                        <h4><i class="bi bi-file-text"></i> Requirements</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Supplies Availability Inquiry (SAI) - secured from CGSO Supplies Section or Administrative Section</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Requisition and Issue Slip (RIS) - secured from CGSO Supplies Section or Administrative Section</li>
+                        </ul>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="process-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%;">Step</th>
+                                    <th style="width: 30%;">Client Steps</th>
+                                    <th style="width: 35%;">Agency Action</th>
+                                    <th style="width: 15%;">Duration</th>
+                                    <th style="width: 15%;">Personnel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="step-badge">1</span></td>
+                                    <td>Submit duly accomplished SAI (2 copies) and RIS (3 copies)</td>
+                                    <td>Receive, review and verify SAI and RIS as to completeness of information; record submitted SAI and RIS and forward to Supply Officer II</td>
+                                    <td><span class="time-tag">5 mins per SAI/RIS</span></td>
+                                    <td><span class="personnel-tag">GSO-Supplies Division Personnel</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">2</span></td>
+                                    <td>-</td>
+                                    <td>Upon receipt of SAI and RIS, determine availability/status of stocks from Supply Stock Card</td>
+                                    <td><span class="time-tag">20 mins per RIS</span></td>
+                                    <td><span class="personnel-tag">Supply Officer II</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">3</span></td>
+                                    <td>-</td>
+                                    <td>Verify requested inventory items in RIS and quantity against PPMP submitted by respective offices; Fill up RIS as to Quantity to be issued and Remarks</td>
+                                    <td><span class="time-tag">20 mins per RIS</span></td>
+                                    <td><span class="personnel-tag">Supply Officer II, Supply Officer I, Admin Aide VI, Admin Aide IV</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">4</span></td>
+                                    <td>-</td>
+                                    <td>If items requested are not included in submitted PPMP, inform concerned office for necessary revision of PPMP</td>
+                                    <td><span class="time-tag">5 mins per office</span></td>
+                                    <td><span class="personnel-tag">Supply Officer II</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">5</span></td>
+                                    <td>-</td>
+                                    <td>Prepare the available inventory items</td>
+                                    <td><span class="time-tag">20 mins per RIS</span></td>
+                                    <td><span class="personnel-tag">Storekeeper, Warehouseman</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">6</span></td>
+                                    <td>Sign the "Received by" portion of the RIS</td>
+                                    <td>Issuance of requested supplies</td>
+                                    <td><span class="time-tag">5 mins per office</span></td>
+                                    <td><span class="personnel-tag">Storekeeper, Warehouseman</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">7</span></td>
+                                    <td>Get the 3rd copy of RIS</td>
+                                    <td>Record the signed RIS and forward to assigned personnel for preparation of Report of Supplies and Materials Issued (RSMI)</td>
+                                    <td><span class="time-tag">5 mins per RIS</span></td>
+                                    <td><span class="personnel-tag">Storekeeper, Warehouseman</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">8</span></td>
+                                    <td>-</td>
+                                    <td>Post the issued inventory items on respective Stock Card</td>
+                                    <td><span class="time-tag">20 mins per RIS</span></td>
+                                    <td><span class="personnel-tag">Supply Officer I, Admin Aide VI, Admin Aide IV</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="step-badge">9</span></td>
+                                    <td>-</td>
+                                    <td>Preparation and Submission of RSMI to City Accounting Office</td>
+                                    <td><span class="time-tag">6 days after posting inventory items to Stock Cards</span></td>
+                                    <td><span class="personnel-tag">Supply Officer II, Supply Officer I, Admin Aide VI, Admin Aide IV</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="req-box" style="margin-top: 14px;">
+                        <h4><i class="bi bi-clock-history"></i> Total Processing Time</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle-fill"></i> <strong>Total Time:</strong> 6 days, 1 hour & 40 minutes per RIS</li>
+                            <li><i class="bi bi-currency-peso"></i> <strong>Fee:</strong> NONE (FREE - G2G Service)</li>
+                            <li><i class="bi bi-info-circle"></i> <strong>Purpose:</strong> Defines actions and responsibilities from receiving request thru RIS to updating Stock Card and providing RSMI to City Accounting Office for recording</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Personnel Section -->
+        <section class="mgso-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="bi bi-people"></i> Office Personnel</h2>
+                    <p>Charter-verified personnel handling City General Services Office operations</p>
+                </div>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <h4>Ma. Theresa Bobis</h4>
+                        <p>GSO-Administrative Division</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Mr. Francisco</h4>
+                        <p>Foreman</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>C&M Foreman</h4>
+                        <p>Construction & Maintenance</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Laborers</h4>
+                        <p>Repair & Maintenance</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Electricians</h4>
+                        <p>Electrical Work</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Carpenters</h4>
+                        <p>Carpentry Work</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Plumbers</h4>
+                        <p>Plumbing Work</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Repro Machine Operator III</h4>
+                        <p>Document Reproduction</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Supply Officer II</h4>
+                        <p>Supplies Management</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Supply Officer I</h4>
+                        <p>Supplies Assistant</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Administrative Aide VI</h4>
+                        <p>Administrative Support</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Administrative Aide IV</h4>
+                        <p>Administrative Support</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Storekeeper</h4>
+                        <p>Warehouse Management</p>
+                    </div>
+                    <div class="staff-card">
+                        <h4>Warehouseman</h4>
+                        <p>Warehouse Operations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mgso-section alt-bg">
+            <div class="container">
+                <div class="grid grid-2" style="gap: 14px;">
+                    <div class="req-box">
+                        <h4><i class="bi bi-building"></i> Office Information</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-geo-alt"></i> City General Services Office, City Hall, San Jose del Monte City, Bulacan</li>
+                            <li><i class="bi bi-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</li>
+                            <li><i class="bi bi-briefcase"></i> <strong>Type:</strong> Internal Service (G2G - Government to Government)</li>
+                            <li><i class="bi bi-people"></i> <strong>Who may avail:</strong> All LGU CSJDM offices and national offices in CSJDM</li>
+                        </ul>
+                    </div>
+                    <div class="req-box">
+                        <h4><i class="bi bi-info-circle"></i> Important Notes</h4>
+                        <ul class="req-list">
+                            <li><i class="bi bi-check-circle"></i> All services are FREE - no fees charged (Internal G2G)</li>
+                            <li><i class="bi bi-check-circle"></i> <strong>Service 1:</strong> Property repair includes major (5 days), minor (2 days), and immediate (2 hours) repairs</li>
+                            <li><i class="bi bi-check-circle"></i> <strong>Service 2:</strong> Forms reproduction catered in-house to save budget instead of outsourcing</li>
+                            <li><i class="bi bi-check-circle"></i> <strong>Service 3:</strong> Inventory requisition requires SAI and RIS forms from GSO Supplies Section</li>
+                            <li><i class="bi bi-exclamation-triangle"></i> All requests must be properly documented with required forms from GSO-Administrative Division or Supplies Section</li>
+                            <li><i class="bi bi-file-text"></i> For Service 3, requested items must be included in submitted PPMP (Project Procurement Management Plan)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main-new">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
+                    <div class="footer-social-new">
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-new">
+                        <li><a href="../sitemap/">Sitemap</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="../terms/">Terms of Use</a></li>
+                        <li><a href="../privacy/">Privacy Policy</a></li>
+                        <li><a href="../accessibility/">Accessibility</a></li>
+                        <li><a href="../faq/">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links-new">
+                        <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
+                        <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
+                        <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
+                        <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-cost" role="status">Cost to the People of SJDM = <span class="footer-cost-value">₱0</span></div>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                </div>
+            </div>
+            <div class="footer-bottom-new">
+                <div class="footer-copyright">
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/info-bar.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/version.js"></script>
+    <script>
+        // Tab functionality for Charter services
+        document.querySelectorAll('.service-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.service-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.service-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+    <script defer src="../assets/js/search.js"></script>
+</body>
+</html>

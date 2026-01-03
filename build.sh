@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# BetterSolano Build Script
+# BetterSJDM Build Script
 # Creates minified production files in dist/ folder
 
-echo "Building BetterSolano for production..."
+echo "Building BetterSJDM for production..."
 
 # Auto-bump patch version (skip if --no-bump flag is passed)
 if [ "$1" != "--no-bump" ] && [ -f "scripts/version.sh" ]; then

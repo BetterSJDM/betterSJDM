@@ -11,34 +11,34 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="View the municipal budget and financial transparency reports of Solano, Nueva Vizcaya. Access public funds data, budget breakdown, expenditures, and financial statements from LGU Solano.">
-    
+    <meta name="description" content="View the municipal budget and financial transparency reports of San Jose del Monte City, . Access public funds data, budget breakdown, expenditures, and financial statements from LGU SJDM.">
+
     <!-- SEO Meta Tags -->
     <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="Solano budget, municipal finances, financial transparency, public funds, budget reports, LGU Solano, Nueva Vizcaya budget, government spending, financial statements, transparency">
+    <meta name="keywords" content="SJDM budget, municipal finances, financial transparency, public funds, budget reports, LGU SJDM,  budget, government spending, financial statements, transparency">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/budget/">
-    
+    <link rel="canonical" href="https://bettersjdm/budget/">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/budget/">
-    <meta property="og:title" content="Budget & Financial Transparency | BetterSolano.org">
-    <meta property="og:description" content="View the municipal budget and financial transparency reports of Solano, Nueva Vizcaya. Access public funds data, budget breakdown, expenditures, and financial statements from LGU Solano.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/budget/">
+    <meta property="og:title" content="Budget & Financial Transparency | BetterSJDM">
+    <meta property="og:description" content="View the municipal budget and financial transparency reports of San Jose del Monte City, . Access public funds data, budget breakdown, expenditures, and financial statements from LGU SJDM.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#1a5f2a">
-    
-    <title>Budget & Financial Transparency | BetterSolano.org</title>
+
+    <title>Budget & Financial Transparency | BetterSJDM</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
     <link rel="apple-touch-icon" href="../assets/images/logo/favicon.svg">
@@ -46,7 +46,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -56,16 +56,58 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item"><i class="bi bi-shield-fill"></i><span>Police: 0927 400 8033</span></a>
-                    <a href="tel:09162840885" class="hotline-item"><i class="bi bi-heart-fill"></i><span>MSWDO: 0916 284 0885</span></a>
-                    <a href="tel:09360620305" class="hotline-item"><i class="bi bi-fire"></i><span>Fire: 0936 062 0305</span></a>
-                    <a href="tel:0906188086" class="hotline-item"><i class="bi bi-building"></i><span>DILG: 0906 188 086</span></a>
-                    <a href="tel:09263833744" class="hotline-item"><i class="bi bi-exclamation-triangle-fill"></i><span>MDRRMO: 0926 383 3744</span></a>
-                    <a href="tel:09068195569" class="hotline-item"><i class="bi bi-truck"></i><span>R2TMC: 0906 819 5569</span></a>
+                    <a href="tel:09366000119" class="hotline-item">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        <span>CDRRMO: 0936 600 0119</span>
+                    </a>
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
+                        <i class="bi bi-truck"></i>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -74,12 +116,11 @@
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="../">
-                    <img src="../assets/images/logo/better-solano-logo.svg" alt="Better Solano Logo" class="logo-img">
+                    <img src="../assets/images/logo/better-sjdm-logo.png" alt="Better SJDM Logo" class="logo-img">
                 </a>
             </div>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../services/">Services</a>
                         <ul class="dropdown-menu">
@@ -105,18 +146,76 @@
                         </ul>
                     </li>
                     <li><a href="./" class="active">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <div class="info-bar" role="complementary" aria-label="Real-time information">
         <div class="container">
@@ -125,9 +224,9 @@
                     <i class="bi bi-currency-exchange"></i>
                     <span class="rate-rotator"><span class="rate-display">1 USD = ₱ --</span></span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -175,34 +274,38 @@
                             <span class="sre-period-q">Q2</span>
                             <span class="sre-period-range">Apr - Jun</span>
                         </button>
+                        <button type="button" class="sre-period-btn" role="tab" aria-selected="false" data-quarter="q3">
+                            <span class="sre-period-q">Q3</span>
+                            <span class="sre-period-range">Jul - Sep</span>
+                        </button>
                     </div>
                 </div>
                 <div class="sre-metrics-row">
                     <div class="sre-metric-card sre-metric-income">
                         <div class="sre-metric-icon"><i class="bi bi-arrow-down-circle"></i></div>
                         <div class="sre-metric-data">
-                            <span class="sre-metric-value" id="sre-total-income">₱158.47 M</span>
+                            <span class="sre-metric-value" id="sre-total-income">₱542.44 M</span>
                             <span class="sre-metric-label">Total Income</span>
                         </div>
                     </div>
                     <div class="sre-metric-card sre-metric-expense">
                         <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
                         <div class="sre-metric-data">
-                            <span class="sre-metric-value" id="sre-total-expense">₱67.51 M</span>
+                            <span class="sre-metric-value" id="sre-total-expense">₱405.43 M</span>
                             <span class="sre-metric-label">Total Expenditures</span>
                         </div>
                     </div>
                     <div class="sre-metric-card sre-metric-net">
                         <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
                         <div class="sre-metric-data">
-                            <span class="sre-metric-value" id="sre-net-income">₱90.96 M</span>
+                            <span class="sre-metric-value" id="sre-net-income">₱710.41 M</span>
                             <span class="sre-metric-label">Net Operating Income</span>
                         </div>
                     </div>
                     <div class="sre-metric-card sre-metric-balance">
                         <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
                         <div class="sre-metric-data">
-                            <span class="sre-metric-value" id="sre-fund-balance">₱283.29 M</span>
+                            <span class="sre-metric-value" id="sre-fund-balance">₱1,312.86 M</span>
                             <span class="sre-metric-label">Fund Balance (End)</span>
                         </div>
                     </div>
@@ -225,8 +328,8 @@
                                         <span class="sre-item-detail">Tax & Non-Tax Revenue</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-income-local">₱88.85 M</span>
-                                        <span class="sre-item-pct" id="sre-income-local-pct">56.1%</span>
+                                        <span class="sre-item-amount" id="sre-income-local">₱139.81 M</span>
+                                        <span class="sre-item-pct" id="sre-income-local-pct">25.8%</span>
                                     </div>
                                 </div>
                                 <div class="sre-breakdown-item" data-type="external">
@@ -236,8 +339,8 @@
                                         <span class="sre-item-detail">National Tax Allotment</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-income-external">₱69.62 M</span>
-                                        <span class="sre-item-pct" id="sre-income-external-pct">43.9%</span>
+                                        <span class="sre-item-amount" id="sre-income-external">₱402.63 M</span>
+                                        <span class="sre-item-pct" id="sre-income-external-pct">74.2%</span>
                                     </div>
                                 </div>
                             </div>
@@ -259,8 +362,8 @@
                                         <span class="sre-item-detail">Administration & Operations</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-exp-gps">₱42.76 M</span>
-                                        <span class="sre-item-pct" id="sre-exp-gps-pct">63.3%</span>
+                                        <span class="sre-item-amount" id="sre-exp-gps">₱171.75 M</span>
+                                        <span class="sre-item-pct" id="sre-exp-gps-pct">42.4%</span>
                                     </div>
                                 </div>
                                 <div class="sre-breakdown-item" data-type="social">
@@ -270,8 +373,8 @@
                                         <span class="sre-item-detail">Health, Education, Welfare</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-exp-social">₱13.33 M</span>
-                                        <span class="sre-item-pct" id="sre-exp-social-pct">19.7%</span>
+                                        <span class="sre-item-amount" id="sre-exp-social">₱155.23 M</span>
+                                        <span class="sre-item-pct" id="sre-exp-social-pct">38.3%</span>
                                     </div>
                                 </div>
                                 <div class="sre-breakdown-item" data-type="economic">
@@ -281,8 +384,8 @@
                                         <span class="sre-item-detail">Infrastructure & Development</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-exp-economic">₱11.07 M</span>
-                                        <span class="sre-item-pct" id="sre-exp-economic-pct">16.4%</span>
+                                        <span class="sre-item-amount" id="sre-exp-economic">₱73.76 M</span>
+                                        <span class="sre-item-pct" id="sre-exp-economic-pct">18.2%</span>
                                     </div>
                                 </div>
                                 <div class="sre-breakdown-item" data-type="debt">
@@ -292,8 +395,8 @@
                                         <span class="sre-item-detail">Interest & Charges</span>
                                     </div>
                                     <div class="sre-item-values">
-                                        <span class="sre-item-amount" id="sre-exp-debt">₱0.35 M</span>
-                                        <span class="sre-item-pct" id="sre-exp-debt-pct">0.5%</span>
+                                        <span class="sre-item-amount" id="sre-exp-debt">₱4.68 M</span>
+                                        <span class="sre-item-pct" id="sre-exp-debt-pct">1.2%</span>
                                     </div>
                                 </div>
                             </div>
@@ -312,28 +415,64 @@
                     <h2>Infrastructure Investments</h2>
                     <p>Major development projects serving the community</p>
                 </div>
+
+                <!-- 2024 Projects -->
                 <div class="infra-project-v5">
                     <div class="infra-project-main">
                         <div class="infra-project-tags">
                             <span class="infra-tag-year">2024</span>
                             <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
                         </div>
-                        <h3>FCDS Package 5 - Magat River Flood Control</h3>
-                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Magat River, Bagahabag Section, Solano, Nueva Vizcaya</p>
+                        <h3>Construction of Flood Control Structure, Barangay Minuyan Proper</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Minuyan Proper, San Jose del Monte, Bulacan</p>
                     </div>
                     <div class="infra-project-details">
                         <div class="infra-detail-row">
                             <div class="infra-detail-col">
-                                <span class="infra-detail-label">Type of Work</span>
-                                <span class="infra-detail-value">Construction of Flood Mitigation Structure</span>
-                            </div>
-                            <div class="infra-detail-col">
                                 <span class="infra-detail-label">Contractor</span>
-                                <span class="infra-detail-value">EGB Construction Corporation</span>
+                                <span class="infra-detail-value">FLORDES CONSTRUCTION & TRADING CORP.</span>
                             </div>
                             <div class="infra-detail-col infra-detail-cost">
                                 <span class="infra-detail-label">Contract Cost</span>
-                                <span class="infra-detail-value">₱144,750,000</span>
+                                <span class="infra-detail-value">₱96,493,479.41</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">February 23, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2023 Projects -->
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
+                        </div>
+                        <h3>Construction of Flood Control Structure, Sapang Palay Proper</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Sapang Palay Proper, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">TRIPLE 8 CONSTRUCTION & SUPPLY, INC.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱96,497,531.45</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">December 29, 2023</span>
                             </div>
                         </div>
                     </div>
@@ -348,25 +487,25 @@
                 <div class="infra-project-v5">
                     <div class="infra-project-main">
                         <div class="infra-project-tags">
-                            <span class="infra-tag-year">2021</span>
-                            <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-droplet"></i> Drainage</span>
                         </div>
-                        <h3>Repair/Rehabilitation of Flood Control and Drainage Structure - Section 1</h3>
-                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Magat River, Bangar Section 1, Brgy. Bangar, Solano, Nueva Vizcaya</p>
+                        <h3>Construction of Drainage Structure, Diamond Crest</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay San Manuel, San Jose del Monte, Bulacan</p>
                     </div>
                     <div class="infra-project-details">
                         <div class="infra-detail-row">
                             <div class="infra-detail-col">
-                                <span class="infra-detail-label">Type of Work</span>
-                                <span class="infra-detail-value">Rehabilitation / Major Repair of Flood Control Structure</span>
-                            </div>
-                            <div class="infra-detail-col">
                                 <span class="infra-detail-label">Contractor</span>
-                                <span class="infra-detail-value">Shanley Construction</span>
+                                <span class="infra-detail-value">FORTUNE RDC ENTERPRISES</span>
                             </div>
                             <div class="infra-detail-col infra-detail-cost">
                                 <span class="infra-detail-label">Contract Cost</span>
-                                <span class="infra-detail-value">₱29,700,000</span>
+                                <span class="infra-detail-value">₱29,363,263.96</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">December 18, 2023</span>
                             </div>
                         </div>
                     </div>
@@ -381,25 +520,323 @@
                 <div class="infra-project-v5">
                     <div class="infra-project-main">
                         <div class="infra-project-tags">
-                            <span class="infra-tag-year">2021</span>
+                            <span class="infra-tag-year">2023</span>
                             <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
                         </div>
-                        <h3>Repair/Rehabilitation of Flood Control and Drainage Structure - Section 2</h3>
-                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Magat River, Bangar Section 2, Brgy. Bangar, Solano, Nueva Vizcaya</p>
+                        <h3>Construction of Flood Control Structure, Dulong Bayan (Phase III)</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Dulong Bayan, San Jose del Monte, Bulacan</p>
                     </div>
                     <div class="infra-project-details">
                         <div class="infra-detail-row">
                             <div class="infra-detail-col">
-                                <span class="infra-detail-label">Type of Work</span>
-                                <span class="infra-detail-value">Rehabilitation / Major Repair of Flood Control Structure</span>
-                            </div>
-                            <div class="infra-detail-col">
                                 <span class="infra-detail-label">Contractor</span>
-                                <span class="infra-detail-value">Shanley Construction</span>
+                                <span class="infra-detail-value">L.R. TIQUI BUILDERS, INC.</span>
                             </div>
                             <div class="infra-detail-col infra-detail-cost">
                                 <span class="infra-detail-label">Contract Cost</span>
-                                <span class="infra-detail-value">₱29,700,000</span>
+                                <span class="infra-detail-value">₱96,496,572.72</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">October 16, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection, Hulo-Kaban</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Brgy. Kaypian, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ROYAL CROWN MONARCH CONSTRUCTION & SUPPLIES CORP.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱96,455,909.00</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">July 3, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection, Brgy. Gumaok East - Central</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Gumaok East-Central, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ST. MATTHEW GEN. CONTRACTOR & DEVELOPMENT CORP.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱96,471,127.99</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">May 18, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
+                        </div>
+                        <h3>Construction of Flood Control Structure, Barangay Bagong Buhay</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Bagong Buhay, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">TRIPLE 8 CONSTRUCTION & SUPPLY, INC.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱95,051,178.88</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">April 25, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
+                        </div>
+                        <h3>Construction of Flood Control Structure, Panaklayan</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Graceville to Barangay Gaya-gaya, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ROYAL CROWN MONARCH CONSTRUCTION & SUPPLIES CORP.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱96,496,179.81</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">March 8, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2023</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection Structure, Phase 3B - Carissa 3-A</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Brgy. Kaypian, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ALPHA & OMEGA GEN. CONTRACTOR & DEVELOPMENT CORP.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱48,997,036.71</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">January 2, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2022 Projects -->
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2022</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection Structure, Brgy. Kaybanban</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Kaybanban, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">E.L. ANOLIN CONSTRUCTION</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱38,611,537.31</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">December 21, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2022</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection, Sapang Palay Proper</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Sapang Palay Proper, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ALPHA & OMEGA / ELITE GENERAL CONTRACTOR</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱92,676,125.88</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">December 12, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2022</span>
+                            <span class="infra-tag-category"><i class="bi bi-triangle"></i> Slope Protection</span>
+                        </div>
+                        <h3>Construction of Slope Protection Structure, Brgy. San Roque</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay San Roque, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">C.T. LEONCIO CONSTRUCTION & TRADING</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱39,197,202.76</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">November 29, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infra-project-footer">
+                        <span class="infra-source"><i class="bi bi-info-circle"></i> Source: Sumbong sa Pangulo</span>
+                        <a href="https://sumbongsapangulo.ph/flood-control-map/" target="_blank" rel="noopener noreferrer" class="infra-link">
+                            View on Map <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="infra-project-v5">
+                    <div class="infra-project-main">
+                        <div class="infra-project-tags">
+                            <span class="infra-tag-year">2022</span>
+                            <span class="infra-tag-category"><i class="bi bi-water"></i> Flood Control</span>
+                        </div>
+                        <h3>Construction of Flood Control Structures, North Diamond</h3>
+                        <p class="infra-location"><i class="bi bi-geo-alt"></i> Barangay Maharlika, San Jose del Monte, Bulacan</p>
+                    </div>
+                    <div class="infra-project-details">
+                        <div class="infra-detail-row">
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Contractor</span>
+                                <span class="infra-detail-value">ST. MATTHEW GEN. CONTRACTOR & DEVELOPMENT CORP.</span>
+                            </div>
+                            <div class="infra-detail-col infra-detail-cost">
+                                <span class="infra-detail-label">Contract Cost</span>
+                                <span class="infra-detail-value">₱38,609,812.08</span>
+                            </div>
+                            <div class="infra-detail-col">
+                                <span class="infra-detail-label">Completion Date</span>
+                                <span class="infra-detail-value">October 17, 2022</span>
                             </div>
                         </div>
                     </div>
@@ -413,24 +850,36 @@
             </div>
         </section>
 
+        <section class="infra-section-v5 infra-section-alt animate-on-scroll">
+            <div class="container">
+                <div class="infra-header-v5">
+                    <span class="infra-label-v5"><i class="bi bi-building"></i> National Government Projects</span>
+                    <h2>DPWH Infrastructure Projects in San Jose del Monte City</h2>
+                    <p>Implementing Agency: Bulacan 2nd District Engineering Office</p>
+                </div>
+
+                <div id="dpwh-projects-container"></div>
+
+                <p class="sre-source dpwh-source-margin"><i class="bi bi-info-circle"></i> Source: <a href="https://transparency.dpwh.gov.ph/" target="_blank" rel="noopener noreferrer">DPWH Transparency Portal</a></p>
+            </div>
+        </section>
+
     </main>
     <footer class="site-footer">
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -442,25 +891,24 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
-                    <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.12</span>
                 </div>
             </div>
         </div>
@@ -471,5 +919,7 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/transparency-v2.js"></script>
+    <script defer src="../assets/js/dpwh-projects.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 </html>

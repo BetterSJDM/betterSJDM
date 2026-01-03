@@ -1,54 +1,97 @@
 {
     "mayor": {
-        "name": "Hon. Philip A. Dacayo",
-        "title": "Municipal Mayor",
+        "name": "Hon. Florida B. Robes",
+        "title": "City Mayor",
+        "email": "om.csjdm@gmail.com",
+        "phone": "(044) 919-7370 Local 3110",
         "image": "assets/images/officials/mayor.jpg"
     },
     "vice_mayor": {
-        "name": "Hon. Eduardo D. Tiongson",
-        "title": "Municipal Vice Mayor",
+        "name": "Hon. Arlene C. Bartolomé-Arciaga",
+        "title": "City Vice Mayor",
+        "email": "ovm.csjdm001@gmail.com",
+        "phone": "(044) 815-6467",
         "image": "assets/images/officials/vice-mayor.jpg"
     },
     "councilors": [
         {
-            "name": "Hon. Councilor One",
-            "title": "SB Member",
+            "name": "Hon. Benjamin G. Acibal, Jr.",
+            "title": "SP Member",
+            "committees": "Finance, Budget and Appropriations; Games and Amusement",
             "image": "assets/images/officials/sb1.jpg"
         },
         {
-            "name": "Hon. Councilor Two",
-            "title": "SB Member",
+            "name": "Hon. Celso G. Francisco",
+            "title": "SP Member",
+            "committees": "Education and Culture; Housing, Zoning, Subdivision & Land Disputes; Transportation and Communications",
             "image": "assets/images/officials/sb2.jpg"
         },
         {
-            "name": "Hon. Councilor Three",
-            "title": "SB Member",
+            "name": "Hon. Julieta D. Abela",
+            "title": "SP Member",
+            "committees": "Livelihood and Cooperatives; Tourism",
             "image": "assets/images/officials/sb3.jpg"
         },
         {
-            "name": "Hon. Councilor Four",
-            "title": "SB Member",
+            "name": "Hon. Vanessa Michelle S. Roquero, MD.",
+            "title": "SP Member",
+            "committees": "Ways and Means; Ethics and Privileges; Environmental Management",
             "image": "assets/images/officials/sb4.jpg"
         },
         {
-            "name": "Hon. Councilor Five",
-            "title": "SB Member",
+            "name": "Hon. Reina Rhodora I. Capa-Salentes",
+            "title": "SP Member",
+            "committees": "Food, Agriculture and Agrarian Reform; Urban Poor and Human Rights",
             "image": "assets/images/officials/sb5.jpg"
         },
         {
-            "name": "Hon. Councilor Six",
-            "title": "SB Member",
+            "name": "Hon. Nolly D. Concepcion",
+            "title": "SP Member",
+            "committees": "Public Safety, Security and Traffic Management; Rules, Laws, Ordinances & Privileges",
             "image": "assets/images/officials/sb6.jpg"
         },
         {
-            "name": "Hon. Councilor Seven",
-            "title": "SB Member",
+            "name": "Hon. Criztopher B. Tiu",
+            "title": "SP Member",
+            "committees": "Justice and Good Government; Legislative Backstopping and Oversight",
             "image": "assets/images/officials/sb7.jpg"
         },
         {
-            "name": "Hon. Councilor Eight",
-            "title": "SB Member",
+            "name": "Hon. Oliver M. Robes",
+            "title": "SP Member",
+            "committees": "Trade, Commerce and Industry; Labor and Employment",
             "image": "assets/images/officials/sb8.jpg"
+        },
+        {
+            "name": "Hon. Rosalyn C. Cabuco, MD.",
+            "title": "SP Member",
+            "committees": "Women, Family Welfare & Social Services; Health & Sanitation",
+            "image": "assets/images/officials/sb9.jpg"
+        },
+        {
+            "name": "Hon. Victorino H. Gerona, Jr.",
+            "title": "SP Member",
+            "committees": "Public Utilities and Facilities & Public Works; Markets and Slaughterhouses",
+            "image": "assets/images/officials/sb10.jpg"
+        },
+        {
+            "name": "Hon. Zosimo B. Lorenzo",
+            "title": "Liga ng mga Barangay President",
+            "committees": "Barangay Affairs",
+            "image": "assets/images/officials/sb11.jpg"
+        },
+        {
+            "name": "Hon. Zymond Kiel D. Ipio",
+            "title": "SK Federation President",
+            "committees": "Youth Development and Sports",
+            "image": "assets/images/officials/sb12.jpg"
+        },
+        {
+            "name": "Hon. Benjamin V. San Jose",
+            "title": "IPMR",
+            "committees": "Cultural Minorities and Indigenous Group",
+            "image": "assets/images/officials/sb13.jpg"
         }
     ]
 }
+

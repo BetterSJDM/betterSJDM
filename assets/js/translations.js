@@ -1,7 +1,7 @@
 /**
- * Better Solano - Enhanced Translation System
+ * Better SJDM - Enhanced Translation System
  * Supports: English (en), Filipino (fil), Ilocano (ilo)
- * Updated: 2025-12-10
+ * Updated: 2026-01-01
  */
 
 const translations = {
@@ -21,10 +21,10 @@ const translations = {
         "nav-privacy": "Privacy",
         "nav-terms": "Terms",
         "nav-accessibility": "Accessibility",
-        
+
         // Statistics Page
-        "stats-title": "Municipal Statistics",
-        "stats-subtitle": "Data and statistics about Solano, Nueva Vizcaya",
+        "stats-title": "City Statistics",
+        "stats-subtitle": "Data and statistics about San Jose del Monte City, Bulacan",
         "stats-demographics": "Demographics Overview",
         "stats-economic": "Economic Indicators",
         "stats-barangay": "Population by Barangay",
@@ -33,7 +33,7 @@ const translations = {
         "stats-density": "Population Density",
         "stats-households": "Households",
         "stats-growth-rate": "Growth Rate",
-        
+
         // Breadcrumbs
         "breadcrumb-home": "Home",
         "breadcrumb-services": "Services",
@@ -48,10 +48,10 @@ const translations = {
         "breadcrumb-sitemap": "Sitemap",
         "breadcrumb-privacy": "Privacy Policy",
         "breadcrumb-terms": "Terms of Use",
-        
+
         // Hero Section
-        "hero-welcome": "Welcome to BetterSolano.org",
-        "hero-subtitle": "Access government services, information, and resources for the people of Solano, Nueva Vizcaya.",
+        "hero-welcome": "Welcome to BetterSJDM",
+        "hero-subtitle": "Access government services, information, and resources for the people of San Jose del Monte City, Bulacan.",
         "hero-browse": "Browse Services",
         "hero-contact": "Contact Us",
         "hero-search-placeholder": "Search for services...",
@@ -76,20 +76,20 @@ const translations = {
         "btn-download": "Download",
         "btn-get-started": "Get Started",
         "btn-submit": "Submit",
-        
+
         // Latest Updates
         "section-updates": "Latest Updates",
         "btn-view-all": "View All",
         "btn-read-more": "Read More",
-        
-        // Municipal Leadership
-        "section-leadership": "Municipal Leadership",
-        "title-mayor": "Municipal Mayor",
-        "title-vice-mayor": "Municipal Vice Mayor",
+
+        // City Leadership
+        "section-leadership": "City Leadership",
+        "title-mayor": "City Mayor",
+        "title-vice-mayor": "City Vice Mayor",
         "title-councilor": "Councilor",
         "title-secretary": "Secretary",
         "btn-view-officials": "View All Officials",
-        
+
         // Contact Section
         "section-contact": "Contact Information",
         "contact-phone": "Phone",
@@ -98,20 +98,20 @@ const translations = {
         "contact-visit": "Visit Us",
         "contact-hours": "Mon-Fri: 8:00 AM - 5:00 PM",
         "contact-response": "We'll respond within 24 hours",
-        "contact-municipal-hall": "Municipal Hall",
+        "contact-municipal-hall": "City Hall",
         "contact-location": "Location",
         "contact-directions": "Get Directions",
-        
+
         // Footer
-        "footer-title": "Better Solano",
-        "footer-desc": "A service-first information portal for the Municipality of Solano, Nueva Vizcaya.",
+        "footer-title": "Better SJDM",
+        "footer-desc": "A service-first information portal for the City Government of San Jose del Monte, Bulacan.",
         "footer-quick-links": "Quick Links",
         "footer-all-services": "All Services",
         "footer-officials": "Officials",
         "footer-contact-us": "Contact Us",
         "footer-faq": "FAQ",
         "footer-contact": "Contact",
-        "footer-copyright": "Better Solano. All rights reserved.",
+        "footer-copyright": "Better SJDM. All rights reserved.",
         "accessibility-statement": "Accessibility Statement",
         "footer-privacy": "Privacy Policy",
         "footer-terms": "Terms of Use",
@@ -120,8 +120,8 @@ const translations = {
         "footer-contribute": "Contribute code with us",
 
         // Services Page
-        "services-title": "Municipal Services Directory",
-        "services-subtitle": "Browse all services offered by the Municipality of Solano",
+        "services-title": "City Services Directory",
+        "services-subtitle": "Browse all services offered by the City Government of San Jose del Monte",
         "search-placeholder": "Search services...",
         "search-no-results": "No services found",
         "search-try-different": "Try different keywords or browse categories below",
@@ -141,7 +141,7 @@ const translations = {
         "life-education": "Education & Scholarship",
         "life-employment": "Looking for Employment",
         "life-property": "Property Matters",
-        
+
         // Service Categories
         "cat-certificates": "Certificates & Vital Records",
         "cat-certificates-desc": "Birth, death, marriage certificates, and other vital records.",
@@ -166,7 +166,7 @@ const translations = {
         "cat-online": "Online Services",
         "cat-online-desc": "Digital services available through Filipizen and other online platforms.",
         "cat-government": "Government Services",
-        "cat-government-desc": "General municipal services and administrative functions.",
+        "cat-government-desc": "General city services and administrative functions.",
 
         // Service Details
         "service-requirements": "Requirements",
@@ -188,24 +188,24 @@ const translations = {
         "service-varies": "Varies",
         "service-same-day": "Same Day",
         "service-instant": "Instant",
-        
+
         // Government Page
         "gov-title": "Government Structure & Officials",
-        "gov-subtitle": "Meet the leadership and offices serving Solano",
+        "gov-subtitle": "Meet the leadership and offices serving San Jose del Monte City",
         "gov-executive": "Executive Branch",
-        "gov-sb-members": "Sangguniang Bayan Members",
-        "gov-sb-subtitle": "Municipal Councilors serving the people of Solano",
+        "gov-sb-members": "Sangguniang Panlungsod Members",
+        "gov-sb-subtitle": "City Councilors serving the people of SJDM",
         "gov-departments": "Department Heads & Key Offices",
-        "gov-dept-subtitle": "Municipal offices providing services to citizens",
-        "gov-barangays": "Barangays of Solano",
-        "gov-barangays-count": "22 Barangays serving our community",
+        "gov-dept-subtitle": "City offices providing services to citizens",
+        "gov-barangays": "Barangays of SJDM",
+        "gov-barangays-count": "62 Barangays organized in 2 Legislative Districts",
         "gov-organizational-chart": "Organizational Chart",
         "gov-term": "Term",
-        
+
         // Budget Page
         "budget-title": "Budget & Financial Transparency",
-        "budget-subtitle": "Tracking municipal finances and projects for accountability",
-        "budget-overview": "2025 Municipal Budget Overview",
+        "budget-subtitle": "Tracking city finances and projects for accountability",
+        "budget-overview": "2025 City Budget Overview",
         "budget-total": "Total Budget",
         "budget-personnel": "Personnel Services",
         "budget-operations": "Operations",
@@ -219,10 +219,10 @@ const translations = {
         "budget-response-time": "Average Response Time",
         "budget-annual-report": "Annual Financial Report",
         "budget-quarterly": "Quarterly Report",
-        
+
         // FAQ Page
         "faq-title": "Frequently Asked Questions",
-        "faq-subtitle": "Find answers to common questions about municipal services",
+        "faq-subtitle": "Find answers to common questions about city services",
         "faq-general": "General Questions",
         "faq-certificates": "Certificates & Documents",
         "faq-business": "Business & Permits",
@@ -250,7 +250,7 @@ const translations = {
         "contact-fire": "Fire",
         "contact-medical": "Medical",
         "contact-disaster": "Disaster Response",
-        
+
         // Form Labels
         "form-name": "Full Name",
         "form-email": "Email Address",
@@ -272,7 +272,7 @@ const translations = {
         "form-error": "There was an error sending your message. Please try again.",
         "form-sending": "Sending...",
         "form-clear": "Clear Form",
-        
+
         // Accessibility Page
         "access-title": "Accessibility Statement",
         "access-subtitle": "Our commitment to digital accessibility for all citizens",
@@ -285,7 +285,7 @@ const translations = {
         "access-technical": "Technical Specifications",
         "access-assessment": "Assessment Approach",
         "access-promise": "Our Promise",
-        
+
         // Legislative Page
         "legislative-title": "Legislative Information",
         "legislative-subtitle": "Ordinances, resolutions, and legislative records",
@@ -294,28 +294,28 @@ const translations = {
         "legislative-pending": "Pending",
         "legislative-approved": "Approved",
         "legislative-enacted": "Enacted",
-        
+
         // News Page
         "news-title": "News & Announcements",
-        "news-subtitle": "Latest updates from the Municipality of Solano",
+        "news-subtitle": "Latest updates from the City Government of San Jose del Monte",
         "news-latest": "Latest News",
         "news-announcements": "Announcements",
         "news-events": "Events",
         "news-posted": "Posted",
         "news-by": "By",
-        
+
         // Sitemap Page
         "sitemap-title": "Sitemap",
         "sitemap-subtitle": "Complete directory of all pages on this website",
-        
+
         // Privacy Page
         "privacy-title": "Privacy Policy",
         "privacy-subtitle": "How we collect, use, and protect your information",
-        
+
         // Terms Page
         "terms-title": "Terms of Use",
         "terms-subtitle": "Terms and conditions for using this website",
-        
+
         // Common UI Elements
         "loading": "Loading...",
         "error": "Error",
@@ -383,7 +383,7 @@ const translations = {
         "popular": "Popular",
         "featured": "Featured",
         "recommended": "Recommended",
-        
+
         // Time-related
         "minutes": "minutes",
         "hours": "hours",
@@ -393,16 +393,16 @@ const translations = {
         "same-day": "Same day",
         "instant": "Instant",
         "varies": "Varies",
-        
+
         // Currency
         "peso": "Peso",
         "free": "Free",
-        
+
         // Hotline labels
         "hotline-police": "Police",
         "hotline-fire": "Fire",
-        "hotline-mswdo": "MSWDO",
-        "hotline-mdrrmo": "MDRRMO",
+        "hotline-mswdo": "CSWDO",
+        "hotline-mdrrmo": "CDRRMO",
         "hotline-dilg": "DILG"
     },
 
@@ -423,10 +423,10 @@ const translations = {
         "nav-privacy": "Privacy",
         "nav-terms": "Mga Tuntunin",
         "nav-accessibility": "Aksesibilidad",
-        
+
         // Statistics Page
-        "stats-title": "Estadistika ng Munisipalidad",
-        "stats-subtitle": "Datos at estadistika tungkol sa Solano, Nueva Vizcaya",
+        "stats-title": "Estadistika ng Lungsod",
+        "stats-subtitle": "Datos at estadistika tungkol sa Lungsod ng San Jose del Monte, Bulacan",
         "stats-demographics": "Pangkalahatang-ideya ng Demograpiya",
         "stats-economic": "Mga Tagapagpahiwatig ng Ekonomiya",
         "stats-barangay": "Populasyon Ayon sa Barangay",
@@ -435,7 +435,7 @@ const translations = {
         "stats-density": "Densidad ng Populasyon",
         "stats-households": "Mga Sambahayan",
         "stats-growth-rate": "Rate ng Paglago",
-        
+
         // Breadcrumbs
         "breadcrumb-home": "Tahanan",
         "breadcrumb-services": "Mga Serbisyo",
@@ -450,10 +450,10 @@ const translations = {
         "breadcrumb-sitemap": "Mapa ng Site",
         "breadcrumb-privacy": "Patakaran sa Privacy",
         "breadcrumb-terms": "Mga Tuntunin ng Paggamit",
-        
+
         // Hero Section
-        "hero-welcome": "Maligayang Pagdating sa BetterSolano.org",
-        "hero-subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Solano, Nueva Vizcaya.",
+        "hero-welcome": "Maligayang Pagdating sa BetterSJDM",
+        "hero-subtitle": "I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Lungsod ng San Jose del Monte, Bulacan.",
         "hero-browse": "Tingnan ang mga Serbisyo",
         "hero-contact": "Makipag-ugnayan sa Amin",
         "hero-search-placeholder": "Maghanap ng serbisyo...",
@@ -478,20 +478,20 @@ const translations = {
         "btn-download": "I-download",
         "btn-get-started": "Magsimula",
         "btn-submit": "Isumite",
-        
+
         // Latest Updates
         "section-updates": "Pinakabagong Balita",
         "btn-view-all": "Tingnan Lahat",
         "btn-read-more": "Magbasa Pa",
-        
-        // Municipal Leadership
+
+        // City Leadership
         "section-leadership": "Pamunuan ng Munisipalidad",
         "title-mayor": "Punong Bayan",
         "title-vice-mayor": "Bise Punong Bayan",
         "title-councilor": "Konsehal",
         "title-secretary": "Kalihim",
         "btn-view-officials": "Tingnan Lahat ng Opisyal",
-        
+
         // Contact Section
         "section-contact": "Impormasyon sa Pakikipag-ugnayan",
         "contact-phone": "Telepono",
@@ -503,17 +503,17 @@ const translations = {
         "contact-municipal-hall": "Munisipyo",
         "contact-location": "Lokasyon",
         "contact-directions": "Kumuha ng Direksyon",
-        
+
         // Footer
-        "footer-title": "Better Solano",
-        "footer-desc": "Isang portal ng impormasyon na inuuna ang serbisyo para sa Munisipalidad ng Solano, Nueva Vizcaya.",
+        "footer-title": "Better SJDM",
+        "footer-desc": "Isang portal ng impormasyon na inuuna ang serbisyo para sa Pamahalaang Lungsod ng San Jose del Monte, Bulacan.",
         "footer-quick-links": "Mabilis na Links",
         "footer-all-services": "Lahat ng Serbisyo",
         "footer-officials": "Mga Opisyal",
         "footer-contact-us": "Makipag-ugnayan sa Amin",
         "footer-faq": "Mga Madalas Itanong",
         "footer-contact": "Makipag-ugnayan",
-        "footer-copyright": "Better Solano. Nakalaan ang lahat ng karapatan.",
+        "footer-copyright": "Better SJDM. Nakalaan ang lahat ng karapatan.",
         "accessibility-statement": "Pahayag ng Aksesibilidad",
         "footer-privacy": "Patakaran sa Privacy",
         "footer-terms": "Mga Tuntunin ng Paggamit",
@@ -523,7 +523,7 @@ const translations = {
 
         // Services Page
         "services-title": "Direktoryo ng Serbisyong Munisipal",
-        "services-subtitle": "Tingnan ang lahat ng serbisyong inaalok ng Munisipalidad ng Solano",
+        "services-subtitle": "Tingnan ang lahat ng serbisyong inaalok ng Pamahalaang Lungsod ng San Jose del Monte",
         "search-placeholder": "Maghanap ng serbisyo...",
         "search-no-results": "Walang nahanap na serbisyo",
         "search-try-different": "Subukan ang ibang mga keyword o tingnan ang mga kategorya sa ibaba",
@@ -543,7 +543,7 @@ const translations = {
         "life-education": "Edukasyon at Iskolarship",
         "life-employment": "Naghahanap ng Trabaho",
         "life-property": "Mga Bagay sa Ari-arian",
-        
+
         // Service Categories
         "cat-certificates": "Mga Sertipiko at Vital Records",
         "cat-certificates-desc": "Sertipiko ng kapanganakan, kamatayan, kasal, at iba pang vital records.",
@@ -590,20 +590,20 @@ const translations = {
         "service-varies": "Nag-iiba",
         "service-same-day": "Parehong Araw",
         "service-instant": "Agad-agad",
-        
+
         // Government Page
         "gov-title": "Istruktura at Opisyal ng Pamahalaan",
-        "gov-subtitle": "Kilalanin ang pamunuan at mga opisina na naglilingkod sa Solano",
+        "gov-subtitle": "Kilalanin ang pamunuan at mga opisina na naglilingkod sa Lungsod ng San Jose del Monte",
         "gov-executive": "Ehekutibong Sangay",
-        "gov-sb-members": "Mga Miyembro ng Sangguniang Bayan",
-        "gov-sb-subtitle": "Mga Konsehal na naglilingkod sa mga tao ng Solano",
+        "gov-sb-members": "Mga Miyembro ng Sangguniang Panlungsod",
+        "gov-sb-subtitle": "Mga Konsehal na naglilingkod sa mga tao ng SJDM",
         "gov-departments": "Mga Pinuno ng Departamento at Pangunahing Opisina",
         "gov-dept-subtitle": "Mga opisina ng munisipalidad na nagbibigay ng serbisyo sa mga mamamayan",
-        "gov-barangays": "Mga Barangay ng Solano",
-        "gov-barangays-count": "22 Barangay na naglilingkod sa ating komunidad",
+        "gov-barangays": "Mga Barangay ng SJDM",
+        "gov-barangays-count": "62 Barangay na nahahati sa 2 Distrito Lehislatibo",
         "gov-organizational-chart": "Tsart ng Organisasyon",
         "gov-term": "Termino",
-        
+
         // Budget Page
         "budget-title": "Badyet at Transparensiya sa Pananalapi",
         "budget-subtitle": "Pagsubaybay sa pananalapi at proyekto ng munisipalidad para sa pananagutan",
@@ -621,7 +621,7 @@ const translations = {
         "budget-response-time": "Average na Oras ng Pagtugon",
         "budget-annual-report": "Taunang Ulat sa Pananalapi",
         "budget-quarterly": "Quarterly na Ulat",
-        
+
         // FAQ Page
         "faq-title": "Mga Madalas Itanong",
         "faq-subtitle": "Hanapin ang mga sagot sa mga karaniwang tanong tungkol sa mga serbisyong munisipal",
@@ -652,7 +652,7 @@ const translations = {
         "contact-fire": "Bumbero",
         "contact-medical": "Medikal",
         "contact-disaster": "Pagtugon sa Sakuna",
-        
+
         // Form Labels
         "form-name": "Buong Pangalan",
         "form-email": "Email Address",
@@ -674,7 +674,7 @@ const translations = {
         "form-error": "May error sa pagpapadala ng iyong mensahe. Pakisubukan muli.",
         "form-sending": "Ipinapadala...",
         "form-clear": "I-clear ang Form",
-        
+
         // Accessibility Page
         "access-title": "Pahayag ng Aksesibilidad",
         "access-subtitle": "Ang aming pangako sa digital na aksesibilidad para sa lahat ng mamamayan",
@@ -687,7 +687,7 @@ const translations = {
         "access-technical": "Mga Teknikal na Detalye",
         "access-assessment": "Paraan ng Pagsusuri",
         "access-promise": "Ang Aming Pangako",
-        
+
         // Legislative Page
         "legislative-title": "Impormasyon sa Lehislatura",
         "legislative-subtitle": "Mga ordinansa, resolusyon, at mga rekord ng lehislatura",
@@ -696,28 +696,28 @@ const translations = {
         "legislative-pending": "Nakabinbin",
         "legislative-approved": "Naaprubahan",
         "legislative-enacted": "Naisabatas",
-        
+
         // News Page
         "news-title": "Balita at Anunsyo",
-        "news-subtitle": "Pinakabagong balita mula sa Munisipalidad ng Solano",
+        "news-subtitle": "Pinakabagong balita mula sa Pamahalaang Lungsod ng San Jose del Monte",
         "news-latest": "Pinakabagong Balita",
         "news-announcements": "Mga Anunsyo",
         "news-events": "Mga Kaganapan",
         "news-posted": "Nai-post",
         "news-by": "Ni",
-        
+
         // Sitemap Page
         "sitemap-title": "Mapa ng Site",
         "sitemap-subtitle": "Kumpletong direktoryo ng lahat ng pahina sa website na ito",
-        
+
         // Privacy Page
         "privacy-title": "Patakaran sa Privacy",
         "privacy-subtitle": "Paano namin kinokolekta, ginagamit, at pinoprotektahan ang iyong impormasyon",
-        
+
         // Terms Page
         "terms-title": "Mga Tuntunin ng Paggamit",
         "terms-subtitle": "Mga tuntunin at kondisyon sa paggamit ng website na ito",
-        
+
         // Common UI Elements
         "loading": "Naglo-load...",
         "error": "Error",
@@ -785,7 +785,7 @@ const translations = {
         "popular": "Sikat",
         "featured": "Tampok",
         "recommended": "Inirerekomenda",
-        
+
         // Time-related
         "minutes": "minuto",
         "hours": "oras",
@@ -795,16 +795,16 @@ const translations = {
         "same-day": "Parehong araw",
         "instant": "Agad-agad",
         "varies": "Nag-iiba",
-        
+
         // Currency
         "peso": "Piso",
         "free": "Libre",
-        
+
         // Hotline labels
         "hotline-police": "Pulis",
         "hotline-fire": "Bumbero",
-        "hotline-mswdo": "MSWDO",
-        "hotline-mdrrmo": "MDRRMO",
+        "hotline-mswdo": "CSWDO",
+        "hotline-mdrrmo": "CDRRMO",
         "hotline-dilg": "DILG"
     },
 
@@ -825,10 +825,10 @@ const translations = {
         "nav-privacy": "Pribado",
         "nav-terms": "Dagiti Kondision",
         "nav-accessibility": "Aksesibilidad",
-        
+
         // Statistics Page
-        "stats-title": "Estadistika ti Munisipalidad",
-        "stats-subtitle": "Datos ken estadistika maipapan iti Solano, Nueva Vizcaya",
+        "stats-title": "Estadistika ti Siudad",
+        "stats-subtitle": "Datos ken estadistika maipapan iti Siudad ti San Jose del Monte, Bulacan",
         "stats-demographics": "Pakabuklan ti Demograpiya",
         "stats-economic": "Dagiti Pagilasinan ti Ekonomiya",
         "stats-barangay": "Populasion Sigun iti Barangay",
@@ -837,7 +837,7 @@ const translations = {
         "stats-density": "Densidad ti Populasion",
         "stats-households": "Dagiti Sangakabbalayan",
         "stats-growth-rate": "Rate ti Panagdakkel",
-        
+
         // Breadcrumbs
         "breadcrumb-home": "Pagtaengan",
         "breadcrumb-services": "Dagiti Serbisio",
@@ -852,10 +852,10 @@ const translations = {
         "breadcrumb-sitemap": "Mapa ti Site",
         "breadcrumb-privacy": "Pagannurotan ti Pribado",
         "breadcrumb-terms": "Dagiti Kondision ti Panagusar",
-        
+
         // Hero Section
-        "hero-welcome": "Naragsak a Panangyawat iti BetterSolano.org",
-        "hero-subtitle": "Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Solano, Nueva Vizcaya.",
+        "hero-welcome": "Naragsak a Panangyawat iti BetterSJDM",
+        "hero-subtitle": "Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Siudad ti San Jose del Monte, Bulacan.",
         "hero-browse": "Kitaen dagiti Serbisio",
         "hero-contact": "Kontaken Dakami",
         "hero-search-placeholder": "Agsapul ti serbisio...",
@@ -880,20 +880,20 @@ const translations = {
         "btn-download": "I-download",
         "btn-get-started": "Mangrugi",
         "btn-submit": "Iysubmit",
-        
+
         // Latest Updates
         "section-updates": "Kabarbaro a Damag",
         "btn-view-all": "Kitaen Amin",
         "btn-read-more": "Agbasa Pay",
-        
-        // Municipal Leadership
+
+        // City Leadership
         "section-leadership": "Panangidaulo ti Munisipalidad",
         "title-mayor": "Mayor ti Munisipalidad",
         "title-vice-mayor": "Bise Mayor ti Munisipalidad",
         "title-councilor": "Konsehal",
         "title-secretary": "Sekretario",
         "btn-view-officials": "Kitaen Amin nga Opisial",
-        
+
         // Contact Section
         "section-contact": "Impormasion ti Panagkontak",
         "contact-phone": "Telepono",
@@ -905,17 +905,17 @@ const translations = {
         "contact-municipal-hall": "Munisipio",
         "contact-location": "Lokasion",
         "contact-directions": "Alaen ti Direksion",
-        
+
         // Footer
-        "footer-title": "Better Solano",
-        "footer-desc": "Maysa a portal ti impormasion a mangipangpangruna ti serbisio para iti Munisipalidad ti Solano, Nueva Vizcaya.",
+        "footer-title": "Better SJDM",
+        "footer-desc": "Maysa a portal ti impormasion a mangipangpangruna ti serbisio para iti Gobierno ti Siudad ti San Jose del Monte, Bulacan.",
         "footer-quick-links": "Dagiti Napartak a Silpo",
         "footer-all-services": "Amin a Serbisio",
         "footer-officials": "Dagiti Opisial",
         "footer-contact-us": "Kontaken Dakami",
         "footer-faq": "Masansan a Maisaludsod",
         "footer-contact": "Kontak",
-        "footer-copyright": "Better Solano. Amin a karbengan ket naireserbado.",
+        "footer-copyright": "Better SJDM. Amin a karbengan ket naireserbado.",
         "accessibility-statement": "Pahayag ti Aksesibilidad",
         "footer-privacy": "Pagannurotan ti Pribado",
         "footer-terms": "Dagiti Kondision ti Panagusar",
@@ -925,7 +925,7 @@ const translations = {
 
         // Services Page
         "services-title": "Direktorio ti Serbisio ti Munisipalidad",
-        "services-subtitle": "Kitaen amin a serbisio nga i-alok ti Munisipalidad ti Solano",
+        "services-subtitle": "Kitaen amin a serbisio nga i-alok ti Gobierno ti Siudad ti San Jose del Monte",
         "search-placeholder": "Agsapul ti serbisio...",
         "search-no-results": "Awan ti nasarakan a serbisio",
         "search-try-different": "Padasem ti sabali a keyword wenno kitaem dagiti kategorya iti baba",
@@ -945,7 +945,7 @@ const translations = {
         "life-education": "Edukasion ken Iskolarship",
         "life-employment": "Agsapsapul ti Trabaho",
         "life-property": "Dagiti Banag ti Sanikua",
-        
+
         // Service Categories
         "cat-certificates": "Dagiti Sertipiko ken Vital Records",
         "cat-certificates-desc": "Sertipiko ti pannakayanak, ipapatay, kasar, ken dadduma pay a vital records.",
@@ -992,20 +992,20 @@ const translations = {
         "service-varies": "Agduduma",
         "service-same-day": "Iti Isu Met Laeng nga Aldaw",
         "service-instant": "Dagus",
-        
+
         // Government Page
         "gov-title": "Estruktura ken Opisial ti Gobierno",
-        "gov-subtitle": "Ammoen dagiti lider ken opisina a mangserbiserbisio iti Solano",
+        "gov-subtitle": "Ammoen dagiti lider ken opisina a mangserbiserbisio iti Siudad ti San Jose del Monte",
         "gov-executive": "Ehekutibo a Sanga",
-        "gov-sb-members": "Dagiti Kameng ti Sangguniang Bayan",
-        "gov-sb-subtitle": "Dagiti Konsehal a mangserbiserbisio kadagiti umili ti Solano",
+        "gov-sb-members": "Dagiti Kameng ti Sangguniang Panlungsod",
+        "gov-sb-subtitle": "Dagiti Konsehal a mangserbiserbisio kadagiti umili ti SJDM",
         "gov-departments": "Dagiti Ulo ti Departamento ken Kangrunaan nga Opisina",
         "gov-dept-subtitle": "Dagiti opisina ti munisipalidad a mangted ti serbisio kadagiti umili",
-        "gov-barangays": "Dagiti Barangay ti Solano",
-        "gov-barangays-count": "22 a Barangay a mangserbiserbisio iti komunidad tayo",
+        "gov-barangays": "Dagiti Barangay ti SJDM",
+        "gov-barangays-count": "59 a Barangay a mangserbiserbisio iti komunidad tayo",
         "gov-organizational-chart": "Tsart ti Organisasion",
         "gov-term": "Termino",
-        
+
         // Budget Page
         "budget-title": "Badyet ken Kinasiluag ti Pinansia",
         "budget-subtitle": "Panagsubaybay ti pinansia ken proyekto ti munisipalidad para iti panagresponsable",
@@ -1023,7 +1023,7 @@ const translations = {
         "budget-response-time": "Average a Tiempo ti Panagsungbat",
         "budget-annual-report": "Tinawen a Report ti Pinansia",
         "budget-quarterly": "Quarterly a Report",
-        
+
         // FAQ Page
         "faq-title": "Dagiti Masansan a Maisaludsod",
         "faq-subtitle": "Biroken dagiti sungbat kadagiti gagangay a saludsod maipapan kadagiti serbisio ti munisipalidad",
@@ -1054,7 +1054,7 @@ const translations = {
         "contact-fire": "Bumbero",
         "contact-medical": "Medikal",
         "contact-disaster": "Panagsungbat iti Didigra",
-        
+
         // Form Labels
         "form-name": "Kompleto a Nagan",
         "form-email": "Email Address",
@@ -1076,7 +1076,7 @@ const translations = {
         "form-error": "Adda error iti panangiypatulod ti mensahem. Pangngaasi a padasem manen.",
         "form-sending": "Agiypatpatulod...",
         "form-clear": "Dalusan ti Form",
-        
+
         // Accessibility Page
         "access-title": "Pahayag ti Aksesibilidad",
         "access-subtitle": "Ti kari mi iti digital nga aksesibilidad para iti amin nga umili",
@@ -1089,7 +1089,7 @@ const translations = {
         "access-technical": "Dagiti Teknikal a Detalye",
         "access-assessment": "Pamuspusan ti Panag-assess",
         "access-promise": "Ti Kari Mi",
-        
+
         // Legislative Page
         "legislative-title": "Impormasion ti Lehislatura",
         "legislative-subtitle": "Dagiti ordinansa, resolusion, ken rekord ti lehislatura",
@@ -1098,28 +1098,28 @@ const translations = {
         "legislative-pending": "Nakabinbin",
         "legislative-approved": "Naaprubaran",
         "legislative-enacted": "Naisabatas",
-        
+
         // News Page
         "news-title": "Damag ken Anunsiasion",
-        "news-subtitle": "Kabarbaro a damag manipud iti Munisipalidad ti Solano",
+        "news-subtitle": "Kabarbaro a damag manipud iti Gobierno ti Siudad ti San Jose del Monte",
         "news-latest": "Kabarbaro a Damag",
         "news-announcements": "Dagiti Anunsiasion",
         "news-events": "Dagiti Pasamak",
         "news-posted": "Naipablaak",
         "news-by": "Ni",
-        
+
         // Sitemap Page
         "sitemap-title": "Mapa ti Site",
         "sitemap-subtitle": "Kompleto a direktorio ti amin a panid iti daytoy a website",
-        
+
         // Privacy Page
         "privacy-title": "Pagannurotan ti Pribado",
         "privacy-subtitle": "Kasano mi a kolektaen, usaren, ken protektaran ti impormasionmo",
-        
+
         // Terms Page
         "terms-title": "Dagiti Kondision ti Panagusar",
         "terms-subtitle": "Dagiti kondision ken termino iti panagusar ti daytoy a website",
-        
+
         // Common UI Elements
         "loading": "Agkarkarga...",
         "error": "Error",
@@ -1187,7 +1187,7 @@ const translations = {
         "popular": "Pagpilian",
         "featured": "Naiparang",
         "recommended": "Nairekomendar",
-        
+
         // Time-related
         "minutes": "minuto",
         "hours": "oras",
@@ -1197,16 +1197,16 @@ const translations = {
         "same-day": "Iti isu met laeng nga aldaw",
         "instant": "Dagus",
         "varies": "Agduduma",
-        
+
         // Currency
         "peso": "Piso",
         "free": "Libre",
-        
+
         // Hotline labels
         "hotline-police": "Polis",
         "hotline-fire": "Bumbero",
-        "hotline-mswdo": "MSWDO",
-        "hotline-mdrrmo": "MDRRMO",
+        "hotline-mswdo": "CSWDO",
+        "hotline-mdrrmo": "CDRRMO",
         "hotline-dilg": "DILG"
     }
 };
@@ -1233,41 +1233,41 @@ const TranslationEngine = {
     },
     initialized: false,
     observers: [],
-    
+
     /**
      * Initialize the translation engine
      */
     init: function() {
         if (this.initialized) return;
-        
+
         // Try to get saved language, then browser preference
         let savedLang = localStorage.getItem('selectedLang');
         if (!savedLang || !this.supportedLangs.includes(savedLang)) {
             savedLang = this.detectBrowserLanguage();
         }
-        
+
         this.currentLang = savedLang;
         this.applyTranslations(this.currentLang);
         this.updateActiveButton(this.currentLang);
         this.setupEventListeners();
         this.setupMutationObserver();
         this.initialized = true;
-        
+
         console.log('[TranslationEngine] Initialized with language:', this.currentLang);
     },
-    
+
     /**
      * Detect browser language preference
      */
     detectBrowserLanguage: function() {
         const browserLang = navigator.language || navigator.userLanguage;
         const langCode = browserLang.split('-')[0].toLowerCase();
-        
+
         // Map common codes
         if (langCode === 'tl' || langCode === 'fil') return 'fil';
         if (langCode === 'ilo') return 'ilo';
         if (langCode === 'en') return 'en';
-        
+
         return this.defaultLang;
     },
 
@@ -1277,7 +1277,7 @@ const TranslationEngine = {
     getTranslation: function(key, lang, params) {
         lang = lang || this.currentLang;
         let translation = null;
-        
+
         // Try current language
         if (translations[lang] && translations[lang][key]) {
             translation = translations[lang][key];
@@ -1286,15 +1286,15 @@ const TranslationEngine = {
         else if (translations[this.defaultLang] && translations[this.defaultLang][key]) {
             translation = translations[this.defaultLang][key];
         }
-        
+
         // Apply parameters if provided
         if (translation && params) {
             translation = this.interpolate(translation, params);
         }
-        
+
         return translation;
     },
-    
+
     /**
      * Interpolate parameters into translation string
      * Usage: getTranslation('greeting', 'en', { name: 'Juan' })
@@ -1305,7 +1305,7 @@ const TranslationEngine = {
             return params.hasOwnProperty(key) ? params[key] : match;
         });
     },
-    
+
     /**
      * Get plural form of translation
      * Usage: getPlural('items', 5, 'en')
@@ -1314,26 +1314,26 @@ const TranslationEngine = {
         lang = lang || this.currentLang;
         const singularKey = key;
         const pluralKey = key + '_plural';
-        
+
         if (count === 1) {
             return this.getTranslation(singularKey, lang, { count: count });
         }
-        
+
         // Try plural form first
         let translation = this.getTranslation(pluralKey, lang, { count: count });
         if (!translation) {
             translation = this.getTranslation(singularKey, lang, { count: count });
         }
-        
+
         return translation;
     },
-    
+
     /**
      * Translate a specific element
      */
     translateElement: function(element, lang) {
         lang = lang || this.currentLang;
-        
+
         // Text content
         const i18nKey = element.getAttribute('data-i18n');
         if (i18nKey) {
@@ -1348,28 +1348,28 @@ const TranslationEngine = {
                 }
             }
         }
-        
+
         // Placeholder
         const placeholderKey = element.getAttribute('data-i18n-placeholder');
         if (placeholderKey) {
             const translation = this.getTranslation(placeholderKey, lang);
             if (translation) element.placeholder = translation;
         }
-        
+
         // Title attribute
         const titleKey = element.getAttribute('data-i18n-title');
         if (titleKey) {
             const translation = this.getTranslation(titleKey, lang);
             if (translation) element.title = translation;
         }
-        
+
         // Aria-label
         const ariaKey = element.getAttribute('data-i18n-aria');
         if (ariaKey) {
             const translation = this.getTranslation(ariaKey, lang);
             if (translation) element.setAttribute('aria-label', translation);
         }
-        
+
         // Alt text for images
         const altKey = element.getAttribute('data-i18n-alt');
         if (altKey) {
@@ -1386,54 +1386,54 @@ const TranslationEngine = {
             console.warn('[TranslationEngine] Language not found:', lang, '- using default');
             lang = this.defaultLang;
         }
-        
+
         const self = this;
-        
+
         // Translate all data-i18n elements
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             self.translateElement(el, lang);
         });
-        
+
         // Translate placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
             self.translateElement(el, lang);
         });
-        
+
         // Translate titles
         document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
             self.translateElement(el, lang);
         });
-        
+
         // Translate aria-labels
         document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
             self.translateElement(el, lang);
         });
-        
+
         // Translate alt texts
         document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
             self.translateElement(el, lang);
         });
-        
+
         // Update document language attribute
         document.documentElement.lang = this.langCodes[lang] || lang;
-        
+
         // Save preference
         this.currentLang = lang;
         localStorage.setItem('selectedLang', lang);
-        
+
         // Dispatch event for other scripts
-        document.dispatchEvent(new CustomEvent('languageChanged', { 
-            detail: { 
-                language: lang, 
+        document.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: {
+                language: lang,
                 langCode: this.langCodes[lang],
                 langName: this.langNames[lang]
             }
         }));
-        
+
         // Notify observers
         this.notifyObservers(lang);
     },
-    
+
     /**
      * Update active state on language buttons
      */
@@ -1445,13 +1445,13 @@ const TranslationEngine = {
             btn.setAttribute('aria-current', isActive ? 'true' : 'false');
         });
     },
-    
+
     /**
      * Setup event listeners for language buttons
      */
     setupEventListeners: function() {
         const self = this;
-        
+
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1461,7 +1461,7 @@ const TranslationEngine = {
                 }
             });
         });
-        
+
         // Also handle select dropdowns
         document.querySelectorAll('.lang-select').forEach(function(select) {
             select.addEventListener('change', function(e) {
@@ -1478,7 +1478,7 @@ const TranslationEngine = {
      */
     setupMutationObserver: function() {
         const self = this;
-        
+
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 mutation.addedNodes.forEach(function(node) {
@@ -1493,7 +1493,7 @@ const TranslationEngine = {
                         )) {
                             self.translateElement(node, self.currentLang);
                         }
-                        
+
                         // Also check children
                         if (node.querySelectorAll) {
                             node.querySelectorAll('[data-i18n], [data-i18n-placeholder], [data-i18n-title], [data-i18n-aria], [data-i18n-alt]').forEach(function(el) {
@@ -1504,13 +1504,13 @@ const TranslationEngine = {
                 });
             });
         });
-        
+
         observer.observe(document.body, {
             childList: true,
             subtree: true
         });
     },
-    
+
     /**
      * Switch to a different language
      */
@@ -1519,28 +1519,28 @@ const TranslationEngine = {
             console.warn('[TranslationEngine] Unsupported language:', lang);
             return false;
         }
-        
+
         this.applyTranslations(lang);
         this.updateActiveButton(lang);
-        
+
         console.log('[TranslationEngine] Switched to:', lang);
         return true;
     },
-    
+
     /**
      * Get current language
      */
     getCurrentLanguage: function() {
         return this.currentLang;
     },
-    
+
     /**
      * Get language name
      */
     getLanguageName: function(lang) {
         return this.langNames[lang || this.currentLang] || lang;
     },
-    
+
     /**
      * Get all supported languages
      */
@@ -1553,7 +1553,7 @@ const TranslationEngine = {
             };
         }, this);
     },
-    
+
     /**
      * Add observer for language changes
      */
@@ -1562,7 +1562,7 @@ const TranslationEngine = {
             this.observers.push(callback);
         }
     },
-    
+
     /**
      * Remove observer
      */
@@ -1572,7 +1572,7 @@ const TranslationEngine = {
             this.observers.splice(index, 1);
         }
     },
-    
+
     /**
      * Notify all observers of language change
      */
@@ -1585,14 +1585,14 @@ const TranslationEngine = {
             }
         });
     },
-    
+
     /**
      * Translate text directly (for dynamic content)
      */
     t: function(key, params) {
         return this.getTranslation(key, this.currentLang, params) || key;
     },
-    
+
     /**
      * Check if a translation key exists
      */

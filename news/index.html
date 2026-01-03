@@ -12,32 +12,32 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Latest news, updates, and announcements from LGU Solano, Nueva Vizcaya. Stay informed about municipal programs, events, and community developments.">
-    <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="Solano news, LGU updates, municipal announcements, Solano Nueva Vizcaya, community news, government updates, local news, municipality announcements">
+    <meta name="description" content="Latest news, updates, and announcements from LGU SJDM. Stay informed about city programs, events, and community developments in San Jose del Monte City.">
+    <meta name="author" content="Jerald A. Pascual">
+    <meta name="keywords" content="San Jose del Monte City news, LGU updates, municipal announcements, San Jose del Monte City Bulacan, community news, government updates, local news, municipality announcements">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/news/">
-    
+    <link rel="canonical" href="https://bettersjdm/news/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/news/">
-    <meta property="og:title" content="News & Updates | BetterSolano.org">
-    <meta property="og:description" content="Latest news, updates, and announcements from LGU Solano, Nueva Vizcaya. Stay informed about municipal programs, events, and community developments.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/news/">
+    <meta property="og:title" content="News & Updates | BetterSJDM">
+    <meta property="og:description" content="Latest news, updates, and announcements from LGU SJDM, . Stay informed about municipal programs, events, and community developments.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:locale" content="en_PH">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://bettersolano.org/news/">
-    <meta name="twitter:title" content="News & Updates | BetterSolano.org">
-    <meta name="twitter:description" content="Latest news, updates, and announcements from LGU Solano, Nueva Vizcaya. Stay informed about municipal programs, events, and community developments.">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <title>News & Updates | BetterSolano.org</title>
+    <meta name="twitter:url" content="https://bettersjdm/news/">
+    <meta name="twitter:title" content="News & Updates | BetterSJDM">
+    <meta name="twitter:description" content="Latest news, updates, and announcements from LGU SJDM, . Stay informed about municipal programs, events, and community developments.">
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <title>News & Updates | BetterSJDM</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
@@ -50,7 +50,7 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -65,35 +65,59 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hotline Bar -->
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
-                
+
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item">
-                        <i class="bi bi-shield-fill"></i>
-                        <span>Police: 0927 400 8033</span>
-                    </a>
-                    <a href="tel:09162840885" class="hotline-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>MSWDO: 0916 284 0885</span>
-                    </a>
-                    <a href="tel:09360620305" class="hotline-item">
-                        <i class="bi bi-fire"></i>
-                        <span>Fire: 0936 062 0305</span>
-                    </a>
-                    <a href="tel:0906188086" class="hotline-item">
-                        <i class="bi bi-building"></i>
-                        <span>DILG: 0906 188 086</span>
-                    </a>
-                    <a href="tel:09263833744" class="hotline-item">
+                    <a href="tel:09366000119" class="hotline-item">
                         <i class="bi bi-exclamation-triangle-fill"></i>
-                        <span>MDRRMO: 0926 383 3744</span>
+                        <span>CDRRMO: 0936 600 0119</span>
                     </a>
-                    <a href="tel:09068195569" class="hotline-item">
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
                         <i class="bi bi-truck"></i>
-                        <span>R2TMC: 0906 819 5569</span>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
                     </a>
                 </div>
             </div>
@@ -105,13 +129,12 @@
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="../">
-                    <img src="../assets/images/logo/better-solano-logo.svg" alt="Municipality of Solano Logo" class="logo-img">
+                    <img src="../assets/images/logo/better-sjdm-logo.png" alt="City of San Jose del Monte Logo" class="logo-img">
                 </a>
             </div>
 
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../" data-i18n="nav-home">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../services/" data-i18n="nav-services">Services</a>
                         <ul class="dropdown-menu">
@@ -137,19 +160,77 @@
                         </ul>
                     </li>
                     <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
@@ -161,9 +242,9 @@
                         <span class="rate-display">1 USD = ₱ --</span>
                     </span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -194,7 +275,7 @@
                 <div class="page-header-content">
                     <span class="page-header-badge"><i class="bi bi-newspaper"></i> News</span>
                     <h1>News & Updates</h1>
-                    <p class="page-header-desc">Stay informed about the latest happenings in Solano</p>
+                    <p class="page-header-desc">Stay informed about the latest happenings in San Jose del Monte City</p>
                 </div>
             </div>
         </section>
@@ -206,48 +287,77 @@
                     <!-- News Item 1 -->
                     <article class="card">
                         <div class="card-body">
-                            <span class="badge badge-info">Announcement</span>
-                            <h3 class="card-title"><a href="../services/business.html">Business Permit Renewal 2025</a></h3>
-                            <p class="text-muted">Nov 28, 2025</p>
-                            <p class="card-text">Deadline for business permit renewal is set for January 20, 2025. Early
-                                renewal is encouraged to avoid penalties.</p>
-                            <a href="../services/business.html" class="btn btn-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            <span class="badge badge-info">Leadership</span>
+                            <h3 class="card-title">Mayor Robes' 2026 Message: "Service Over Resolutions"</h3>
+                            <p class="text-muted">January 1, 2026</p>
+                            <p class="card-text">Mayor Florida "Rida" Robes announced she is skipping traditional New Year's resolutions for 2026. Instead, she emphasized a "continued commitment" to serving the people of SJDM with leadership rooted in heart and integrity, carrying the theme: "Ngayong 2026, tayo ay aARangkada pa rin tungo sa tuloy-tuloy na progreso!"</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://centralluzon.politiko.com.ph/2026/01/02/mayor-robes-no-new-years-resolution-just-continued-commitment-to-serve-san-josenos/social-snitch/" target="_blank" rel="noopener noreferrer">Politiko Central Luzon</a></p>
                         </div>
                     </article>
 
                     <!-- News Item 2 -->
                     <article class="card">
                         <div class="card-body">
-                            <span class="badge badge-success">Project</span>
-                            <h3 class="card-title"><a href="../budget/">New Public Market Wing Opens</a></h3>
-                            <p class="text-muted">Nov 15, 2025</p>
-                            <p class="card-text">The renovated wing of the Solano Public Market is now open to vendors
-                                and the public, featuring improved sanitation and facilities.</p>
-                            <a href="../budget/" class="btn btn-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            <span class="badge badge-warning">Safety</span>
+                            <h3 class="card-title">New Year's Safety: Stray Bullet Incident</h3>
+                            <p class="text-muted">January 1, 2026</p>
+                            <p class="card-text">While Central Luzon was generally peaceful, the Philippine National Police (PNP) reported a stray bullet incident in San Jose del Monte during the New Year revelry. This was one of the few isolated safety incidents in the region amidst otherwise strict firecracker regulations.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://www.philstar.com/headlines/2026/01/02/2498204/fireworks-related-injuries-235" target="_blank" rel="noopener noreferrer">Philippine Star</a></p>
                         </div>
                     </article>
 
                     <!-- News Item 3 -->
                     <article class="card">
                         <div class="card-body">
-                            <span class="badge badge-warning">Advisory</span>
-                            <h3 class="card-title"><a href="../contact/">Scheduled Power Interruption</a></h3>
-                            <p class="text-muted">Nov 10, 2025</p>
-                            <p class="card-text">Maintenance scheduled for Barangay Osmeña on Dec 1, 8:00 AM - 5:00 PM.
-                                Please make necessary preparations.</p>
-                            <a href="../contact/" class="btn btn-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            <span class="badge badge-success">Infrastructure</span>
+                            <h3 class="card-title">MRT-7 Station Relocation Confirmed</h3>
+                            <p class="text-muted">December 2025</p>
+                            <p class="card-text">The Department of Transportation (DOTr) and the SJDM local government have finalized the relocation of the MRT-7 SJDM Station. It has been moved from the original Muzon-Tungkong Mangga intersection plan to a location closer to the SJDM-North Caloocan boundary to better manage traffic and serve commuters.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://pia.gov.ph/news/dotr-san-jose-del-monte-lgu-agree-on-new-location-for-mrt-7-station/" target="_blank" rel="noopener noreferrer">Philippine Information Agency</a></p>
                         </div>
                     </article>
 
                     <!-- News Item 4 -->
                     <article class="card">
                         <div class="card-body">
-                            <span class="badge badge-info">Event</span>
-                            <h3 class="card-title"><a href="../services/">Pagbiagan Festival 2025</a></h3>
-                            <p class="text-muted">Oct 05, 2025</p>
-                            <p class="card-text">Join us in celebrating the annual Pagbiagan Festival. Schedule of
-                                activities to be posted soon.</p>
-                            <a href="../services/" class="btn btn-link">Read More <i class="bi bi-arrow-right"></i></a>
+                            <span class="badge badge-info">Youth & Sports</span>
+                            <h3 class="card-title">First Intertown Esports Tournament</h3>
+                            <p class="text-muted">December 2025</p>
+                            <p class="card-text">The city solidified its support for esports by hosting the first-ever "Intertown Mobile Legends: Bang Bang Tournament" at Starmall SJDM. Spearheaded by the City Youth and Sports Development Office (CYSDO), recognizing esports as a key youth development platform.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://csjdm.gov.ph/kauna-unahang-intertown-mobile-legends-bang-bang-tournament-sa-csjdm-bulacan/" target="_blank" rel="noopener noreferrer">City Government of San Jose del Monte</a></p>
+                        </div>
+                    </article>
+
+                    <!-- News Item 5 -->
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-success">Development</span>
+                            <h3 class="card-title">Infrastructure Status: Government Center & River Esplanade</h3>
+                            <p class="text-muted">December 2025</p>
+                            <p class="card-text">The administration continues its push for the "highly urbanized city" vision with ongoing works at the New Government Center. While the River Esplanade project has faced some contract adjustments, the broader development of the People's Park facilities remains a priority for city tourism.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://csjdm.gov.ph/wp-content/uploads/2024/03/CSJDM-CDP-2023-2028.pdf" target="_blank" rel="noopener noreferrer">CSJDM Comprehensive Development Plan 2023-2028 (PDF)</a></p>
+                        </div>
+                    </article>
+
+                    <!-- News Item 6 -->
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-warning">Utilities</span>
+                            <h3 class="card-title">Termination of PrimeWater Joint Venture</h3>
+                            <p class="text-muted">November 2025</p>
+                            <p class="card-text">In a major utility shake-up, the City Government of SJDM formally terminated its Joint Venture Agreement (JVA) with PrimeWater Infrastructure Corp. Mayor Robes cited poor service and erratic water supply as the primary reasons. The city has since activated "Water Task Force Tugon" to manage the transition.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://www.manilatimes.net/2025/11/06/regions/san-jose-del-monte-ends-primewater-deal/2216174" target="_blank" rel="noopener noreferrer">The Manila Times</a></p>
+                        </div>
+                    </article>
+
+                    <!-- News Item 7 -->
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="badge badge-info">Education</span>
+                            <h3 class="card-title">BulSU Sarmiento Campus Infrastructure Upgrade</h3>
+                            <p class="text-muted">November 2025</p>
+                            <p class="card-text">Bulacan State University (BulSU) Sarmiento Campus inaugurated several completed infrastructure projects. These upgrades are part of the university's effort to improve facilities for the growing student population in SJDM, ensuring better academic environments for the 2026 school year.</p>
+                            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);"><i class="bi bi-link-45deg"></i> Source: <a href="https://www.bulsu.edu.ph/news/view/inauguration-of-completed-bulsu-infrastructure-projects-at-the-sarmiento-campus" target="_blank" rel="noopener noreferrer">Bulacan State University</a></p>
                         </div>
                     </article>
                 </div>
@@ -259,19 +369,17 @@
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -283,24 +391,23 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
                     <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
                 </div>
             </div>
@@ -311,6 +418,7 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 
 </html>

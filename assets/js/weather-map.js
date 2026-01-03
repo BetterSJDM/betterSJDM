@@ -1,13 +1,13 @@
 /**
- * Weather & Map Section for Better Solano Homepage
- * Displays real-time weather data and interactive map of Solano, Nueva Vizcaya
+ * Weather & Map Section for Better SJDM Homepage
+ * Displays real-time weather data and interactive map of San Jose del Monte City, Bulacan
  * With robust fallback system to ensure content always renders
  */
 
 // Wrap everything in IIFE to prevent redeclaration errors
 (function() {
     'use strict';
-    
+
     console.log('=== weather-map.js: Script loading started ===');
 
 // ============================================================================
@@ -16,7 +16,7 @@
 function getMockWeather() {
     const now = new Date();
     const currentHour = now.getHours();
-    
+
     // Generate realistic hourly forecast based on current time
     const hourlyForecast = [];
     for (let i = 0; i < 6; i++) {
@@ -24,7 +24,7 @@ function getMockWeather() {
         const isPM = hour >= 12;
         const displayHour = hour === 0 ? 12 : (hour > 12 ? hour - 12 : hour);
         const temp = 26 + Math.floor(Math.random() * 5); // 26-30°C range
-        
+
         hourlyForecast.push({
             time: `${displayHour} ${isPM ? 'PM' : 'AM'}`,
             temperature: temp,
@@ -60,10 +60,10 @@ function isFileProtocol() {
 // Weather Service - Handles fetching, caching, and providing weather data
 // ============================================================================
 const WeatherService = {
-    CACHE_KEY: 'solano_weather_cache',
+    CACHE_KEY: 'sjdm_weather_cache',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 16.5167, lon: 121.1833 },
+    COORDINATES: { lat: 14.8137, lon: 121.0453 },
 
     mapWeatherCode(code) {
         const mappings = {
@@ -102,12 +102,12 @@ const WeatherService = {
             if (typeof localStorage === 'undefined') return null;
             const cached = localStorage.getItem(this.CACHE_KEY);
             if (!cached) return null;
-            
+
             const entry = JSON.parse(cached);
             if (entry && entry.data && Date.now() < entry.expiresAt) {
                 return entry.data;
             }
-            
+
             // Clear expired cache
             localStorage.removeItem(this.CACHE_KEY);
         } catch (e) {
@@ -157,13 +157,13 @@ const WeatherService = {
             const response = await fetch(apiUrl, {
                 signal: controller.signal
             });
-            
+
             clearTimeout(timeoutId);
 
             if (!response.ok) {
                 throw new Error(`API error: ${response.status}`);
             }
-            
+
             const apiData = await response.json();
             console.log('Weather: API response received:', apiData);
             const weatherData = this.transformApiResponse(apiData);
@@ -184,7 +184,7 @@ const WeatherService = {
             const { condition, icon } = this.mapWeatherCode(current.weather_code);
             const currentHour = new Date().getHours();
             const hourlyForecast = [];
-            
+
             for (let i = 0; i < 6 && (currentHour + i) < hourly.time.length; i++) {
                 const idx = currentHour + i;
                 const { icon: fIcon } = this.mapWeatherCode(hourly.weather_code[idx]);
@@ -217,7 +217,7 @@ const WeatherService = {
 const WeatherUI = {
     render(container, data) {
         if (!container) return;
-        
+
         try {
             // Limit to 4 hours for minimal design
             const forecastHTML = data.hourlyForecast.slice(0, 4).map(h => `
@@ -228,12 +228,12 @@ const WeatherUI = {
                 </div>
             `).join('');
 
-            const dataSourceBadge = data.isFallback 
+            const dataSourceBadge = data.isFallback
                 ? '<span style="font-size:0.65rem;color:rgba(255,255,255,0.5);margin-left:4px;" title="Using fallback data">(Demo)</span>'
                 : '<span style="font-size:0.65rem;color:#06a77d;margin-left:4px;" title="Live data from Open-Meteo API">●</span>';
 
             container.innerHTML = `
-                <div class="weather-widget" role="region" aria-label="Current weather in Solano">
+                <div class="weather-widget" role="region" aria-label="Current weather in San Jose del Monte">
                     <div class="weather-current">
                         <div class="weather-current-icon" aria-hidden="true">
                             <i class="bi ${data.icon}"></i>
@@ -242,7 +242,7 @@ const WeatherUI = {
                             <div class="weather-current-temp" aria-label="Temperature ${data.temperature} degrees Celsius">${data.temperature}°C</div>
                             <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}${dataSourceBadge}</div>
                             <div class="weather-current-location">
-                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Solano, Nueva Vizcaya
+                                <i class="bi bi-geo-alt" aria-hidden="true"></i> San Jose del Monte City, Bulacan
                             </div>
                         </div>
                     </div>
@@ -261,9 +261,9 @@ const WeatherUI = {
                     </div>
                 </div>
             `;
-            
+
             container.setAttribute('data-weather-loaded', 'true');
-            
+
         } catch (e) {
             console.error('Weather: Render failed', e);
             this.renderError(container);
@@ -317,8 +317,8 @@ const WeatherUI = {
 // Map Component - Initializes and manages the Leaflet map
 // ============================================================================
 const MapComponent = {
-    SOLANO_CENTER: [16.5167, 121.1833],
-    DEFAULT_ZOOM: 14,
+    SJDM_CENTER: [14.8137, 121.0453],
+    DEFAULT_ZOOM: 13,
     map: null,
 
     init(containerId) {
@@ -345,14 +345,14 @@ const MapComponent = {
 
         // Leaflet not ready yet, show loading and retry
         this.renderLoading(container);
-        
+
         // Retry multiple times
         let attempts = 0;
         const maxAttempts = 10;
         const retryInterval = setInterval(() => {
             attempts++;
             console.log(`Map: Retry attempt ${attempts}/${maxAttempts}`);
-            
+
             if (typeof L !== 'undefined') {
                 clearInterval(retryInterval);
                 this.initLeaflet(container);
@@ -378,16 +378,16 @@ const MapComponent = {
     renderTextFallback(container) {
         // Use OpenStreetMap iframe embed as fallback - this always works
         container.innerHTML = `
-            <iframe 
-                width="100%" 
-                height="300" 
-                frameborder="0" 
-                scrolling="no" 
-                marginheight="0" 
-                marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+            <iframe
+                width="100%"
+                height="300"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=121.0253%2C14.7937%2C121.0653%2C14.8337&layer=mapnik&marker=14.8137%2C121.0453"
                 style="border:0;display:block;"
-                title="Map of Solano, Nueva Vizcaya"
+                title="Map of San Jose del Monte City, Bulacan"
                 loading="lazy">
             </iframe>
         `;
@@ -397,13 +397,13 @@ const MapComponent = {
     initLeaflet(container) {
         try {
             console.log('Map: Initializing Leaflet...');
-            
+
             // Clear any existing content
             container.innerHTML = '';
-            
+
             // Create the map with keyboard navigation support (Requirement 5.4)
             this.map = L.map(container, {
-                center: this.SOLANO_CENTER,
+                center: this.SJDM_CENTER,
                 zoom: this.DEFAULT_ZOOM,
                 scrollWheelZoom: false,
                 zoomControl: true,
@@ -418,8 +418,8 @@ const MapComponent = {
             }).addTo(this.map);
 
             // Add marker
-            const marker = L.marker(this.SOLANO_CENTER).addTo(this.map);
-            marker.bindPopup('<strong>Solano Municipal Hall</strong><br>Nueva Vizcaya 3708');
+            const marker = L.marker(this.SJDM_CENTER).addTo(this.map);
+            marker.bindPopup('<strong>San Jose del Monte City Hall</strong><br>Bulacan 3023');
 
             container.setAttribute('data-map-loaded', 'leaflet');
 
@@ -454,7 +454,7 @@ const MapComponent = {
 // ============================================================================
 async function WeatherMapInit() {
     console.log('Weather-Map: Initializing...');
-    
+
     const weatherContainer = document.getElementById('weather-container');
     const mapContainer = document.getElementById('map-container');
 
@@ -463,11 +463,11 @@ async function WeatherMapInit() {
         try {
             // Show loading state first
             WeatherUI.renderLoading(weatherContainer);
-            
+
             // Fetch weather (will use mock if needed)
             const data = await WeatherService.fetchWeather();
             WeatherUI.render(weatherContainer, data);
-            
+
         } catch (error) {
             console.error('Weather: Init failed', error);
             // Render mock data as last resort
@@ -496,7 +496,7 @@ console.log('=== weather-map.js: WeatherMapInit exposed to window ===');
 (function() {
     console.log('=== weather-map.js: Auto-init IIFE executing ===');
     console.log('Document readyState:', document.readyState);
-    
+
     function init() {
         console.log('=== weather-map.js: Calling WeatherMapInit() ===');
         WeatherMapInit();

@@ -40,16 +40,16 @@ function formatTime12Hour(date) {
     if (!(date instanceof Date) || isNaN(date.getTime())) {
         return '--:-- --';
     }
-    
+
     let hours = date.getHours();
     const minutes = date.getMinutes();
     const ampm = hours >= 12 ? 'PM' : 'AM';
-    
+
     hours = hours % 12;
     hours = hours ? hours : 12; // 0 should be 12
-    
+
     const minutesStr = minutes < 10 ? '0' + minutes : minutes;
-    
+
     return `${hours}:${minutesStr} ${ampm}`;
 }
 
@@ -62,14 +62,14 @@ function formatDateShort(date) {
     if (!(date instanceof Date) || isNaN(date.getTime())) {
         return '--- --, ----';
     }
-    
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    
+
     const month = months[date.getMonth()];
     const day = date.getDate();
     const year = date.getFullYear();
-    
+
     return `${month} ${day}, ${year}`;
 }
 
@@ -126,17 +126,17 @@ const CacheManager = {
         if (!data || typeof data !== 'object') {
             return false;
         }
-        
+
         // Check for timestamp
         if (typeof data.timestamp !== 'number') {
             return false;
         }
-        
+
         // Check for data property
         if (!('data' in data)) {
             return false;
         }
-        
+
         // If schema has required fields, validate them
         if (schema && schema.requiredFields) {
             for (const field of schema.requiredFields) {
@@ -145,7 +145,7 @@ const CacheManager = {
                 }
             }
         }
-        
+
         return true;
     },
 
@@ -158,10 +158,10 @@ const CacheManager = {
         try {
             const json = localStorage.getItem(key);
             if (!json) return null;
-            
+
             const cached = this.deserialize(json);
             if (!cached) return null;
-            
+
             return cached;
         } catch (e) {
             console.error('CacheManager: Failed to get cache', e);
@@ -210,8 +210,8 @@ const CONFIG = {
     EXCHANGE_RATE_TTL: 30 * 60 * 1000,  // 30 minutes
     WEATHER_TTL: 15 * 60 * 1000,         // 15 minutes
     TIME_UPDATE_INTERVAL: 1000,          // 1 second
-    SOLANO_LAT: 16.5167,
-    SOLANO_LON: 121.1833,
+    SJDM_LAT: 14.8137,
+    SJDM_LON: 121.0453,
     CURRENCIES: ['USD', 'GBP', 'SAR', 'AED', 'JPY', 'CAD', 'AUD'],
     CACHE_KEYS: {
         EXCHANGE_RATES: 'infobar_exchange_rates',
@@ -237,22 +237,22 @@ const ExchangeRateService = {
             const response = await fetch(
                 `https://api.exchangerate.host/latest?base=PHP&symbols=${currencies}`
             );
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
-            
+
             if (!data.success && data.rates) {
                 // Some APIs return rates directly
                 return this.processRates(data.rates);
             }
-            
+
             if (data.rates) {
                 return this.processRates(data.rates);
             }
-            
+
             throw new Error('Invalid API response');
         } catch (error) {
             console.error('ExchangeRateService: Failed to fetch rates', error);
@@ -270,17 +270,17 @@ const ExchangeRateService = {
             const response = await fetch(
                 'https://open.er-api.com/v6/latest/PHP'
             );
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
-            
+
             if (data.rates) {
                 return this.processRates(data.rates);
             }
-            
+
             throw new Error('Invalid fallback API response');
         } catch (error) {
             console.error('ExchangeRateService: Fallback also failed', error);
@@ -375,27 +375,27 @@ const WeatherService = {
     async fetchWeather() {
         try {
             const response = await fetch(
-                `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.SOLANO_LAT}&longitude=${CONFIG.SOLANO_LON}&current_weather=true`
+                `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.SJDM_LAT}&longitude=${CONFIG.SJDM_LON}&current_weather=true`
             );
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
-            
+
             if (data.current_weather && typeof data.current_weather.temperature === 'number') {
                 return {
                     temperature: data.current_weather.temperature,
                     timestamp: Date.now(),
                     location: {
-                        lat: CONFIG.SOLANO_LAT,
-                        lon: CONFIG.SOLANO_LON,
-                        name: 'Solano, Nueva Vizcaya'
+                        lat: CONFIG.SJDM_LAT,
+                        lon: CONFIG.SJDM_LON,
+                        name: 'San Jose del Monte City, Bulacan'
                     }
                 };
             }
-            
+
             throw new Error('Invalid weather API response');
         } catch (error) {
             console.error('WeatherService: Failed to fetch weather', error);
@@ -446,9 +446,9 @@ const WeatherService = {
             temperature: null,
             timestamp: Date.now(),
             location: {
-                lat: CONFIG.SOLANO_LAT,
-                lon: CONFIG.SOLANO_LON,
-                name: 'Solano, Nueva Vizcaya'
+                lat: CONFIG.SJDM_LAT,
+                lon: CONFIG.SJDM_LON,
+                name: 'San Jose del Monte City, Bulacan'
             }
         };
     }
@@ -505,17 +505,17 @@ const InfoBarManager = {
     },
     currentRateIndex: 0,
     currentRates: null,
-    
+
     /**
      * Initialize the info bar
      */
     async init() {
         // Initial render with loading state
         this.renderLoading();
-        
+
         // Fetch and render data
         await this.updateAll();
-        
+
         // Start periodic updates
         this.startUpdates();
     },
@@ -562,11 +562,11 @@ const InfoBarManager = {
     renderCurrentRate() {
         const displayElement = document.querySelector('.rate-display');
         if (!displayElement || !this.currentRates || !this.currentRates.rates) return;
-        
+
         const currency = CONFIG.CURRENCIES[this.currentRateIndex];
         const rate = this.currentRates.rates[currency];
         const formattedRate = formatExchangeRate(rate);
-        
+
         // Update display with animation
         displayElement.style.animation = 'none';
         displayElement.offsetHeight; // Trigger reflow
@@ -610,7 +610,7 @@ const InfoBarManager = {
         if (timeElement) {
             timeElement.textContent = TimeService.getCurrentPHT();
         }
-        
+
         const dateElement = document.querySelector('.date-value');
         if (dateElement) {
             dateElement.textContent = TimeService.getCurrentPHTDate_Formatted();

@@ -1,6 +1,6 @@
 {
-  "title": "Solano Competitive Index",
-  "description": "Annual competitiveness indicators measuring local economic performance",
+  "title": "San Jose del Monte Competitive Index",
+  "description": "Annual competitiveness indicators measuring local economic performance for San Jose del Monte City, Bulacan",
   "source": "Cities and Municipalities Competitiveness Index (CMCI)",
   "years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
   "pillars": [
@@ -9,11 +9,11 @@
       "name": "Economic Dynamism",
       "icon": "bi-graph-up-arrow",
       "indicators": [
-        {"name": "Local Economy Size", "values": [0.4353, 0.1829, 0.1004, 0.0420, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259]},
-        {"name": "Local Economy Growth", "values": [0.0847, 0.0030, 0.0081, 0.0028, 0.3297, 0.0026, 0.0000, 0.0005, 0.0318]},
-        {"name": "Active Establishments", "values": [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994]},
-        {"name": "Safety Compliant Business", "values": [null, 0.2991, 0.3683, 0.2471, 0.2470, 0.2629, 0.0000, 0.2480, 0.2235]},
-        {"name": "Employment Generation", "values": [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835]}
+        {"name": "Local Economy Size", "values": [0.4978, 0.2063, 0.0828, 0.0924, 0.1476, 0.1041, 0.1597, 0.1571, 0.1336]},
+        {"name": "Local Economy Growth", "values": [0.1352, 0.3199, 0.0439, 0.1253, 0.6326, 0.0345, 0.0410, 0.0129, 0.0106]},
+        {"name": "Active Establishments", "values": [null, 0.4622, 1.1156, 0.7206, 0.5473, 0.8171, 0.6801, 0.7339, 0.7730]},
+        {"name": "Safety Compliant Business", "values": [null, 1.1414, 0.4819, 0.7577, 0.8094, 1.0323, 0.7143, 0.7270, 0.7397]},
+        {"name": "Employment Generation", "values": [1.2853, 0.2483, 0.1671, 0.3984, 0.5096, 0.5894, 0.1379, 0.1950, 0.1068]}
       ]
     },
     {
@@ -21,11 +21,11 @@
       "name": "Government Efficiency",
       "icon": "bi-building-check",
       "indicators": [
-        {"name": "Cost of Living", "values": [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919]},
-        {"name": "Cost of Doing Business", "values": [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.5460, 1.5599]},
-        {"name": "Financial Deepening", "values": [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288]},
-        {"name": "Productivity", "values": [0.0062, 0.0339, 0.0083, 0.0040, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297]},
-        {"name": "Compliance to National Directives", "values": [3.0994, 2.1474, 0.0000, 2.4500, 2.5000, 2.3810, 1.8929, 1.9565, 1.9600]}
+        {"name": "Cost of Living", "values": [3.9167, 0.4310, 0.0000, 2.4206, 1.9014, 1.8831, 1.4359, 1.0261, 0.0000]},
+        {"name": "Cost of Doing Business", "values": [3.3403, 1.9653, 1.8415, 1.5634, 1.6122, 1.4197, 1.3883, 1.3209, 1.6390]},
+        {"name": "Financial Deepening", "values": [1.4791, 1.8667, 1.2562, 0.8268, 0.7732, 0.8233, 0.5456, 0.6510, 0.6324]},
+        {"name": "Productivity", "values": [0.3521, 0.0150, 0.1122, 0.2947, 0.3848, 0.4332, 0.0799, 0.0620, 0.0632]},
+        {"name": "Compliance to National Directives", "values": [3.1373, 2.4306, 2.3611, 2.4306, 2.4219, 2.4265, 1.7857, 1.9643, 2.0000]}
       ]
     },
     {
@@ -33,11 +33,11 @@
       "name": "Infrastructure",
       "icon": "bi-building-gear",
       "indicators": [
-        {"name": "Road Network", "values": [0.0019, 0.0003, 0.0000, 0.0090, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016]},
-        {"name": "Distance to Ports", "values": [2.3543, 1.8319, 0.0000, 1.6595, 2.4576, 2.4658, 1.3088, 1.5620, 1.5281]},
-        {"name": "Availability of Basic Utilities", "values": [3.3333, 2.5000, 0.0000, 1.8498, 2.4750, 2.4714, 0.0037, 0.6363, 0.3560]},
-        {"name": "Transportation Vehicles", "values": [0.4063, 0.2816, 0.0000, 0.0343, 0.0221, 0.0153, 0.0230, 0.0636, 0.0959]},
-        {"name": "Information Technology Capacity", "values": [1.4638, 0.4000, 0.0000, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155]}
+        {"name": "Road Network", "values": [0.4362, 0.0099, 0.4451, 0.0700, 0.1026, 0.1048, 0.0037, 0.0024, 0.0079]},
+        {"name": "Distance to Ports", "values": [2.9908, 2.1628, 2.1148, 2.0859, 2.1246, 2.1527, 1.7857, 1.6783, 1.6056]},
+        {"name": "Availability of Basic Utilities", "values": [3.3333, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 1.5710, 1.5800, 1.5258]},
+        {"name": "Transportation Vehicles", "values": [0.2082, 0.3526, 0.3161, 0.2684, 0.2386, 0.1236, 0.1512, 0.1327, 0.1205]},
+        {"name": "Information Technology Capacity", "values": [1.3300, 0.7276, 0.8493, 0.6915, 0.7565, 0.4167, 0.3459, 0.4110, 0.4742]}
       ]
     },
     {
@@ -45,12 +45,12 @@
       "name": "Resiliency",
       "icon": "bi-shield-check",
       "indicators": [
-        {"name": "Disaster Risk Reduction Plan", "values": [null, 2.5000, 0.0000, 2.4537, 2.5000, 2.4474, 1.9995, 1.9583, 1.9783]},
-        {"name": "Annual Disaster Drill", "values": [null, 2.5000, 0.0000, 2.2500, 2.5000, 1.2583, 1.0020, 1.0016, 1.0023]},
-        {"name": "Early Warning System", "values": [null, 2.5000, 0.0000, 2.5000, 2.5000, 1.2573, 1.0062, 1.0033, 1.0397]},
-        {"name": "Budget for DRRMP", "values": [null, 0.0022, 0.0000, 0.2655, 0.1649, 0.0183, 0.0000, 0.0699, 0.0020]},
-        {"name": "Local Risk Assessments", "values": [null, 2.5000, 0.0000, 2.5000, 2.5000, 2.5000, 2.0000, 2.0000, 2.0000]},
-        {"name": "Emergency Infrastructure", "values": [null, 0.8921, 0.0000, 0.5495, 0.5883, 0.3314, 0.4282, 0.4363, 0.4754]}
+        {"name": "Disaster Risk Reduction Plan", "values": [null, 2.5000, 2.5000, 2.3810, 2.5000, 2.5000, 1.9444, 1.9762, 1.9091]},
+        {"name": "Annual Disaster Drill", "values": [null, 2.5000, 2.5000, 2.2917, 2.5000, 1.2838, 1.0194, 1.3470, 1.3636]},
+        {"name": "Early Warning System", "values": [null, 2.5000, 2.5000, 2.5000, 2.5000, 1.2545, 1.0330, 1.0026, 2.0000]},
+        {"name": "Budget for DRRMP", "values": [null, 0.0536, 0.2531, 1.0805, 0.7332, 0.1318, 0.0654, 0.1008, 0.0446]},
+        {"name": "Local Risk Assessments", "values": [null, 2.5000, 2.5000, 2.5000, 2.5000, 2.5000, 2.0000, 2.0000, 2.0000]},
+        {"name": "Emergency Infrastructure", "values": [null, null, null, null, null, null, null, null, null]}
       ]
     },
     {
@@ -59,11 +59,11 @@
       "icon": "bi-lightbulb",
       "indicators": [
         {"name": "ICT Plan", "values": [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001]},
-        {"name": "R&D Expenditures Allotment", "values": [null, null, null, null, null, null, 0.0000, 0.0000, 0.0006]},
-        {"name": "ICT Use: E-BPLS Software", "values": [null, null, null, null, null, null, 2.0000, 0.0000, 2.0000]},
-        {"name": "Online Payment Facilities", "values": [null, null, null, null, null, null, 0.0000, 0.0000, 0.0000]},
-        {"name": "STEM Graduates", "values": [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181]},
-        {"name": "Start Up and Innovation Facilities", "values": [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227]}
+        {"name": "R&D Expenditures Allotment", "values": [null, null, null, null, null, null, 0.0006, 0.0014, 0.0018]},
+        {"name": "ICT Use: E-BPLS Software", "values": [null, null, null, null, null, null, 2.0000, 2.0000, 2.0000]},
+        {"name": "Online Payment Facilities", "values": [null, null, null, null, null, null, null, null, null]},
+        {"name": "STEM Graduates", "values": [null, null, null, null, null, null, 0.0107, 0.1744, 0.1294]},
+        {"name": "Start Up and Innovation Facilities", "values": [null, null, null, null, null, null, 0.1802, 0.2626, 0.3218]}
       ]
     }
   ],

@@ -1,0 +1,518 @@
+{
+  "events": [
+    {
+      "id": "new-year-2026",
+      "date": "2026-01-01",
+      "title": "New Year's Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday - New Year's Day celebration",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "property-tax-q1",
+      "date": "2026-01-15",
+      "title": "Property Tax Deadline Q1",
+      "type": "deadline",
+      "category": "tax",
+      "description": "First quarter property tax payment deadline",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "valentines-2026",
+      "date": "2026-02-14",
+      "title": "Valentine's Day",
+      "type": "city",
+      "category": "celebration",
+      "description": "Valentine's Day celebration events across SJDM",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "chinese-new-year-2026",
+      "date": "2026-02-17",
+      "title": "Chinese New Year",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Year of the Horse - Special Non-Working Day",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "edsa-revolution-2026",
+      "date": "2026-02-25",
+      "title": "EDSA People Power Revolution Anniversary",
+      "type": "holiday",
+      "category": "special-working",
+      "description": "Commemoration of the 1986 EDSA Revolution",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "sjdm-town-founding",
+      "date": "2026-03-02",
+      "title": "Town Founding Anniversary",
+      "type": "city",
+      "category": "local",
+      "description": "San Jose del Monte Town Founding Day - Commemorating the founding of the town (March 2, 1752)",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "maundy-thursday-2026",
+      "date": "2026-04-02",
+      "title": "Maundy Thursday",
+      "type": "holiday",
+      "category": "regular",
+      "description": "Holy Week - Regular Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "good-friday-2026",
+      "date": "2026-04-03",
+      "title": "Good Friday",
+      "type": "holiday",
+      "category": "regular",
+      "description": "Holy Week - Regular Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "black-saturday-2026",
+      "date": "2026-04-04",
+      "title": "Black Saturday",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Holy Week - Special Non-Working Day",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "araw-ng-kagitingan-2026",
+      "date": "2026-04-09",
+      "title": "Araw ng Kagitingan",
+      "type": "holiday",
+      "category": "regular",
+      "description": "Day of Valor - National Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "property-tax-q2",
+      "date": "2026-04-15",
+      "title": "Property Tax Deadline Q2",
+      "type": "deadline",
+      "category": "tax",
+      "description": "Second quarter property tax payment deadline",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "labor-day-2026",
+      "date": "2026-05-01",
+      "title": "Labor Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday - Labor Day and Feast of St. Joseph the Worker (SJDM Patron Saint)",
+      "isClassSuspended": true,
+      "isWorkSuspended": true,
+      "isMajorEvent": true
+    },
+    {
+      "id": "st-joseph-feast",
+      "date": "2026-05-01",
+      "title": "Feast of St. Joseph the Worker",
+      "type": "festival",
+      "category": "local",
+      "description": "Feast day of SJDM's patron saint - Traditional fiesta celebrations, masses, and parades",
+      "isClassSuspended": true,
+      "isWorkSuspended": true,
+      "isMajorEvent": true
+    },
+    {
+      "id": "san-isidro-labrador",
+      "date": "2026-05-15",
+      "title": "San Isidro Labrador Feast",
+      "type": "festival",
+      "category": "local",
+      "description": "Feast of San Isidro Labrador - Patron saint of farmers",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "independence-day-2026",
+      "date": "2026-06-12",
+      "title": "Independence Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "Philippine Independence Day - National Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "eid-al-adha-2026",
+      "date": "2026-06-24",
+      "title": "Eid al-Adha",
+      "type": "holiday",
+      "category": "regular",
+      "description": "Islamic Holiday - Festival of Sacrifice",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "property-tax-q3",
+      "date": "2026-07-15",
+      "title": "Property Tax Deadline Q3",
+      "type": "deadline",
+      "category": "tax",
+      "description": "Third quarter property tax payment deadline",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "ninoy-aquino-day-2026",
+      "date": "2026-08-21",
+      "title": "Ninoy Aquino Day",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Special Non-Working Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "national-heroes-day-2026",
+      "date": "2026-08-31",
+      "title": "National Heroes Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday honoring Filipino heroes",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "tanglawan-day1",
+      "date": "2026-09-01",
+      "title": "Tanglawan Festival Opening",
+      "type": "festival",
+      "category": "local",
+      "description": "SJDM's premier festival - Opening ceremonies and welcome activities",
+      "isClassSuspended": false,
+      "isWorkSuspended": false,
+      "isMajorEvent": true
+    },
+    {
+      "id": "tanglawan-day2",
+      "date": "2026-09-02",
+      "title": "Tanglawan Festival Day 2",
+      "type": "festival",
+      "category": "local",
+      "description": "Cultural performances and trade fair exhibitions",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day3",
+      "date": "2026-09-03",
+      "title": "Tanglawan Festival Day 3",
+      "type": "festival",
+      "category": "local",
+      "description": "Street dancing competition and Indakan Festival",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day4",
+      "date": "2026-09-04",
+      "title": "Tanglawan Festival Day 4",
+      "type": "festival",
+      "category": "local",
+      "description": "Lantern parade and Kakanin Festival",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day5",
+      "date": "2026-09-05",
+      "title": "Tanglawan Festival Day 5",
+      "type": "festival",
+      "category": "local",
+      "description": "Festival continues with various activities",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day6",
+      "date": "2026-09-06",
+      "title": "Tanglawan Festival Day 6",
+      "type": "festival",
+      "category": "local",
+      "description": "Festival continues with barangay competitions",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day7",
+      "date": "2026-09-07",
+      "title": "Tanglawan Festival Day 7",
+      "type": "festival",
+      "category": "local",
+      "description": "Festival continues with cultural shows",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day8",
+      "date": "2026-09-08",
+      "title": "Tanglawan Festival Day 8",
+      "type": "festival",
+      "category": "local",
+      "description": "Festival continues with food fair and exhibits",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-day9",
+      "date": "2026-09-09",
+      "title": "Tanglawan Festival Day 9",
+      "type": "festival",
+      "category": "local",
+      "description": "Festival continues with community activities",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "tanglawan-finale",
+      "date": "2026-09-10",
+      "title": "Tanglawan Festival Grand Finale",
+      "type": "festival",
+      "category": "local",
+      "description": "SJDM Cityhood Anniversary - Grand parade, fireworks display and closing ceremonies",
+      "isClassSuspended": true,
+      "isWorkSuspended": true,
+      "isMajorEvent": true
+    },
+    {
+      "id": "property-tax-q4",
+      "date": "2026-10-15",
+      "title": "Property Tax Deadline Q4",
+      "type": "deadline",
+      "category": "tax",
+      "description": "Fourth quarter property tax payment deadline",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "all-saints-day-2026",
+      "date": "2026-11-01",
+      "title": "All Saints' Day",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Undas - Special Non-Working Day",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "all-souls-day-2026",
+      "date": "2026-11-02",
+      "title": "All Souls' Day",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Undas - Special Non-Working Day",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "soca-2026",
+      "date": "2026-11-05",
+      "title": "State of the City Address",
+      "type": "city",
+      "category": "government",
+      "description": "Annual State of the City Address by the Mayor of San Jose del Monte",
+      "isClassSuspended": false,
+      "isWorkSuspended": false,
+      "isMajorEvent": true
+    },
+    {
+      "id": "bonifacio-day-2026",
+      "date": "2026-11-30",
+      "title": "Bonifacio Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday honoring Andres Bonifacio",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "immaculate-conception-2026",
+      "date": "2026-12-08",
+      "title": "Feast of the Immaculate Conception",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Religious Holiday - Special Non-Working Day",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "christmas-festival",
+      "date": "2026-12-15",
+      "title": "Christmas Festival",
+      "type": "city",
+      "category": "celebration",
+      "description": "City Christmas festival and gift-giving program",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "christmas-eve-2026",
+      "date": "2026-12-24",
+      "title": "Christmas Eve",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Special Non-Working Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "christmas-day-2026",
+      "date": "2026-12-25",
+      "title": "Christmas Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday - Christmas",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "rizal-day-2026",
+      "date": "2026-12-30",
+      "title": "Rizal Day",
+      "type": "holiday",
+      "category": "regular",
+      "description": "National Holiday honoring Jose Rizal",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    },
+    {
+      "id": "new-year-eve-2026",
+      "date": "2026-12-31",
+      "title": "New Year's Eve",
+      "type": "holiday",
+      "category": "special-nonworking",
+      "description": "Last Day of the Year - Special Non-Working Holiday",
+      "isClassSuspended": true,
+      "isWorkSuspended": true
+    }
+  ],
+  "barangayEvents": [
+    {
+      "id": "pipigan-festival",
+      "date": "2026-09-05",
+      "title": "Pipigan Festival",
+      "type": "barangay",
+      "barangay": "Muzon",
+      "description": "Highlighting the making of pinipig in Barangay Muzon",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "sambuklod-festival",
+      "date": "2026-09-06",
+      "title": "Sambuklod Festival",
+      "type": "barangay",
+      "barangay": "San Manuel",
+      "description": "Held at San Lorenzo Ruiz de Manila Parish in Barangay San Manuel",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "barangay-cleanup-march",
+      "date": "2026-03-01",
+      "title": "Barangay Cleanup Drive",
+      "type": "barangay",
+      "description": "Community cleanup and beautification program",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "barangay-health-day",
+      "date": "2026-05-10",
+      "title": "Barangay Health Day",
+      "type": "barangay",
+      "description": "Free medical checkup and vaccination program",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "nutrition-month",
+      "date": "2026-07-01",
+      "title": "Nutrition Month Celebration",
+      "type": "barangay",
+      "description": "Nutrition awareness and feeding program",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    },
+    {
+      "id": "barangay-sports-fest",
+      "date": "2026-10-27",
+      "title": "Barangay Sports Fest",
+      "type": "barangay",
+      "description": "Inter-barangay sports competition",
+      "isClassSuspended": false,
+      "isWorkSuspended": false
+    }
+  ],
+  "longWeekends": [
+    {
+      "name": "Chinese New Year Weekend",
+      "startDate": "2026-02-14",
+      "endDate": "2026-02-17",
+      "days": 4,
+      "description": "Saturday to Tuesday - Extended weekend"
+    },
+    {
+      "name": "Holy Week",
+      "startDate": "2026-04-02",
+      "endDate": "2026-04-05",
+      "days": 4,
+      "description": "Thursday to Sunday - Holy Week break"
+    },
+    {
+      "name": "Labor Day Weekend",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-03",
+      "days": 3,
+      "description": "Friday to Sunday - Labor Day weekend"
+    },
+    {
+      "name": "Independence Day Weekend",
+      "startDate": "2026-06-12",
+      "endDate": "2026-06-14",
+      "days": 3,
+      "description": "Friday to Sunday - Independence Day weekend"
+    },
+    {
+      "name": "Ninoy Aquino Day Weekend",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-23",
+      "days": 3,
+      "description": "Friday to Sunday - Ninoy Aquino Day weekend"
+    },
+    {
+      "name": "National Heroes Day Weekend",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-31",
+      "days": 3,
+      "description": "Saturday to Monday - National Heroes Day weekend"
+    },
+    {
+      "name": "Undas Break",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-02",
+      "days": 3,
+      "description": "Saturday to Monday - All Saints' and All Souls' Day"
+    }
+  ]
+}

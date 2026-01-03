@@ -3,43 +3,61 @@
  * Modern, minimal design with smooth animations
  */
 
-// Financial data for FY 2025
+// Financial data for FY 2025 - San Jose del Monte City
 const FINANCIAL_DATA = {
     q1: {
         period: "Q1 2025",
         periodLabel: "Jan - Mar",
         income: {
-            local: 88.85,
-            external: 69.62,
-            total: 158.47
+            local: 139.81,
+            external: 402.63,
+            total: 542.44
         },
         expenditures: {
-            gps: 42.76,
-            social: 13.33,
-            economic: 11.07,
-            debt: 0.35,
-            total: 67.51
+            gps: 171.75,
+            social: 155.23,
+            economic: 73.76,
+            debt: 4.68,
+            total: 405.43
         },
-        netIncome: 90.96,
-        fundBalance: 283.29
+        netIncome: 710.41,
+        fundBalance: 1312.86
     },
     q2: {
         period: "Q2 2025",
         periodLabel: "Apr - Jun",
         income: {
-            local: 114.15,
-            external: 139.25,
-            total: 253.40
+            local: 159.39,
+            external: 556.22,
+            total: 715.61
         },
         expenditures: {
-            gps: 88.31,
-            social: 30.56,
-            economic: 20.32,
-            debt: 1.29,
-            total: 140.48
+            gps: 464.86,
+            social: 394.46,
+            economic: 192.73,
+            debt: 10.56,
+            total: 1062.61
         },
-        netIncome: 112.92,
-        fundBalance: 275.20
+        netIncome: 800.07,
+        fundBalance: 1473.95
+    },
+    q3: {
+        period: "Q3 2025",
+        periodLabel: "Jul - Sep",
+        income: {
+            local: 173.44,
+            external: 716.78,
+            total: 890.22
+        },
+        expenditures: {
+            gps: 685.05,
+            social: 567.03,
+            economic: 295.14,
+            debt: 17.66,
+            total: 1564.87
+        },
+        netIncome: 1045.82,
+        fundBalance: 1588.45
     }
 };
 
@@ -78,20 +96,20 @@ function animateValue(element, newValue) {
  */
 function updateDisplay(quarter) {
     const data = FINANCIAL_DATA[quarter];
-    
+
     // Update metrics
     animateValue(document.getElementById('sre-total-income'), formatPeso(data.income.total));
     animateValue(document.getElementById('sre-total-expense'), formatPeso(data.expenditures.total));
     animateValue(document.getElementById('sre-net-income'), formatPeso(data.netIncome));
     animateValue(document.getElementById('sre-fund-balance'), formatPeso(data.fundBalance));
-    
+
     // Update income breakdown
     const incomeTotal = data.income.total;
     document.getElementById('sre-income-local').textContent = formatPeso(data.income.local);
     document.getElementById('sre-income-local-pct').textContent = calcPercent(data.income.local, incomeTotal);
     document.getElementById('sre-income-external').textContent = formatPeso(data.income.external);
     document.getElementById('sre-income-external-pct').textContent = calcPercent(data.income.external, incomeTotal);
-    
+
     // Update expenditure breakdown
     const expTotal = data.expenditures.total;
     document.getElementById('sre-exp-gps').textContent = formatPeso(data.expenditures.gps);
@@ -102,13 +120,13 @@ function updateDisplay(quarter) {
     document.getElementById('sre-exp-economic-pct').textContent = calcPercent(data.expenditures.economic, expTotal);
     document.getElementById('sre-exp-debt').textContent = formatPeso(data.expenditures.debt);
     document.getElementById('sre-exp-debt-pct').textContent = calcPercent(data.expenditures.debt, expTotal);
-    
+
     // Update charts
     if (incomeChart) {
         incomeChart.data.datasets[0].data = [data.income.local, data.income.external];
         incomeChart.update('active');
     }
-    
+
     if (expenditureChart) {
         expenditureChart.data.datasets[0].data = [
             data.expenditures.gps,
@@ -127,11 +145,11 @@ function updateDisplay(quarter) {
 function initCharts() {
     const incomeCtx = document.getElementById('incomeChartV2');
     const expenditureCtx = document.getElementById('expenditureChartV2');
-    
+
     if (!incomeCtx || !expenditureCtx || typeof Chart === 'undefined') return;
-    
+
     const data = FINANCIAL_DATA[currentQuarter];
-    
+
     // Chart.js default options
     const chartOptions = {
         responsive: true,
@@ -159,7 +177,7 @@ function initCharts() {
             easing: 'easeOutQuart'
         }
     };
-    
+
     // Income Chart
     incomeChart = new Chart(incomeCtx, {
         type: 'doughnut',
@@ -174,7 +192,7 @@ function initCharts() {
         },
         options: chartOptions
     });
-    
+
     // Expenditure Chart
     expenditureChart = new Chart(expenditureCtx, {
         type: 'doughnut',
@@ -201,12 +219,12 @@ function initCharts() {
  */
 function initPeriodToggle() {
     const buttons = document.querySelectorAll('.sre-period-btn');
-    
+
     buttons.forEach(btn => {
         btn.addEventListener('click', function() {
             const quarter = this.dataset.quarter;
             if (quarter === currentQuarter) return;
-            
+
             // Update button states
             buttons.forEach(b => {
                 b.classList.remove('active');
@@ -214,7 +232,7 @@ function initPeriodToggle() {
             });
             this.classList.add('active');
             this.setAttribute('aria-selected', 'true');
-            
+
             // Update data
             currentQuarter = quarter;
             updateDisplay(quarter);
@@ -233,7 +251,7 @@ function initScrollAnimations() {
         });
         return;
     }
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -242,7 +260,7 @@ function initScrollAnimations() {
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    
+
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
@@ -253,13 +271,13 @@ function initScrollAnimations() {
  */
 function initBreakdownInteractions() {
     const items = document.querySelectorAll('.sre-breakdown-item');
-    
+
     items.forEach(item => {
         item.addEventListener('mouseenter', function() {
             const type = this.dataset.type;
             highlightChartSegment(type, true);
         });
-        
+
         item.addEventListener('mouseleave', function() {
             const type = this.dataset.type;
             highlightChartSegment(type, false);
@@ -273,10 +291,10 @@ function initBreakdownInteractions() {
 function highlightChartSegment(type, highlight) {
     const incomeTypes = ['local', 'external'];
     const expTypes = ['gps', 'social', 'economic', 'debt'];
-    
+
     let chart = null;
     let index = -1;
-    
+
     if (incomeTypes.includes(type)) {
         chart = incomeChart;
         index = incomeTypes.indexOf(type);
@@ -284,7 +302,7 @@ function highlightChartSegment(type, highlight) {
         chart = expenditureChart;
         index = expTypes.indexOf(type);
     }
-    
+
     if (chart && index >= 0) {
         const meta = chart.getDatasetMeta(0);
         if (meta.data[index]) {

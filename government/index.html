@@ -12,34 +12,34 @@
       gtag('config', 'G-8777S9SP9X');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solano, Nueva Vizcaya government structure. Meet Mayor Philip A. Dacayo, Vice Mayor, Sangguniang Bayan members, 16 municipal offices, and 22 barangay captains. Access office contacts and services.">
-    
+    <meta name="description" content="San Jose del Monte City, Bulacan government structure. Meet Mayor Florida B. Robes, Vice Mayor, Sangguniang Panlungsod members, city offices, and 62 barangay officials. Access office contacts and services.">
+
     <!-- SEO Meta Tags -->
     <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="Solano government, municipal officials, Mayor Philip Dacayo, Vice Mayor Tiongson, Sangguniang Bayan, LGU Solano, municipal offices, MSWDO, SEEDO, BPLS, treasurer, assessor, barangay captains, Nueva Vizcaya officials">
+    <meta name="keywords" content="SJDM government, city officials, Mayor Florida Robes, Vice Mayor Arlene Bartolomé-Arciaga, Sangguniang Panlungsod, LGU SJDM, city offices, CSWDO, BPLO, treasurer, assessor, barangay captains, Bulacan officials">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/government/">
-    
+    <link rel="canonical" href="https://bettersjdm/government/">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/government/">
-    <meta property="og:title" content="Government Officials & Structure | BetterSolano.org">
-    <meta property="og:description" content="Meet the government officials of Solano, Nueva Vizcaya. Learn about the municipal structure, Mayor Philip A. Dacayo, Vice Mayor, Sangguniang Bayan members, and department heads.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/government/">
+    <meta property="og:title" content="Government Officials & Structure | BetterSJDM">
+    <meta property="og:description" content="Meet the government officials of San Jose del Monte City, Bulacan. Learn about the city structure, Mayor Florida B. Robes, Vice Mayor, Sangguniang Panlungsod members, and department heads.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#1a5f2a">
-    
-    <title>Government Officials & Structure | BetterSolano.org</title>
+
+    <title>Government Officials & Structure | BetterSJDM</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
@@ -51,7 +51,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -66,35 +66,59 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hotline Bar -->
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
-                
+
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item">
-                        <i class="bi bi-shield-fill"></i>
-                        <span>Police: 0927 400 8033</span>
-                    </a>
-                    <a href="tel:09162840885" class="hotline-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>MSWDO: 0916 284 0885</span>
-                    </a>
-                    <a href="tel:09360620305" class="hotline-item">
-                        <i class="bi bi-fire"></i>
-                        <span>Fire: 0936 062 0305</span>
-                    </a>
-                    <a href="tel:0906188086" class="hotline-item">
-                        <i class="bi bi-building"></i>
-                        <span>DILG: 0906 188 086</span>
-                    </a>
-                    <a href="tel:09263833744" class="hotline-item">
+                    <a href="tel:09366000119" class="hotline-item">
                         <i class="bi bi-exclamation-triangle-fill"></i>
-                        <span>MDRRMO: 0926 383 3744</span>
+                        <span>CDRRMO: 0936 600 0119</span>
                     </a>
-                    <a href="tel:09068195569" class="hotline-item">
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
                         <i class="bi bi-truck"></i>
-                        <span>R2TMC: 0906 819 5569</span>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
                     </a>
                 </div>
             </div>
@@ -106,13 +130,12 @@
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="../">
-                    <img src="../assets/images/logo/better-solano-logo.svg" alt="Municipality of Solano Logo" class="logo-img">
+                    <img src="../assets/images/logo/better-sjdm-logo.png" alt="City of San Jose del Monte Logo" class="logo-img">
                 </a>
             </div>
 
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../" data-i18n="nav-home">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../services/" data-i18n="nav-services">Services</a>
                         <ul class="dropdown-menu">
@@ -138,19 +161,77 @@
                         </ul>
                     </li>
                     <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Real-Time Info Bar -->
     <!-- Real-Time Info Bar -->
@@ -163,9 +244,9 @@
                         <span class="rate-display">1 USD = ₱ --</span>
                     </span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -196,7 +277,7 @@
                 <div class="page-header-content">
                     <span class="page-header-badge"><i class="bi bi-building-fill"></i> Government</span>
                     <h1 data-i18n="gov-title">Government Structure & Officials</h1>
-                    <p class="page-header-desc" data-i18n="gov-subtitle">Meet the leadership and offices serving Solano</p>
+                    <p class="page-header-desc" data-i18n="gov-subtitle">Meet the leadership and offices serving San Jose del Monte City</p>
                 </div>
             </div>
         </section>
@@ -209,8 +290,8 @@
                     <span style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; margin-bottom: var(--spacing-sm);">
                         <i class="bi bi-star-fill"></i> Executive Branch
                     </span>
-                    <h3 data-i18n="gov-executive" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Municipal Leadership</h3>
-                    <p style="color: var(--color-text-light);">The executive officials leading Solano's governance</p>
+                    <h3 data-i18n="gov-executive" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">City Leadership</h3>
+                    <p style="color: var(--color-text-light);">The executive officials leading San Jose del Monte City's governance</p>
                 </div>
 
                 <!-- Executive Cards -->
@@ -218,13 +299,13 @@
                     <!-- Mayor Card -->
                     <div class="executive-card">
                         <div class="executive-card-header">
-                            <span class="executive-badge" data-i18n="title-mayor">Municipal Mayor</span>
-                            <h4 class="executive-name">Hon. Philip A. Dacayo</h4>
+                            <span class="executive-badge" data-i18n="title-mayor">City Mayor</span>
+                            <h4 class="executive-name">Hon. Florida B. Robes</h4>
                         </div>
                         <div class="executive-card-body">
                             <div class="executive-contacts">
-                                <a href="mailto:mayor@solano.gov.ph"><i class="bi bi-envelope"></i> mayor@solano.gov.ph</a>
-                                <a href="tel:0783265002"><i class="bi bi-telephone"></i> (078) 326-5002</a>
+                                <a href="mailto:om.csjdm@gmail.com"><i class="bi bi-envelope"></i> om.csjdm@gmail.com</a>
+                                <a href="tel:0449197370"><i class="bi bi-telephone"></i> (044) 919-7370 Local 3110</a>
                                 <span><i class="bi bi-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</span>
                             </div>
                         </div>
@@ -233,13 +314,13 @@
                     <!-- Vice Mayor Card -->
                     <div class="executive-card">
                         <div class="executive-card-header">
-                            <span class="executive-badge" data-i18n="title-vice-mayor">Municipal Vice Mayor</span>
-                            <h4 class="executive-name">Hon. Eduardo D. Tiongson</h4>
+                            <span class="executive-badge" data-i18n="title-vice-mayor">City Vice Mayor</span>
+                            <h4 class="executive-name">Hon. Arlene C. Bartolomé-Arciaga</h4>
                         </div>
                         <div class="executive-card-body">
                             <div class="executive-contacts">
-                                <a href="mailto:vicemayor@solano.gov.ph"><i class="bi bi-envelope"></i> vicemayor@solano.gov.ph</a>
-                                <a href="tel:0783265003"><i class="bi bi-telephone"></i> (078) 326-5003</a>
+                                <a href="mailto:ovm.csjdm001@gmail.com"><i class="bi bi-envelope"></i> ovm.csjdm001@gmail.com</a>
+                                <a href="tel:0448156467"><i class="bi bi-telephone"></i> (044) 815-6467</a>
                                 <span><i class="bi bi-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</span>
                             </div>
                         </div>
@@ -248,7 +329,7 @@
             </div>
         </section>
 
-        <!-- Municipal Council -->
+        <!-- City Council -->
         <section class="section">
             <div class="container">
                 <!-- Section Header -->
@@ -256,66 +337,76 @@
                     <span style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--color-success) 0%, #05c793 100%); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; margin-bottom: var(--spacing-sm);">
                         <i class="bi bi-people-fill"></i> Legislative Branch
                     </span>
-                    <h3 data-i18n="gov-sb-members" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Sangguniang Bayan Members</h3>
-                    <p data-i18n="gov-sb-subtitle" style="color: var(--color-text-light);">Municipal Councilors serving the people of Solano</p>
+                    <h3 data-i18n="gov-sb-members" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Sangguniang Panlungsod Members</h3>
+                    <p data-i18n="gov-sb-subtitle" style="color: var(--color-text-light);">City Councilors serving the people of San Jose del Monte</p>
                 </div>
 
                 <!-- Councilors Grid -->
                 <div class="grid grid-3" style="gap: var(--spacing-md);">
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Thomas Dave C. Santos</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Entrepreneurship & Economic Development, Historical Records & Preservation of Heritage, Culture and the Arts</p>
+                        <h4 class="councilor-name">Hon. Benjamin G. Acibal, Jr.</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Finance, Budget and Appropriations; Games and Amusement</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Edwin Clifford F. Tito, O.D.</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Health & Sanitation, Finance Appropriation and Budget</p>
+                        <h4 class="councilor-name">Hon. Celso G. Francisco</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Education and Culture; Housing, Zoning, Subdivision & Land Disputes; Transportation and Communications</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Michael Dl. Tiongson, LPT</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Education, Science & Technology, Transportation, Commerce, Trade & Industry</p>
+                        <h4 class="councilor-name">Hon. Julieta D. Abela</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Livelihood and Cooperatives; Tourism</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Walter D. Savedra, Sr.</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Cooperative Development, Senior Citizens and Disability Affairs</p>
+                        <h4 class="councilor-name">Hon. Vanessa Michelle S. Roquero, MD.</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Ways and Means; Ethics and Privileges; Environmental Management</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Atty. Jerome G. Marcos</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Legal, Good Governance, Justice, Human Rights, Environmental Management</p>
+                        <h4 class="councilor-name">Hon. Reina Rhodora I. Capa-Salentes</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Food, Agriculture and Agrarian Reform; Urban Poor and Human Rights</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Roland M. Carub, J.D.</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Agriculture, Aquaculture & Food Security, Overseas Filipino Workers Affairs</p>
+                        <h4 class="councilor-name">Hon. Nolly D. Concepcion</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Public Safety, Security and Traffic Management; Rules, Laws, Ordinances & Privileges</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Joseph T. Alindada</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Games, Entertainment & Amusement, Internal Affairs</p>
+                        <h4 class="councilor-name">Hon. Criztopher B. Tiu</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Justice and Good Government; Legislative Backstopping and Oversight</p>
                     </div>
                     <div class="councilor-card">
-                        <h4 class="councilor-name">Hon. Luisito L. Lannu</h4>
-                        <span class="councilor-badge">SB Member</span>
-                        <p class="councilor-committees">Public Safety, Peace & Order, Family, Women, Children & Social Services</p>
+                        <h4 class="councilor-name">Hon. Oliver M. Robes</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Trade, Commerce and Industry; Labor and Employment</p>
+                    </div>
+                    <div class="councilor-card">
+                        <h4 class="councilor-name">Hon. Rosalyn C. Cabuco, MD.</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Women, Family Welfare & Social Services; Health & Sanitation</p>
+                    </div>
+                    <div class="councilor-card">
+                        <h4 class="councilor-name">Hon. Victorino H. Gerona, Jr.</h4>
+                        <span class="councilor-badge">SP Member</span>
+                        <p class="councilor-committees">Public Utilities and Facilities & Public Works; Markets and Slaughterhouses</p>
                     </div>
                     <div class="councilor-card councilor-card--liga">
-                        <h4 class="councilor-name">Hon. Melchor E. Marzo</h4>
+                        <h4 class="councilor-name">Hon. Zosimo B. Lorenzo</h4>
                         <span class="councilor-badge councilor-badge--liga">Liga ng mga Barangay President</span>
-                        <p class="councilor-committees">Barangay Affairs, Tourism</p>
+                        <p class="councilor-committees">Barangay Affairs</p>
                     </div>
                     <div class="councilor-card councilor-card--sk">
-                        <h4 class="councilor-name">Hon. Isaac R. Divina</h4>
+                        <h4 class="councilor-name">Hon. Zymond Kiel D. Ipio</h4>
                         <span class="councilor-badge councilor-badge--sk">SK Federation President</span>
-                        <p class="councilor-committees">Youth & Sports Development, Legislative Drafting</p>
+                        <p class="councilor-committees">Youth Development and Sports</p>
                     </div>
                     <div class="councilor-card councilor-card--ipmr">
-                        <h4 class="councilor-name">Hon. IPMR Leon G. Dumani</h4>
+                        <h4 class="councilor-name">Hon. Benjamin V. San Jose</h4>
                         <span class="councilor-badge councilor-badge--ipmr">IPMR</span>
-                        <p class="councilor-committees">Indigenous People Affairs</p>
+                        <p class="councilor-committees">Cultural Minorities and Indigenous Group</p>
                     </div>
                 </div>
             </div>
@@ -327,46 +418,46 @@
                 <!-- Section Header -->
                 <div class="text-center" style="margin-bottom: var(--spacing-xl);">
                     <span style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--color-info) 0%, #0099cc 100%); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; margin-bottom: var(--spacing-sm);">
-                        <i class="bi bi-building-fill"></i> Municipal Offices
+                        <i class="bi bi-building-fill"></i> City Offices
                     </span>
                     <h3 data-i18n="gov-departments" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Department Heads & Key Offices</h3>
-                    <p data-i18n="gov-dept-subtitle" style="color: var(--color-text-light);">Municipal offices providing services to citizens</p>
+                    <p data-i18n="gov-dept-subtitle" style="color: var(--color-text-light);">City offices providing services to citizens</p>
                 </div>
 
                 <!-- Departments Grid -->
                 <div class="grid grid-3" style="gap: var(--spacing-md);">
-                    <a href="../service-details/municipal-civil-registrar.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-civil-registrar.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Civil Registrar</h4>
+                            <h4 class="dept-card-title">City Civil Registrar</h4>
                             <p class="dept-card-desc">Birth, death, marriage certificates, CENOMAR</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5011</span>
-                                <span><i class="bi bi-envelope"></i> civilreg@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 1214</span>
+                                <span><i class="bi bi-envelope"></i> csjdmlcro@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-treasurer.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-treasurer.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-cash-coin"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Treasurer's Office</h4>
+                            <h4 class="dept-card-title">City Treasurer's Office</h4>
                             <p class="dept-card-desc">Tax payments, real property tax, revenue collection</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5012</span>
-                                <span><i class="bi bi-envelope"></i> treasurer@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 1116-17</span>
+                                <span><i class="bi bi-envelope"></i> cto_sjdm@yahoo.com.ph</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-engineering.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-engineering.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-building-fill-gear"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Engineering Office</h4>
+                            <h4 class="dept-card-title">City Engineering Office</h4>
                             <p class="dept-card-desc">Building permits, construction permits, infrastructure</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5013</span>
-                                <span><i class="bi bi-envelope"></i> engineer@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370</span>
+                                <span><i class="bi bi-envelope"></i> ceo.csjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -374,83 +465,83 @@
                     <a href="../service-details/mswdo-services.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-people-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">MSWDO</h4>
+                            <h4 class="dept-card-title">CSWDO</h4>
                             <p class="dept-card-desc">Social services, PWD & senior citizen IDs, financial assistance</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5014</span>
-                                <span><i class="bi bi-envelope"></i> mswdo@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370</span>
+                                <span><i class="bi bi-envelope"></i> cswdo.csjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-agriculture.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-agriculture.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-tree-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Agriculture Office</h4>
+                            <h4 class="dept-card-title">City Agriculture Office</h4>
                             <p class="dept-card-desc">Agricultural loans, crop insurance, fertilizer assistance</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5015</span>
-                                <span><i class="bi bi-envelope"></i> agri@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370</span>
+                                <span><i class="bi bi-envelope"></i> cao.csjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-planning.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-planning.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-clipboard-data-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Planning & Development</h4>
+                            <h4 class="dept-card-title">City Planning & Development Office</h4>
                             <p class="dept-card-desc">Development planning, project monitoring, zoning</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5016</span>
-                                <span><i class="bi bi-envelope"></i> mpdo@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 2224</span>
+                                <span><i class="bi bi-envelope"></i> cpdo.sjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-assessor.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-assessor.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-house-door-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Assessor's Office</h4>
+                            <h4 class="dept-card-title">City Assessor's Office</h4>
                             <p class="dept-card-desc">Property assessment, tax declarations, land records</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5017</span>
-                                <span><i class="bi bi-envelope"></i> assessor@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 1121</span>
+                                <span><i class="bi bi-envelope"></i> sjdmcassessor@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-accounting.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-accounting.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-calculator-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Accounting Office</h4>
+                            <h4 class="dept-card-title">City Accounting Office</h4>
                             <p class="dept-card-desc">Financial records, disbursements, accounting services</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                                <span><i class="bi bi-envelope"></i> accounting@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 3111</span>
+                                <span><i class="bi bi-envelope"></i> accounting_csjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-budget.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-budget.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-piggy-bank-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Budget Office</h4>
+                            <h4 class="dept-card-title">City Budget Office</h4>
                             <p class="dept-card-desc">Budget preparation, appropriations, fiscal management</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                                <span><i class="bi bi-envelope"></i> budget@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 3120</span>
+                                <span><i class="bi bi-envelope"></i> csjdmbudgetoffice@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
-                    <a href="../service-details/municipal-general-services.html" class="dept-card dept-card-link-wrap">
+                    <a href="../service-details/city-general-services.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-gear-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal General Services Office</h4>
+                            <h4 class="dept-card-title">General Services Office</h4>
                             <p class="dept-card-desc">Property management, procurement, administration</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                                <span><i class="bi bi-envelope"></i> gso@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 306-7431</span>
+                                <span><i class="bi bi-envelope"></i> csjdmgeneralservicesoffice@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -458,11 +549,11 @@
                     <a href="../services/health.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-heart-pulse-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Municipal Health Office</h4>
+                            <h4 class="dept-card-title">City Health Office</h4>
                             <p class="dept-card-desc">Vaccination, health certificates, medical assistance</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5010</span>
-                                <span><i class="bi bi-envelope"></i> mho@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370</span>
+                                <span><i class="bi bi-envelope"></i> cho.csjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -470,11 +561,11 @@
                     <a href="../service-details/business-permits-licensing.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-shop"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Business Permits & Licensing</h4>
+                            <h4 class="dept-card-title">Business Permits & Licensing Office</h4>
                             <p class="dept-card-desc">Business permits, Mayor's clearance, licensing</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5002</span>
-                                <span><i class="bi bi-envelope"></i> bpls@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 306-4637</span>
+                                <span><i class="bi bi-envelope"></i> bplocsjdm_16@yahoo.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -482,11 +573,11 @@
                     <a href="../service-details/human-resource-management.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-person-badge-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">Human Resource Management</h4>
+                            <h4 class="dept-card-title">City Human Resource Management Office</h4>
                             <p class="dept-card-desc">Personnel services, recruitment, employee records</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5002</span>
-                                <span><i class="bi bi-envelope"></i> hrmo@solano.gov.ph</span>
+                                <span><i class="bi bi-telephone"></i> (044) 919-7370 Local 2121</span>
+                                <span><i class="bi bi-envelope"></i> chrmosjdm@gmail.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -494,33 +585,11 @@
                     <a href="../services/public-safety.html" class="dept-card dept-card-link-wrap">
                         <div class="dept-card-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
                         <div class="dept-card-content">
-                            <h4 class="dept-card-title">MDRRMO</h4>
+                            <h4 class="dept-card-title">CDRRMO</h4>
                             <p class="dept-card-desc">Disaster preparedness, emergency response, risk reduction</p>
                             <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> 0926 383 3744</span>
-                                <span><i class="bi bi-envelope"></i> mdrrmo@solano.gov.ph</span>
-                            </div>
-                            <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="../service-details/seedo-public-market.html" class="dept-card dept-card-link-wrap">
-                        <div class="dept-card-icon"><i class="bi bi-shop-window"></i></div>
-                        <div class="dept-card-content">
-                            <h4 class="dept-card-title">SEEDO – Public Market</h4>
-                            <p class="dept-card-desc">Market clearance, entrance fees, vendor services, CTC</p>
-                            <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
-                            </div>
-                            <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a href="../service-details/seedo-slaughterhouse.html" class="dept-card dept-card-link-wrap">
-                        <div class="dept-card-icon"><i class="bi bi-box-seam"></i></div>
-                        <div class="dept-card-content">
-                            <h4 class="dept-card-title">SEEDO – Slaughterhouse</h4>
-                            <p class="dept-card-desc">Hog, cattle, goat, carabao slaughter with meat inspection</p>
-                            <div class="dept-card-contacts">
-                                <span><i class="bi bi-telephone"></i> (078) 326-5001</span>
+                                <span><i class="bi bi-telephone"></i> 0932-600-0119</span>
+                                <span><i class="bi bi-envelope"></i> cdrrmo.csjdm@yahoo.com</span>
                             </div>
                             <span class="dept-card-link">View Services <i class="bi bi-arrow-right"></i></span>
                         </div>
@@ -548,232 +617,594 @@
                     <span style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; margin-bottom: var(--spacing-sm);">
                         <i class="bi bi-geo-alt-fill"></i> Barangay Units
                     </span>
-                    <h3 data-i18n="gov-barangays" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Barangays of Solano</h3>
-                    <p data-i18n="gov-barangays-count" style="color: var(--color-text-light);">22 Barangays serving our community</p>
+                    <h3 data-i18n="gov-barangays" style="font-size: 1.75rem; margin-bottom: var(--spacing-xs);">Barangays of San Jose del Monte City</h3>
+                    <p data-i18n="gov-barangays-count" style="color: var(--color-text-light);">62 Barangays organized in 2 Legislative Districts</p>
                 </div>
 
-                <!-- Barangays Grid -->
-                <div class="grid grid-4" style="gap: var(--spacing-sm);">
-                    <a href="tel:09751772529" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Aggub</span>
+                <!-- District 1 Barangays -->
+                <div style="margin-bottom: var(--spacing-xl);">
+                    <div style="text-align: center; margin-bottom: var(--spacing-lg);">
+                        <span class="executive-badge" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); font-size: 1rem; padding: 10px 24px;">1st Legislative District</span>
+                        <p style="color: var(--color-text-light); margin-top: var(--spacing-xs);">26 Barangays</p>
+                    </div>
+                    <div class="grid grid-4" style="gap: var(--spacing-sm);">
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Poblacion</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Emilia M. Pasco</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Felix Caramat Tolentino Sr.</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0975 177 2529</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Poblacion 1</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Laarnie M. Contreras</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09366551984" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Bagahabag</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Francisco Homes - Narra</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Philip Oicenev G. Villar</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Eduardo Abu Bangad Sr.</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 655 1984</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Francisco Homes - Mulawin</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Herson Paul C. Hayo</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09352425023" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Bangaan</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Francisco Homes - Yakal</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Leonor M. Escuro</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Isidro Baliza Prado</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 242 5023</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Francisco Homes - Guijo</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Celso A. Apatan</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09358066847" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Bangar</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Gumaok East</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Rommel B. Pitalbo</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Victor Tubay Adalin Jr.</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 806 6847</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Gumaok West</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Manolito B. Blen</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09261879385" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Bascaran</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Gumaok Central</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Manuel M. Gabion</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Federico Vienes Asuncion</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0926 187 9385</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Graceville</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Melencio I. Garcia</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09058411484" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Communal</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Gaya-gaya</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Enry L. Santos</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Renaldo Gin-Om Nabad-Aw</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0905 841 1484</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sto. Cristo</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Eufronio B. Avena</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09274646243" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Concepcion</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Tungkong Mangga</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Alexander DS. Medina</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Jenny Gomez Marquez</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0927 464 6243</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Dulong Bayan</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Gerardo A. Aguirre</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09363607880" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Curifang</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Ciudad Real</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Benjamin R. De Leon</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Elmer Zabala Lingayu</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 360 7880</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Maharlika</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Andro G. Batingan</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09053412755" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Dadap</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Manuel</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Gilbert A. Baptista</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Rudy Eugenio Paranis</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0905 341 2755</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Kaypian</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Zosimo B. Lorenzo</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09169958916" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Lactawan</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Isidro</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Mario N. Balmaceda</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Sherwin Elevazo Vicente</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0916 995 8916</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Roque</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Matias S. Walinsundin</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09063843974" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Osmeña</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Kaybanban</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Eriberto P. Belisano Jr.</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Danilo Estacio Domingo</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0906 384 3974</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Paradise III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Gloria D. Cardona</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09655516034" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Pilar D. Galima</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Muzon Proper</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Elizabeth DC. Valerio</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Dexter Yaranon Ruiz</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0965 551 6034</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Muzon East</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Elena Joy B. Celis</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09171475710" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Poblacion North</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Muzon West</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Paolo Martin P. Mateo</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Angelito De Leon Tiongson</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0917 147 5710</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Muzon South</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Edgar E. Celis</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09062685095" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Poblacion South</span>
+                    </div>
+                </div>
+
+                <!-- District 2 Barangays -->
+                <div style="margin-bottom: var(--spacing-lg);">
+                    <div style="text-align: center; margin-bottom: var(--spacing-lg);">
+                        <span class="executive-badge" style="background: linear-gradient(135deg, var(--color-success) 0%, #05c793 100%); font-size: 1rem; padding: 10px 24px;">2nd Legislative District</span>
+                        <p style="color: var(--color-text-light); margin-top: var(--spacing-xs);">36 Barangays</p>
+                    </div>
+                    <div class="grid grid-4" style="gap: var(--spacing-sm);">
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan Proper</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Irene A. Biteng</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Melchor Esmedina Marzo</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0906 268 5095</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Alberto P. Lachica</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09209454538" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Quezon</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Vilma F. Barrientos</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Luis Amangi Castillo</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0920 945 4538</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Kristan Ed M. Espinosa</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09351987103" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Quirino</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan IV</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Antonio M. Madrilejos</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Walter Dalupang Savedra Sr.</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 198 7103</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Minuyan V</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Roberto Q. Arguilles</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09364504413" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Roxas</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Bagong Buhay I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Rogelio M. Elfa</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Edwin Bungan Dacayo</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 450 4413</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Bagong Buhay II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Emma DV. De Leon</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09653480556" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">San Juan</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Bagong Buhay III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Angelina E. Batuigas</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Nardo Eustaquio Ramel</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0965 348 0556</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Martin I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Arlando A. Disamburun</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09363680681" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">San Luis</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Martin II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Alma P. Palacay</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Ernesto Domingo Ramones Jr.</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0936 368 0681</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Martin III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Remedios A. Joseph</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09661769302" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Tucal</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Martin IV</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Christian P. Tamayo</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Roberto Ojastro Dizon</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0966 176 9302</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sta. Cruz I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Ruben J. Gammad</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09355460625" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Uddiawan</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sta. Cruz II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Reynaldo G. Budac</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Jessie Concepcion Delos Reyes</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0935 546 0625</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sta. Cruz III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Genelyn C. Piano</span>
+                            </div>
                         </div>
-                    </a>
-                    <a href="tel:09159621403" class="barangay-card">
-                        <div class="barangay-card-header">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span class="barangay-name">Wacal</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sta. Cruz IV</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Raymundo Arriesgado</span>
+                            </div>
                         </div>
-                        <div class="barangay-card-body">
-                            <span class="barangay-captain">Kap. Janette Quines Cristobal</span>
-                            <span class="barangay-contact"><i class="bi bi-telephone"></i> 0915 962 1403</span>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sta. Cruz V</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Marcelino H. Abing</span>
+                            </div>
                         </div>
-                    </a>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Fatima I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. George S. Tablan Jr.</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Fatima II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Pedro A. Padilla Jr.</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Fatima III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Roberto R. Managabat</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Fatima IV</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Ronnie S. Tabuzo</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Fatima V</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Edwin P. Obenita</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Citrus</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Larry N. Demo</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Pedro</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Erwin C. Blancaflor</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sapang Palay Proper</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Paulo A. Sta. Maria</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Martin De Porres</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Myrna M. Manzano</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Assumption</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Bienvenido E. Punzal</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sto. Nino I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Ricardo M. Semilla Jr.</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Sto. Nino II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Reynaldo C. Francisco</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">Lawang Pare</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Hilario D. Dabu</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Rafael I</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Edmon P. Daluz</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Rafael II</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Sonny L. Canonce</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Rafael III</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Zenaida S. Dela Cruz</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Rafael IV</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Victorel C. Roxas</span>
+                            </div>
+                        </div>
+                        <div class="barangay-card">
+                            <div class="barangay-card-header">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span class="barangay-name">San Rafael V</span>
+                            </div>
+                            <div class="barangay-card-body">
+                                <span class="barangay-captain">Hon. Ma. Flor A. Cerera</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="card" style="background: var(--color-bg-alt); padding: var(--spacing-md); border-radius: 8px; text-align: center;">
+                    <p style="color: var(--color-text-light); font-size: 0.9rem;">
+                        <i class="bi bi-info-circle"></i> For detailed barangay contact information and services, visit
+                        <a href="https://csjdm.gov.ph/barangays/" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline;">CSJDM Barangay Directory</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -783,19 +1214,17 @@
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -807,24 +1236,24 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://csjdm.gov.ph/sangguniang-panlungsod/" target="_blank" rel="noopener noreferrer">Sangguniang Panlungsod</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
                     <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
                 </div>
             </div>
@@ -835,6 +1264,7 @@
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 
 </html>

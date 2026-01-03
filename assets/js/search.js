@@ -1,4 +1,4 @@
-/* Better Solano - Enhanced Search Functionality */
+/* Better SJDM - Enhanced Search Functionality */
 /* Updated: 2025-12-05 */
 
 (function() {
@@ -10,8 +10,8 @@
     let searchIndex = null;
 
     // Search analytics storage
-    const ANALYTICS_KEY = 'bettersolano_search_analytics';
-    const RECENT_SEARCHES_KEY = 'bettersolano_recent_searches';
+    const ANALYTICS_KEY = 'bettersjdm_search_analytics';
+    const RECENT_SEARCHES_KEY = 'bettersjdm_recent_searches';
     const MAX_RECENT_SEARCHES = 10;
     const MAX_ANALYTICS_ENTRIES = 100;
 
@@ -26,7 +26,7 @@
     // Determine the base path based on current page location
     function getBasePath() {
         const path = window.location.pathname;
-        if (path.includes('/services/') || path.includes('/government/') || 
+        if (path.includes('/services/') || path.includes('/government/') ||
             path.includes('/budget/') || path.includes('/contact/') ||
             path.includes('/faq/') || path.includes('/accessibility/') ||
             path.includes('/news/') || path.includes('/sitemap/') ||
@@ -39,7 +39,7 @@
     }
 
     // ==================== SEARCH INDEX ====================
-    
+
     // Build search index for faster lookups
     function buildSearchIndex(services) {
         const index = {
@@ -131,30 +131,30 @@
     function isFuzzyMatch(term, target, threshold = 0.3) {
         if (target.includes(term) || term.includes(target)) return true;
         if (target.startsWith(term) || term.startsWith(target)) return true;
-        
+
         const distance = levenshteinDistance(term, target);
         const maxLen = Math.max(term.length, target.length);
         const similarity = 1 - (distance / maxLen);
-        
+
         return similarity >= (1 - threshold);
     }
 
     // Find fuzzy matches in index
     function findFuzzyMatches(term, indexMap) {
         const matches = new Set();
-        
+
         // Exact match first
         if (indexMap.has(term)) {
             indexMap.get(term).forEach(idx => matches.add(idx));
         }
-        
+
         // Fuzzy matches
         indexMap.forEach((indices, key) => {
             if (isFuzzyMatch(term, key)) {
                 indices.forEach(idx => matches.add(idx));
             }
         });
-        
+
         return matches;
     }
 
@@ -162,7 +162,7 @@
 
     async function loadServicesData() {
         if (isDataLoaded) return servicesData;
-        
+
         try {
             const basePath = getBasePath();
             const response = await fetch(`${basePath}data/services.json`);
@@ -193,13 +193,13 @@
 
     function searchServices(query, services, options = {}) {
         if (!query || query.length < 2) return [];
-        
+
         const { category = null, limit = 10 } = options;
         const searchTerms = tokenize(query);
         if (searchTerms.length === 0) return [];
 
         const candidateIndices = new Set();
-        
+
         // Use index for fast candidate lookup
         if (searchIndex) {
             searchTerms.forEach(term => {
@@ -222,7 +222,7 @@
         candidateIndices.forEach(idx => {
             const service = services[idx];
             if (!service) return;
-            
+
             // Category filter
             if (category && service.categoryId !== category && !service.category.toLowerCase().includes(category.toLowerCase())) {
                 return;
@@ -316,7 +316,7 @@
 
     function addRecentSearch(query) {
         if (!query || query.length < 2) return;
-        
+
         try {
             let recent = getRecentSearches();
             // Remove if already exists
@@ -345,7 +345,7 @@
         try {
             let analytics = getSearchAnalytics();
             const existing = analytics.find(a => a.query.toLowerCase() === query.toLowerCase());
-            
+
             if (existing) {
                 existing.count++;
                 existing.lastSearched = Date.now();
@@ -361,7 +361,7 @@
             // Sort by count and limit
             analytics.sort((a, b) => b.count - a.count);
             analytics = analytics.slice(0, MAX_ANALYTICS_ENTRIES);
-            
+
             localStorage.setItem(ANALYTICS_KEY, JSON.stringify(analytics));
         } catch {
             // localStorage not available
@@ -383,7 +383,7 @@
             .filter(a => a.count >= 2)
             .slice(0, limit)
             .map(a => a.query);
-        
+
         // Fill with curated if not enough
         if (popular.length < limit) {
             CURATED_POPULAR.forEach(term => {
@@ -392,7 +392,7 @@
                 }
             });
         }
-        
+
         return popular;
     }
 
@@ -454,10 +454,10 @@
         dropdown.className = 'search-autocomplete';
         dropdown.setAttribute('role', 'listbox');
         dropdown.setAttribute('aria-label', 'Search suggestions');
-        
+
         input.parentElement.style.position = 'relative';
         input.parentElement.appendChild(dropdown);
-        
+
         return dropdown;
     }
 
@@ -554,7 +554,7 @@
                     url = 'services/' + url;
                 }
             }
-            
+
             return `
                 <a href="${url}" class="search-result-item" role="option" data-index="${index}">
                     <div class="search-result-title">
@@ -618,7 +618,7 @@
         const services = await loadServicesData();
         const dropdown = createAutocomplete(input);
         const categories = getCategories(services);
-        
+
         let debounceTimer;
         let selectedIndex = -1;
         let currentCategory = null;
@@ -639,7 +639,7 @@
         input.addEventListener('input', function() {
             clearTimeout(debounceTimer);
             const query = this.value.trim();
-            
+
             if (query.length < 2) {
                 const suggestions = getSuggestions(query, services);
                 renderResults([], dropdown, { showSuggestions: true, suggestions, categories });
@@ -654,13 +654,13 @@
             const results = searchServices(query, services, { category: currentCategory });
             currentResults = results;
             const suggestions = getSuggestions(query, services);
-            
-            renderResults(results, dropdown, { 
-                suggestions, 
-                categories, 
-                selectedCategory: currentCategory 
+
+            renderResults(results, dropdown, {
+                suggestions,
+                categories,
+                selectedCategory: currentCategory
             });
-            
+
             // Track search
             trackSearch(query, results.length);
             selectedIndex = -1;
@@ -669,7 +669,7 @@
         // Handle keyboard navigation
         input.addEventListener('keydown', function(e) {
             const items = dropdown.querySelectorAll('.search-result-item, .search-suggestion-item');
-            
+
             if (e.key === 'ArrowDown') {
                 e.preventDefault();
                 selectedIndex = Math.min(selectedIndex + 1, items.length - 1);
@@ -785,11 +785,11 @@
 
     function addSearchStyles() {
         if (document.getElementById('search-styles-v3')) return;
-        
+
         // Remove old styles if present
         const oldStyles = document.getElementById('search-styles-v2');
         if (oldStyles) oldStyles.remove();
-        
+
         const styles = document.createElement('style');
         styles.id = 'search-styles-v3';
         styles.textContent = `
@@ -809,25 +809,25 @@
                 margin-top: 8px;
                 animation: searchDropdownFadeIn 0.2s ease;
             }
-            
+
             @keyframes searchDropdownFadeIn {
                 from { opacity: 0; transform: translateY(-8px); }
                 to { opacity: 1; transform: translateY(0); }
             }
-            
+
             .search-autocomplete::-webkit-scrollbar {
                 width: 6px;
             }
-            
+
             .search-autocomplete::-webkit-scrollbar-track {
                 background: transparent;
             }
-            
+
             .search-autocomplete::-webkit-scrollbar-thumb {
                 background: rgba(0, 50, 160, 0.2);
                 border-radius: 3px;
             }
-            
+
             .search-loading {
                 display: flex;
                 align-items: center;
@@ -836,7 +836,7 @@
                 color: #666;
                 font-size: 0.875rem;
             }
-            
+
             .search-loading-spinner {
                 width: 20px;
                 height: 20px;
@@ -846,11 +846,11 @@
                 animation: searchSpin 0.8s linear infinite;
                 margin-right: 10px;
             }
-            
+
             @keyframes searchSpin {
                 to { transform: rotate(360deg); }
             }
-            
+
             .search-filters {
                 display: flex;
                 gap: 6px;
@@ -861,11 +861,11 @@
                 background: linear-gradient(180deg, #fafbfc 0%, #fff 100%);
                 border-radius: 16px 16px 0 0;
             }
-            
+
             .search-filters::-webkit-scrollbar {
                 height: 0;
             }
-            
+
             .search-filter-btn {
                 padding: 6px 14px;
                 border: 1px solid rgba(0, 50, 160, 0.15);
@@ -878,28 +878,28 @@
                 white-space: nowrap;
                 transition: all 0.2s ease;
             }
-            
+
             .search-filter-btn:hover {
                 border-color: #0032a0;
                 color: #0032a0;
                 background: rgba(0, 50, 160, 0.04);
             }
-            
+
             .search-filter-btn.active {
                 background: linear-gradient(135deg, #0032a0 0%, #0044cc 100%);
                 border-color: #0032a0;
                 color: #fff;
                 box-shadow: 0 2px 8px rgba(0, 50, 160, 0.3);
             }
-            
+
             .search-section {
                 border-bottom: 1px solid rgba(0, 50, 160, 0.06);
             }
-            
+
             .search-section:last-child {
                 border-bottom: none;
             }
-            
+
             .search-section-header {
                 display: flex;
                 justify-content: space-between;
@@ -911,12 +911,12 @@
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
             }
-            
+
             .search-section-header i {
                 margin-right: 5px;
                 color: #0032a0;
             }
-            
+
             .search-clear-recent {
                 background: none;
                 border: none;
@@ -928,11 +928,11 @@
                 border-radius: 4px;
                 transition: background 0.15s ease;
             }
-            
+
             .search-clear-recent:hover {
                 background: rgba(0, 50, 160, 0.08);
             }
-            
+
             .search-suggestion-item {
                 display: flex;
                 align-items: center;
@@ -944,14 +944,14 @@
                 text-align: left;
                 border-left: 3px solid transparent;
             }
-            
+
             .search-suggestion-item i {
                 color: #999;
                 margin-right: 10px;
                 font-size: 0.8125rem;
                 transition: color 0.15s ease;
             }
-            
+
             .search-suggestion-item:hover,
             .search-suggestion-item.selected {
                 background: linear-gradient(90deg, rgba(0, 50, 160, 0.06) 0%, rgba(0, 50, 160, 0.02) 100%);
@@ -959,12 +959,12 @@
                 text-decoration: none;
                 color: #0032a0;
             }
-            
+
             .search-suggestion-item:hover i,
             .search-suggestion-item.selected i {
                 color: #0032a0;
             }
-            
+
             .search-result-item {
                 display: block;
                 padding: 14px 16px;
@@ -975,18 +975,18 @@
                 text-align: left;
                 border-left: 3px solid transparent;
             }
-            
+
             .search-result-item:last-child {
                 border-bottom: none;
             }
-            
+
             .search-result-item:hover,
             .search-result-item.selected {
                 background: linear-gradient(90deg, rgba(0, 50, 160, 0.06) 0%, rgba(0, 50, 160, 0.02) 100%);
                 border-left-color: #0032a0;
                 text-decoration: none;
             }
-            
+
             .search-result-title {
                 font-weight: 600;
                 color: #0032a0;
@@ -996,14 +996,14 @@
                 align-items: center;
                 gap: 8px;
             }
-            
+
             .search-result-title mark {
                 background: linear-gradient(180deg, transparent 60%, rgba(0, 50, 160, 0.15) 60%);
                 color: inherit;
                 padding: 0;
                 border-radius: 0;
             }
-            
+
             .search-result-badge {
                 font-size: 0.625rem;
                 font-weight: 600;
@@ -1014,7 +1014,7 @@
                 text-transform: uppercase;
                 letter-spacing: 0.3px;
             }
-            
+
             .search-result-meta {
                 display: flex;
                 flex-wrap: wrap;
@@ -1022,34 +1022,34 @@
                 font-size: 0.75rem;
                 margin-bottom: 6px;
             }
-            
+
             .search-result-meta span {
                 display: inline-flex;
                 align-items: center;
                 gap: 5px;
             }
-            
+
             .search-result-meta i {
                 font-size: 0.6875rem;
                 opacity: 0.8;
             }
-            
+
             .search-result-category {
                 color: #666;
                 background: rgba(0, 0, 0, 0.04);
                 padding: 2px 8px;
                 border-radius: 4px;
             }
-            
+
             .search-result-fee {
                 color: #06a77d;
                 font-weight: 600;
             }
-            
+
             .search-result-time {
                 color: #0066cc;
             }
-            
+
             .search-result-office {
                 font-size: 0.75rem;
                 color: #777;
@@ -1057,13 +1057,13 @@
                 display: flex;
                 align-items: center;
             }
-            
+
             .search-result-office i {
                 margin-right: 6px;
                 font-size: 0.6875rem;
                 color: #0032a0;
             }
-            
+
             .search-result-desc {
                 font-size: 0.8125rem;
                 color: #666;
@@ -1072,31 +1072,31 @@
                 text-overflow: ellipsis;
                 line-height: 1.4;
             }
-            
+
             .search-no-results {
                 padding: 32px 24px;
                 text-align: center;
                 color: #666;
             }
-            
+
             .search-no-results i {
                 font-size: 2.5rem;
                 color: rgba(0, 50, 160, 0.2);
                 margin-bottom: 12px;
                 display: block;
             }
-            
+
             .search-no-results p {
                 margin: 0 0 6px;
                 font-weight: 600;
                 color: #333;
             }
-            
+
             .search-no-results small {
                 color: #888;
                 font-size: 0.8125rem;
             }
-            
+
             .search-keyboard-hint {
                 display: flex;
                 align-items: center;
@@ -1109,7 +1109,7 @@
                 color: #888;
                 border-radius: 0 0 16px 16px;
             }
-            
+
             .search-keyboard-hint kbd {
                 display: inline-flex;
                 align-items: center;
@@ -1127,7 +1127,7 @@
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
                 margin: 0 2px;
             }
-            
+
             .search-footer {
                 display: flex;
                 align-items: center;
@@ -1139,54 +1139,54 @@
                 color: #888;
                 border-radius: 0 0 16px 16px;
             }
-            
+
             .search-footer-count {
                 font-weight: 500;
             }
-            
+
             .search-footer-powered {
                 display: flex;
                 align-items: center;
                 gap: 4px;
             }
-            
+
             .search-footer-powered i {
                 color: #0032a0;
             }
-            
+
             @media (max-width: 575px) {
                 .search-autocomplete {
                     border-radius: 12px;
                     margin-top: 6px;
                 }
-                
+
                 .search-filters {
                     padding: 10px 12px;
                     gap: 5px;
                     border-radius: 12px 12px 0 0;
                 }
-                
+
                 .search-filter-btn {
                     padding: 5px 12px;
                     font-size: 0.6875rem;
                 }
-                
+
                 .search-result-meta {
                     gap: 8px;
                 }
-                
+
                 .search-result-item {
                     padding: 12px 14px;
                 }
-                
+
                 .search-suggestion-item {
                     padding: 10px 14px;
                 }
-                
+
                 .search-keyboard-hint {
                     display: none;
                 }
-                
+
                 .search-footer {
                     border-radius: 0 0 12px 12px;
                 }
@@ -1195,37 +1195,263 @@
         document.head.appendChild(styles);
     }
 
+    // ==================== GLOBAL SEARCH MODAL ====================
+
+    function initGlobalSearchModal() {
+        const modal = document.getElementById('searchModal');
+        const input = document.getElementById('global-search-input');
+        const resultsContainer = document.getElementById('searchResults');
+        const toggleBtns = document.querySelectorAll('.search-toggle-btn');
+        const closeBtn = modal?.querySelector('.search-modal-close');
+        const overlay = modal?.querySelector('.search-modal-overlay');
+        const categoryBtns = modal?.querySelectorAll('.search-category-btn');
+
+        if (!modal || !input || !resultsContainer) return;
+
+        let currentCategory = 'all';
+        let debounceTimer = null;
+
+        // Open modal
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => input.focus(), 100);
+        }
+
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            input.value = '';
+            showQuickLinks();
+        }
+
+        // Toggle buttons
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', openModal);
+        });
+
+        // Close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        // Overlay click
+        if (overlay) {
+            overlay.addEventListener('click', closeModal);
+        }
+
+        // ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+            // Ctrl+K or Cmd+K to open
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                openModal();
+            }
+        });
+
+        // Category buttons
+        categoryBtns?.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                if (input.value.trim()) {
+                    performSearch(input.value.trim());
+                }
+            });
+        });
+
+        // Search input
+        input.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            const query = e.target.value.trim();
+
+            if (query.length < 2) {
+                showQuickLinks();
+                return;
+            }
+
+            debounceTimer = setTimeout(() => {
+                performSearch(query);
+            }, 150);
+        });
+
+        // Perform search
+        async function performSearch(query) {
+            await loadServicesData();
+
+            let results = searchServices(query, servicesData);
+
+            // Filter by category
+            if (currentCategory !== 'all') {
+                results = results.filter(r => {
+                    if (currentCategory === 'services') {
+                        return r.category !== 'Pages' && r.category !== 'Offices';
+                    }
+                    if (currentCategory === 'offices') {
+                        return r.office || r.category?.toLowerCase().includes('office');
+                    }
+                    if (currentCategory === 'pages') {
+                        return r.category === 'Pages' || r.isPage;
+                    }
+                    return true;
+                });
+            }
+
+            renderResults(results, query);
+        }
+
+        // Render results
+        function renderResults(results, query) {
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="search-no-results">
+                        <i class="bi bi-search"></i>
+                        <p>No results found for "${escapeHtml(query)}"</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const basePath = getBasePath();
+            let html = '<div class="search-results-list">';
+
+            results.slice(0, 10).forEach(result => {
+                const url = result.url || '#';
+                const adjustedUrl = url.startsWith('../') ? url.replace('../', basePath) : basePath + url;
+                const icon = getCategoryIcon(result.category);
+
+                html += `
+                    <a href="${adjustedUrl}" class="search-result-item">
+                        <div class="search-result-icon">
+                            <i class="bi ${icon}"></i>
+                        </div>
+                        <div class="search-result-content">
+                            <h5>${highlightMatch(result.title, query)}</h5>
+                            <p>${result.category || ''}</p>
+                            ${result.office ? `<div class="search-result-meta"><span><i class="bi bi-building"></i> ${result.office}</span></div>` : ''}
+                        </div>
+                    </a>
+                `;
+            });
+
+            html += '</div>';
+            resultsContainer.innerHTML = html;
+        }
+
+        // Show quick links (initial state)
+        function showQuickLinks() {
+            const basePath = getBasePath();
+            resultsContainer.innerHTML = `
+                <div class="search-quick-links">
+                    <h4>Quick Links</h4>
+                    <div class="quick-links-grid">
+                        <a href="${basePath}service-details/birth-certificate.html" class="quick-link-item">
+                            <i class="bi bi-file-person"></i>
+                            <span>Birth Certificate</span>
+                        </a>
+                        <a href="${basePath}service-details/business-permits-licensing.html" class="quick-link-item">
+                            <i class="bi bi-shop"></i>
+                            <span>Business Permit</span>
+                        </a>
+                        <a href="${basePath}service-details/city-treasurer.html" class="quick-link-item">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Real Property Tax</span>
+                        </a>
+                        <a href="${basePath}services/certificates.html" class="quick-link-item">
+                            <i class="bi bi-file-earmark-check"></i>
+                            <span>Certificates</span>
+                        </a>
+                        <a href="${basePath}government/" class="quick-link-item">
+                            <i class="bi bi-building"></i>
+                            <span>Government</span>
+                        </a>
+                        <a href="${basePath}contact/" class="quick-link-item">
+                            <i class="bi bi-telephone"></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Get category icon
+        function getCategoryIcon(category) {
+            const icons = {
+                'Certificates & Vital Records': 'bi-file-earmark-text',
+                'Business Trade & Investment': 'bi-shop',
+                'Tax & Payments': 'bi-cash-coin',
+                'Social Welfare': 'bi-people',
+                'Health & Medical': 'bi-heart-pulse',
+                'Agriculture & Environment': 'bi-tree',
+                'Infrastructure & Engineering': 'bi-building-gear',
+                'Education': 'bi-mortarboard',
+                'Public Safety': 'bi-shield-check',
+                'Pages': 'bi-link-45deg',
+                'Offices': 'bi-building'
+            };
+            return icons[category] || 'bi-file-earmark';
+        }
+
+        // Highlight search match
+        function highlightMatch(text, query) {
+            if (!query) return escapeHtml(text);
+            const escaped = escapeHtml(text);
+            const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+            return escaped.replace(regex, '<mark>$1</mark>');
+        }
+
+        // Escape HTML
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // Escape regex
+        function escapeRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+    }
+
     // ==================== INIT ====================
 
     if (typeof document !== 'undefined') {
         document.addEventListener('DOMContentLoaded', function() {
             addSearchStyles();
-            
+
             const searchInputs = document.querySelectorAll('#service-search, #hero-search, .service-search-input');
             searchInputs.forEach(input => {
                 if (input) initSearch(input);
             });
+
+            // Initialize global search modal
+            initGlobalSearchModal();
         });
     }
 
     // ==================== EXPORTS ====================
 
     if (typeof module !== 'undefined' && module.exports) {
-        module.exports = { 
-            searchServices, 
-            getSuggestions, 
-            getPopularSearches, 
+        module.exports = {
+            searchServices,
+            getSuggestions,
+            getPopularSearches,
             getRecentSearches,
             getSearchAnalytics,
             trackSearch
         };
     }
-    
+
     if (typeof window !== 'undefined') {
-        window.BetterSolanoSearch = { 
-            searchServices, 
-            getSuggestions, 
-            getPopularSearches, 
+        window.BetterSJDMSearch = {
+            searchServices,
+            getSuggestions,
+            getPopularSearches,
             getRecentSearches,
             getSearchAnalytics,
             trackSearch,

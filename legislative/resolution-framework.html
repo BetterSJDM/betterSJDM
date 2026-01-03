@@ -12,32 +12,32 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse resolutions passed by the Sangguniang Bayan of Solano, Nueva Vizcaya. Access municipal resolutions, council decisions, and legislative records from LGU Solano.">
+    <meta name="description" content="Browse resolutions passed by the Sangguniang Bayan of San Jose del Monte City, . Access municipal resolutions, council decisions, and legislative records from LGU SJDM.">
     <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="Solano resolutions, municipal resolutions, Sangguniang Bayan, council resolutions, LGU Solano, Nueva Vizcaya resolutions, legislative records, municipal council">
+    <meta name="keywords" content="SJDM resolutions, municipal resolutions, Sangguniang Bayan, council resolutions, LGU SJDM,  resolutions, legislative records, municipal council">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/legislative/resolution-framework">
-    
+    <link rel="canonical" href="https://bettersjdm/legislative/resolution-framework">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/legislative/resolution-framework">
-    <meta property="og:title" content="Resolution Framework | BetterSolano.org">
-    <meta property="og:description" content="Browse resolutions passed by the Sangguniang Bayan of Solano, Nueva Vizcaya. Access municipal resolutions, council decisions, and legislative records from LGU Solano.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/legislative/resolution-framework">
+    <meta property="og:title" content="Resolution Framework | BetterSJDM">
+    <meta property="og:description" content="Browse resolutions passed by the Sangguniang Bayan of San Jose del Monte City, . Access municipal resolutions, council decisions, and legislative records from LGU SJDM.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:locale" content="en_PH">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://bettersolano.org/legislative/resolution-framework">
-    <meta name="twitter:title" content="Resolution Framework | BetterSolano.org">
-    <meta name="twitter:description" content="Browse resolutions passed by the Sangguniang Bayan of Solano, Nueva Vizcaya. Access municipal resolutions, council decisions, and legislative records from LGU Solano.">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <title>Resolution Framework | BetterSolano.org</title>
+    <meta name="twitter:url" content="https://bettersjdm/legislative/resolution-framework">
+    <meta name="twitter:title" content="Resolution Framework | BetterSJDM">
+    <meta name="twitter:description" content="Browse resolutions passed by the Sangguniang Bayan of San Jose del Monte City, . Access municipal resolutions, council decisions, and legislative records from LGU SJDM.">
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <title>Resolution Framework | BetterSJDM</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
@@ -50,7 +50,7 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -60,39 +60,64 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/accessibility.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/legislative.css">
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hotline Bar -->
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item">
-                        <i class="bi bi-shield-fill"></i>
-                        <span>Police: 0927 400 8033</span>
-                    </a>
-                    <a href="tel:09162840885" class="hotline-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <span>MSWDO: 0916 284 0885</span>
-                    </a>
-                    <a href="tel:09360620305" class="hotline-item">
-                        <i class="bi bi-fire"></i>
-                        <span>Fire: 0936 062 0305</span>
-                    </a>
-                    <a href="tel:0906188086" class="hotline-item">
-                        <i class="bi bi-building"></i>
-                        <span>DILG: 0906 188 086</span>
-                    </a>
-                    <a href="tel:09263833744" class="hotline-item">
+                    <a href="tel:09366000119" class="hotline-item">
                         <i class="bi bi-exclamation-triangle-fill"></i>
-                        <span>MDRRMO: 0926 383 3744</span>
+                        <span>CDRRMO: 0936 600 0119</span>
                     </a>
-                    <a href="tel:09068195569" class="hotline-item">
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
                         <i class="bi bi-truck"></i>
-                        <span>R2TMC: 0906 819 5569</span>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
                     </a>
                 </div>
             </div>
@@ -104,13 +129,12 @@
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="../">
-                    <img src="../assets/images/logo/better-solano-logo.svg" alt="Better Solano Logo" class="logo-img">
+                    <img src="../assets/images/logo/better-sjdm-logo.png" alt="Better SJDM Logo" class="logo-img">
                 </a>
             </div>
 
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../" data-i18n="nav-home">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../services/" data-i18n="nav-services">Services</a>
                         <ul class="dropdown-menu">
@@ -136,19 +160,77 @@
                         </ul>
                     </li>
                     <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search services" title="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
@@ -160,9 +242,9 @@
                         <span class="rate-display">1 USD = ₱ --</span>
                     </span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -195,7 +277,7 @@
                 <div class="page-header-content">
                     <span class="page-header-badge"><i class="bi bi-file-earmark-text"></i> Legislative</span>
                     <h1>Resolution Framework</h1>
-                    <p class="page-header-desc">Resolutions passed by the Sangguniang Bayan ng Solano</p>
+                    <p class="page-header-desc">Resolutions passed by the Sangguniang Lungsod ng San Jose Del Monte</p>
                 </div>
             </div>
         </section>
@@ -207,8 +289,120 @@
                     <div class="info-card-icon"><i class="bi bi-info-circle"></i></div>
                     <div class="info-card-content">
                         <h3>What is a Resolution?</h3>
-                        <p>A resolution is a formal expression of the opinion or will of the Sangguniang Bayan. Unlike ordinances, resolutions do not have the force and effect of law but serve as official statements of the legislative body.</p>
-                        <p>Resolutions are commonly used for: commendations, requests to higher government agencies, expressions of support or opposition, and administrative matters of the Sangguniang Bayan.</p>
+                        <p>A resolution is a formal expression of the opinion or will of the Sangguniang Panlungsod. Unlike ordinances, resolutions do not have the force and effect of law but serve as official statements of the legislative body.</p>
+                        <p>Resolutions are commonly used for: commendations, requests to higher government agencies, expressions of support or opposition, and administrative matters of the Sangguniang Panlungsod.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legislative Process Steps -->
+        <section class="section" style="background: var(--color-bg-alt);">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: var(--spacing-lg);">
+                    <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-xs);">How a Resolution is Passed</h2>
+                    <p style="color: var(--color-text-light);">Step-by-step process based on RA 7160 (Local Government Code) and CSJDM rules</p>
+                </div>
+
+                <div class="legislative-steps">
+                    <div class="legislative-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Drafting the Resolution</h4>
+                            <p>A Sangguniang Panlungsod member (councilor), committee, or the Mayor/City departments prepares the draft resolution. It must include: title, whereas clauses (background/justification), and resolved clauses (action items).</p>
+                            <span class="step-legal">Legal basis: RA 7160 (Local Government Code)</span>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Sponsorship / Filing with Sangguniang Secretariat</h4>
+                            <p>A councilor must sponsor/introduce the draft during a session or file it with the Sangguniang Secretariat so it is placed on the Calendar of Business. The secretary certifies passage/processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Referral to Appropriate Committee</h4>
+                            <p>On first reading, the resolution may be referred to the relevant committee(s) for review. For simple resolutions (commendations, condolences), this step may be expedited.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Committee Review (If Required)</h4>
+                            <p>For resolutions requiring technical review, committees may hold hearings or consultations. For appropriation resolutions, public hearings may be required. Citizens/affected parties may submit position papers.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Committee Report</h4>
+                            <p>If referred to committee, it issues a written recommendation (approve, approve with amendments, or disapprove) and sends the resolution back to the plenary with its report.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Readings in Plenary</h4>
+                            <p>Resolutions may be acted upon with fewer readings than ordinances, depending on local rules. Simple resolutions may be passed in one session, while more substantive resolutions may undergo:</p>
+                            <ul>
+                                <li><strong>First Reading:</strong> Introduction and referral</li>
+                                <li><strong>Second Reading:</strong> Deliberation and amendments</li>
+                                <li><strong>Third Reading:</strong> Final vote (if required)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h4>Voting / Passage</h4>
+                            <p>A resolution is adopted when approved by the required majority as provided in the Sanggunian's rules (usually majority of those present). Minutes and enrolled copy are kept.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h4>Certification by Sanggunian</h4>
+                            <p>After passage, the Sangguniang Secretary certifies the resolution. Unlike ordinances, most resolutions do not require mayoral approval unless they involve appropriations or other executive actions.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">9</div>
+                        <div class="step-content">
+                            <h4>Transmittal (If Required)</h4>
+                            <p>For resolutions requesting action from higher government agencies or other entities, the certified resolution is transmitted to the addressee. For appropriation resolutions, transmittal to the Mayor follows the same 10-day rule as ordinances.</p>
+                        </div>
+                    </div>
+
+                    <div class="legislative-step">
+                        <div class="step-number">10</div>
+                        <div class="step-content">
+                            <h4>Filing and Archiving</h4>
+                            <p>The approved resolution is recorded in the Sanggunian records and copies are sent to concerned offices or addressees. Citizens can request copies from the Sanggunian or view resolutions on DILG/LGU repositories.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Citizen Participation -->
+                <div class="info-card" style="margin-top: var(--spacing-lg);">
+                    <div class="info-card-icon"><i class="bi bi-people"></i></div>
+                    <div class="info-card-content">
+                        <h3>How Citizens Can Participate</h3>
+                        <ol style="margin: 0; padding-left: 1.25rem;">
+                            <li>Request a councilor to sponsor a resolution on your behalf or on a matter of public interest</li>
+                            <li>Contact the Sangguniang Secretariat to track pending resolutions</li>
+                            <li>Attend committee hearings for resolutions requiring public consultation</li>
+                            <li>Request copies of passed resolutions from the Sanggunian</li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -236,11 +430,11 @@
             <div class="container">
                 <div class="text-center" style="margin-bottom: var(--spacing-lg);">
                     <h2 style="font-size: 1.5rem; margin-bottom: var(--spacing-xs);">2025 Resolutions</h2>
-                    <p style="color: var(--color-text-light);">Official resolutions passed by the Sangguniang Bayan ng Solano in 2025</p>
+                    <p style="color: var(--color-text-light);">Official resolutions passed by the Sangguniang Lungsod ng San Jose Del Monte in 2025</p>
                 </div>
                 <div class="table-responsive">
                     <table class="data-table resolution-table" id="resolution-table">
-                        <caption class="sr-only">List of 2025 Resolutions from Sangguniang Bayan ng Solano</caption>
+                        <caption class="sr-only">List of 2025 Resolutions from Sangguniang Lungsod ng San Jose Del Monte</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Resolution No.</th>
@@ -254,8 +448,8 @@
                     </table>
                 </div>
                 <div class="text-center" style="margin-top: var(--spacing-lg);">
-                    <a href="https://sangguniangbayan.solano.gov.ph/index.php?page=legislative_framework_reso" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <i class="bi bi-box-arrow-up-right"></i> View All Resolutions on SB Website
+                    <a href="https://www.facebook.com/secretariatoffice/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-up-right"></i> View All Resolutions on SP Facebook
                     </a>
                 </div>
             </div>
@@ -266,19 +460,17 @@
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -290,24 +482,23 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
                     <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
                 </div>
             </div>
@@ -319,6 +510,7 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/resolutions.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,8 @@
-# BetterSolano.org
+# BetterSJDM
 
-A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Solano, Nueva Vizcaya, Philippines.
+A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU San Jose del Monte City, Bulacan, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.1.7-green)
+![Version](https://img.shields.io/badge/version-2.0.0-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -11,13 +11,24 @@ A civic-tech initiative providing transparent access to municipal services, prog
 
 ## About
 
-BetterSolano.org is a volunteer-driven, open-source project that empowers the people of Solano with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
+BetterSJDM is a volunteer-driven, open-source project that empowers the people of San Jose del Monte City with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
 
-**Cost to the People of Solano = ₱0**
+**Cost to the People of SJDM = ₱0**
+
+## License
+
+This project uses a dual-license structure:
+
+- **Code** (HTML, CSS, JavaScript, configuration files) is licensed under the [MIT License](./LICENSE)
+- **Content** (text, images, datasets, documentation) is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE-CC-BY-4.0.txt)
+
+**Attribution: Ramon Logan Jr.**
+
+For detailed license information, see [LICENSE-README.md](./LICENSE-README.md).
 
 ## Live Demo
 
-Visit the live website: [https://bettersolano.org](https://bettersolano.org)
+Visit the live website: [https://bettersjdm.org](https://bettersjdm.org)
 
 ## Technology Stack
 
@@ -48,12 +59,15 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 |---------|-------------|
 | **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times |
 | **Government Officials** | Directory of elected officials and department heads with contact information |
-| **Budget Transparency** | Financial reports, income/expenditure breakdowns, and infrastructure projects |
+| **Budget Transparency** | Financial reports, income/expenditure breakdowns, and DPWH infrastructure projects |
 | **Legislative Documents** | Searchable database of ordinances and resolutions from Sangguniang Bayan |
 | **Municipal Statistics** | Demographics, economic data, and competitive index rankings |
+| **Events Calendar** | Interactive calendar showing city events, holidays, and important dates |
+| **News & Updates** | Latest announcements and news from the city government |
 | **Real-time Information** | Live weather updates, currency exchange rates, and Philippine time |
 | **Multi-language Support** | Available in English, Filipino, and Ilocano |
 | **Accessibility** | WCAG 2.1 compliant with skip links, ARIA labels, and semantic HTML |
+| **Privacy & Terms** | Comprehensive privacy policy and terms of service pages |
 | **SEO Optimized** | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap |
 | **Performance** | 90% size reduction through minification, GZIP compression, and browser caching |
 
@@ -61,10 +75,10 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterSolano/bettersolano.git
+git clone https://github.com/BetterSJDM/bettersjdm.git
 
 # Navigate to project directory
-cd bettersolano
+cd bettersjdm
 
 # Install dependencies
 npm install
@@ -81,18 +95,18 @@ npm run dev
 ### Prerequisites
 
 | Requirement | Version | Purpose |
-|-------------|---------|---------|
+|-------------|---------|------|
 | Node.js | v16+ | Build tools and package management |
 | npm | v8+ | Dependency management |
-| Python 3 | v3.x | Local development server |
+| Python | v3.x | Local development server |
 | Git | Latest | Version control |
 
 ### Setup Steps
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
+git clone https://github.com/BetterSJDM/bettersjdm.git
+cd bettersjdm
 ```
 
 2. **Install dependencies**
@@ -150,25 +164,34 @@ npm run build
 ## Project Structure
 
 ```
-bettersolano/
+bettersjdm/
 ├── assets/
 │   ├── css/              # Stylesheets (9 files)
-│   ├── js/               # JavaScript modules (15 files)
+│   ├── js/               # JavaScript modules (19 files)
 │   ├── images/           # Images, icons, banners
 │   └── fonts/            # Web fonts
 ├── data/                 # JSON data files
 │   ├── officials.json    # Government officials data
 │   ├── services.json     # Municipal services data
 │   ├── ordinances.json   # Legislative ordinances
-│   └── resolutions.json  # Legislative resolutions
+│   ├── resolutions.json  # Legislative resolutions
+│   ├── events.json       # City events and calendar
+│   ├── dpwh-projects.json # DPWH infrastructure projects
+│   └── csv/              # CSV data files for statistics
 ├── services/             # Service category pages (11 pages)
-├── service-details/      # Individual service pages (22 pages)
+├── service-details/      # Individual service pages (15 pages)
 ├── government/           # Government directory pages
 ├── legislative/          # Legislative framework pages
 ├── budget/               # Budget transparency page
 ├── statistics/           # Municipal statistics page
+├── calendar/             # Events calendar page
+├── news/                 # News and announcements page
 ├── contact/              # Contact information page
 ├── faq/                  # Frequently asked questions
+├── privacy/              # Privacy policy page
+├── terms/                # Terms of service page
+├── sitemap/              # HTML sitemap page
+├── accessibility/        # Accessibility statement page
 ├── scripts/              # Build and version scripts
 ├── dist/                 # Production build output
 ├── index.html            # Homepage
@@ -183,7 +206,7 @@ bettersolano/
 
 ## Contributing
 
-We welcome contributions from everyone! Whether you're a developer, designer, data researcher, content writer, translator, or a concerned citizen of Solano, your participation helps shape this project for all.
+We welcome contributions from everyone! Whether you're a developer, designer, data researcher, content writer, translator, or a concerned citizen of San Jose del Monte City, your participation helps shape this project for all.
 
 ### How to Contribute
 
@@ -237,9 +260,9 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 All public information is sourced from official government portals:
 
 | Source | URL | Data Type |
-|--------|-----|-----------|
-| LGU Solano Official Website | [solano.gov.ph](https://solano.gov.ph/) | Services, Officials |
-| Sangguniang Bayan ng Solano | [sangguniangbayan.solano.gov.ph](https://sangguniangbayan.solano.gov.ph/) | Ordinances, Resolutions |
+|--------|-----|-----------||
+| LGU SJDM Official Website | [sjdm.gov.ph](https://sjdm.gov.ph/) | Services, Officials |
+| Sangguniang Panlungsod ng SJDM | TBD | Ordinances, Resolutions |
 | Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/) | Budget, Financial Reports |
 | Philippine Statistics Authority | [psa.gov.ph](https://psa.gov.ph/) | Demographics, Census |
 | DTI CMCI Portal | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/) | Competitive Index |
@@ -259,25 +282,24 @@ See [LICENSE](LICENSE) for full details.
 
 | Channel | Link |
 |---------|------|
-| Website | [bettersolano.org](https://bettersolano.org) |
-| Email | volunteer@bettersolano.org |
-| Facebook | [@bettersolano.org](https://www.facebook.com/bettersolano.org) |
-| LinkedIn | [BetterSolano](https://www.linkedin.com/company/bettersolano/) |
+| Website | [bettersjdm.org](https://bettersjdm.org) |
+| Email | volunteer@bettersjdm.org |
+| Facebook | [@bettersjdm.org](https://www.facebook.com/bettersjdm.org) |
+| LinkedIn | [BetterSJDM](https://www.linkedin.com/company/bettersjdm/) |
 | Discord | [Join Community](https://discord.com/invite/qeSu7RJkjQ) |
-| GitHub | [BetterSolano/bettersolano](https://github.com/BetterSolano/bettersolano) |
+| GitHub | [BetterSJDM/bettersjdm](https://github.com/BetterSJDM/bettersjdm) |
 
 ## Acknowledgments
 
-- [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
-- LGU Solano for public data availability and transparency
+- [BetterGov.ph](https://bettergov.ph) for pioneering the civic-tech initiative in the Philippines
+- [BetterSolano.org](https://bettersolano.org) and its developer for the civic-tech approach
+- [BetterSJDM](https://bettersjdm) for the community
+- LGU San Jose del Monte City for public data availability and transparency
 - All volunteers and contributors who dedicate their time
 - Open-source community for the tools and libraries used
-- Citizens of Solano for their feedback and support
+- Citizens of SJDM for their feedback and support
 
 ---
 
-Made for the people of Solano, Nueva Vizcaya
+Made for the people of San Jose del Monte City, Bulacan
 
-## Developer
-
-[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterSolano.org and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).

@@ -11,34 +11,34 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solano, Nueva Vizcaya statistics and data. View CMCI Competitive Index rankings, population demographics, economic dynamism, government efficiency, infrastructure, and barangay data visualizations.">
-    
+    <meta name="description" content="San Jose del Monte City, Bulacan statistics and data. View CMCI Competitive Index rankings, population demographics, economic dynamism, government efficiency, infrastructure, and barangay data visualizations.">
+
     <!-- SEO Meta Tags -->
     <meta name="author" content="Ramon Logan Jr.">
-    <meta name="keywords" content="Solano statistics, CMCI competitive index, population data, demographics, economic dynamism, government efficiency, infrastructure, resiliency, innovation, Nueva Vizcaya data, barangay population, LGU Solano data">
+    <meta name="keywords" content="SJDM statistics, San Jose del Monte statistics, CMCI competitive index, population data, demographics, economic dynamism, government efficiency, infrastructure, resiliency, innovation, Bulacan data, barangay population, LGU SJDM data, component city">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bettersolano.org/statistics/">
-    
+    <link rel="canonical" href="https://bettersjdm/statistics/">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bettersolano.org/statistics/">
-    <meta property="og:title" content="Municipal Statistics & Data | BetterSolano.org">
-    <meta property="og:description" content="Municipal statistics and data for Solano, Nueva Vizcaya. View population demographics, economic indicators, barangay data, and community statistics from LGU Solano.">
-    <meta property="og:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
+    <meta property="og:url" content="https://bettersjdm/statistics/">
+    <meta property="og:title" content="City Statistics & Data | BetterSJDM">
+    <meta property="og:description" content="City statistics and data for San Jose del Monte City, Bulacan. View population demographics, economic indicators, barangay data, and community statistics from LGU SJDM.">
+    <meta property="og:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:secure_url" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    <meta property="og:site_name" content="BetterSolano.org">
-    
+    <meta property="og:image:secure_url" content="https://bettersjdm/assets/images/banners/opengraph.png">
+    <meta property="og:site_name" content="BetterSJDM">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://bettersolano.org/assets/images/banners/opengraph.png">
-    
+    <meta name="twitter:image" content="https://bettersjdm/assets/images/banners/opengraph.png">
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#1a5f2a">
-    
-    <title>Municipal Statistics & Data | BetterSolano.org</title>
+
+    <title>City Statistics & Data | BetterSJDM</title>
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
     <link rel="apple-touch-icon" href="../assets/images/logo/favicon.svg">
@@ -48,7 +48,7 @@
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -59,17 +59,59 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Global Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-overlay"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <div class="search-modal-input-wrapper">
+                    <i class="bi bi-search"></i>
+                    <input type="search" id="global-search-input" placeholder="Search services, offices, information..." autocomplete="off">
+                    <kbd>ESC</kbd>
+                </div>
+                <button class="search-modal-close" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="search-modal-body">
+                <div class="search-modal-categories">
+                    <button class="search-category-btn active" data-category="all"><i class="bi bi-grid-3x3-gap"></i> All</button>
+                    <button class="search-category-btn" data-category="services"><i class="bi bi-file-earmark-text"></i> Services</button>
+                    <button class="search-category-btn" data-category="offices"><i class="bi bi-building"></i> Offices</button>
+                    <button class="search-category-btn" data-category="pages"><i class="bi bi-link-45deg"></i> Pages</button>
+                </div>
+                <div class="search-modal-results" id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Hotline Bar -->
     <div class="hotline-bar">
         <div class="container">
             <div class="hotline-inner">
                 <div class="hotline-items">
-                    <a href="tel:09274008033" class="hotline-item"><i class="bi bi-shield-fill"></i><span>Police: 0927 400 8033</span></a>
-                    <a href="tel:09162840885" class="hotline-item"><i class="bi bi-heart-fill"></i><span>MSWDO: 0916 284 0885</span></a>
-                    <a href="tel:09360620305" class="hotline-item"><i class="bi bi-fire"></i><span>Fire: 0936 062 0305</span></a>
-                    <a href="tel:0906188086" class="hotline-item"><i class="bi bi-building"></i><span>DILG: 0906 188 086</span></a>
-                    <a href="tel:09263833744" class="hotline-item"><i class="bi bi-exclamation-triangle-fill"></i><span>MDRRMO: 0926 383 3744</span></a>
-                    <a href="tel:09068195569" class="hotline-item"><i class="bi bi-truck"></i><span>R2TMC: 0906 819 5569</span></a>
+                    <a href="tel:09366000119" class="hotline-item">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                        <span>CDRRMO: 0936 600 0119</span>
+                    </a>
+                    <a href="tel:09164320401" class="hotline-item">
+                        <i class="bi bi-shield-fill"></i>
+                        <span>Police: 0916 432 0401</span>
+                    </a>
+                    <a href="tel:09323732444" class="hotline-item">
+                        <i class="bi bi-fire"></i>
+                        <span>Fire: 0932 373 2444</span>
+                    </a>
+                    <a href="tel:09366310799" class="hotline-item">
+                        <i class="bi bi-truck"></i>
+                        <span>Traffic: 0936 631 0799</span>
+                    </a>
+                    <a href="tel:09569869417" class="hotline-item">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span>Health: 0956 986 9417</span>
+                    </a>
+                    <a href="tel:911" class="hotline-item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>Emergency: 911</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -80,12 +122,11 @@
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="../">
-                    <img src="../assets/images/logo/better-solano-logo.svg" alt="Better Solano Logo" class="logo-img">
+                    <img src="../assets/images/logo/better-sjdm-logo.png" alt="Better SJDM Logo" class="logo-img">
                 </a>
             </div>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="../" data-i18n="nav-home">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../services/" data-i18n="nav-services">Services</a>
                         <ul class="dropdown-menu">
@@ -111,18 +152,76 @@
                         </ul>
                     </li>
                     <li><a href="../budget/" data-i18n="nav-transparency">Transparency</a></li>
+                    <li><a href="../calendar/">Calendar</a></li>
                     <li><a href="../contact/" data-i18n="nav-contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <button type="button" class="search-toggle-btn" aria-label="Search"><i class="bi bi-search"></i><span class="search-text">Search</span></button>
                 <div class="lang-selector">
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
                     <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-                    <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
                 </div>
             </div>
+            <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button type="button" class="mobile-menu-close" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="search" class="mobile-menu-search-input" placeholder="Search services..." id="mobileSearchInput">
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li class="has-dropdown">
+                    <a href="../services/">Services <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../services/certificates.html">Certificates</a></li>
+                        <li><a href="../services/business.html">Business</a></li>
+                        <li><a href="../services/tax-payments.html">Tax Payments</a></li>
+                        <li><a href="../services/social-services.html">Social Services</a></li>
+                        <li><a href="../services/health.html">Health</a></li>
+                        <li><a href="../services/agriculture.html">Agriculture</a></li>
+                        <li><a href="../services/infrastructure.html">Infrastructure</a></li>
+                        <li><a href="../services/education.html">Education</a></li>
+                        <li><a href="../services/public-safety.html">Public Safety</a></li>
+                        <li><a href="../services/environment.html">Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="../government/">Government</a></li>
+                <li><a href="../statistics/">Statistics</a></li>
+                <li class="has-dropdown">
+                    <a href="../legislative/">Legislative <i class="bi bi-chevron-down mobile-dropdown-toggle"></i></a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="../legislative/ordinance-framework.html">Ordinance Framework</a></li>
+                        <li><a href="../legislative/resolution-framework.html">Resolution Framework</a></li>
+                    </ul>
+                </li>
+                <li><a href="../budget/">Transparency</a></li>
+                <li><a href="../calendar/">Calendar</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li><a href="../sitemap/">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-lang">
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">English</button>
+                <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">Filipino</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
@@ -134,9 +233,9 @@
                         <span class="rate-display">1 USD = ₱ --</span>
                     </span>
                 </div>
-                <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+                <div class="info-bar-item info-bar-weather" aria-label="Current weather in San Jose del Monte">
                     <i class="bi bi-thermometer-half"></i>
-                    <span class="weather-location">Solano</span>
+                    <span class="weather-location">SJDM</span>
                     <span class="weather-temp">--°C</span>
                 </div>
                 <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -165,9 +264,9 @@
         <section class="stats-hero">
             <div class="container">
                 <div class="stats-hero-content">
-                    <span class="stats-hero-badge"><i class="bi bi-bar-chart-fill"></i> Municipal Data</span>
-                    <h1 data-i18n="stats-title">Municipal Statistics</h1>
-                    <p data-i18n="stats-subtitle">Data and statistics about Solano, Nueva Vizcaya</p>
+                    <span class="stats-hero-badge"><i class="bi bi-bar-chart-fill"></i> City Data</span>
+                    <h1 data-i18n="stats-title">City Statistics</h1>
+                    <p data-i18n="stats-subtitle">Data and statistics about San Jose del Monte City, Bulacan</p>
                 </div>
             </div>
         </section>
@@ -178,56 +277,56 @@
                 <div class="metrics-grid">
                     <div class="metric-card animate-on-scroll" data-delay="0">
                         <div class="metric-icon"><i class="bi bi-people-fill"></i></div>
-                        <div class="metric-value" data-count="69296">0</div>
+                        <div class="metric-value" data-count="685688">0</div>
                         <div class="metric-label">Population</div>
                         <div class="metric-source">2024 Census</div>
                     </div>
                     <div class="metric-card animate-on-scroll" data-delay="100">
                         <div class="metric-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                        <div class="metric-value">22</div>
+                        <div class="metric-value">62</div>
                         <div class="metric-label">Barangays</div>
                         <div class="metric-source">Administrative Units</div>
                     </div>
                     <div class="metric-card animate-on-scroll" data-delay="200">
                         <div class="metric-icon"><i class="bi bi-rulers"></i></div>
-                        <div class="metric-value">162.70</div>
+                        <div class="metric-value">105.47</div>
                         <div class="metric-label">Land Area (km²)</div>
-                        <div class="metric-source">Total Municipal Area</div>
+                        <div class="metric-source">Total City Area</div>
                     </div>
                     <div class="metric-card animate-on-scroll" data-delay="300">
                         <div class="metric-icon"><i class="bi bi-award-fill"></i></div>
-                        <div class="metric-value">1st</div>
-                        <div class="metric-label">Income Class</div>
-                        <div class="metric-source">Municipality Classification</div>
+                        <div class="metric-value">Component</div>
+                        <div class="metric-label">City Status</div>
+                        <div class="metric-source">City Classification</div>
                     </div>
                 </div>
             </div>
         </section>
- 
-       <!-- Municipal Finance -->
+
+       <!-- City Finance -->
         <section class="stats-section stats-finance animate-on-scroll">
             <div class="container">
                 <div class="section-header-minimal">
                     <span class="section-tag"><i class="bi bi-cash-stack"></i> Finance</span>
-                    <h2>Municipal Income</h2>
-                    <p>Financial standing for fiscal year 2023</p>
+                    <h2>City Income</h2>
+                    <p>Financial standing for fiscal year 2024</p>
                 </div>
-                
+
                 <div class="finance-grid">
                     <div class="finance-card finance-card-primary">
                         <div class="finance-card-header">
                             <i class="bi bi-graph-up-arrow"></i>
                             <span>Annual Income</span>
                         </div>
-                        <div class="finance-card-value">₱371.33M</div>
-                        <div class="finance-card-detail">₱371,329,918.71</div>
+                        <div class="finance-card-value">₱2.92B</div>
+                        <div class="finance-card-detail">₱2,921,712,884.73</div>
                     </div>
                     <div class="finance-card">
                         <div class="finance-card-header">
                             <i class="bi bi-bank"></i>
                             <span>IRA Share</span>
                         </div>
-                        <div class="finance-card-value">₱220.77M</div>
+                        <div class="finance-card-value">₱1.93B</div>
                         <div class="finance-card-detail">Internal Revenue Allotment</div>
                     </div>
                     <div class="finance-card">
@@ -235,7 +334,7 @@
                             <i class="bi bi-pie-chart-fill"></i>
                             <span>IRA Dependency</span>
                         </div>
-                        <div class="finance-card-value">59.45%</div>
+                        <div class="finance-card-value">66.18%</div>
                         <div class="finance-card-detail">National Tax Share</div>
                     </div>
                 </div>
@@ -243,11 +342,11 @@
                 <div class="income-breakdown animate-on-scroll">
                     <h4>Income Composition</h4>
                     <div class="breakdown-bar">
-                        <div class="breakdown-segment breakdown-ira breakdown-initial" data-width="59.45">
-                            <span class="breakdown-label">IRA 59.45%</span>
+                        <div class="breakdown-segment breakdown-ira breakdown-initial" data-width="66.18">
+                            <span class="breakdown-label">IRA 66.18%</span>
                         </div>
-                        <div class="breakdown-segment breakdown-local breakdown-initial" data-width="40.55">
-                            <span class="breakdown-label">Local 40.55%</span>
+                        <div class="breakdown-segment breakdown-local breakdown-initial" data-width="33.82">
+                            <span class="breakdown-label">Local 33.82%</span>
                         </div>
                     </div>
                     <div class="breakdown-legend">
@@ -256,7 +355,7 @@
                     </div>
                 </div>
 
-                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">Bureau of Local Government Finance (BLGF)</a> – 2023 SRE Data</p>
+                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">Bureau of Local Government Finance (BLGF)</a> – 2024 SRE Data</p>
             </div>
         </section>
 
@@ -272,16 +371,16 @@
                 <div class="trends-summary">
                     <div class="trend-stat">
                         <span class="trend-stat-label">1990</span>
-                        <span class="trend-stat-value">38,006</span>
+                        <span class="trend-stat-value">142,047</span>
                     </div>
                     <div class="trend-arrow"><i class="bi bi-arrow-right"></i></div>
                     <div class="trend-stat trend-stat-current">
                         <span class="trend-stat-label">2024</span>
-                        <span class="trend-stat-value">69,296</span>
+                        <span class="trend-stat-value">685,688</span>
                     </div>
                     <div class="trend-stat trend-stat-growth">
                         <span class="trend-stat-label">Growth</span>
-                        <span class="trend-stat-value">+82.3%</span>
+                        <span class="trend-stat-value">+382.8%</span>
                     </div>
                 </div>
 
@@ -292,14 +391,14 @@
                 <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a></p>
             </div>
         </section>
-  
+
       <!-- Population Distribution -->
         <section class="stats-section stats-distribution animate-on-scroll">
             <div class="container">
                 <div class="section-header-minimal">
                     <span class="section-tag"><i class="bi bi-pie-chart-fill"></i> Distribution</span>
                     <h2>Population by Barangay</h2>
-                    <p>2024 Census of Population</p>
+                    <p>2020 Census of Population (62 barangays)</p>
                 </div>
 
                 <div class="distribution-layout">
@@ -307,38 +406,37 @@
                         <canvas id="distributionPieChart"></canvas>
                     </div>
                     <div class="distribution-list">
-                        <div class="barangay-row" data-rank="1"><span class="rank">#1</span><span class="name">Roxas</span><div class="bar-wrap"><div class="bar" data-width="100"></div></div><span class="pop">9,088</span></div>
-                        <div class="barangay-row" data-rank="2"><span class="rank">#2</span><span class="name">Quirino</span><div class="bar-wrap"><div class="bar" data-width="72"></div></div><span class="pop">6,572</span></div>
-                        <div class="barangay-row" data-rank="3"><span class="rank">#3</span><span class="name">Osmeña</span><div class="bar-wrap"><div class="bar" data-width="70"></div></div><span class="pop">6,403</span></div>
-                        <div class="barangay-row"><span class="rank">#4</span><span class="name">Quezon</span><div class="bar-wrap"><div class="bar" data-width="63"></div></div><span class="pop">5,758</span></div>
-                        <div class="barangay-row"><span class="rank">#5</span><span class="name">Curifang</span><div class="bar-wrap"><div class="bar" data-width="54"></div></div><span class="pop">4,885</span></div>
-                        <div class="barangay-row"><span class="rank">#6</span><span class="name">Bagahabag</span><div class="bar-wrap"><div class="bar" data-width="52"></div></div><span class="pop">4,731</span></div>
-                        <div class="barangay-row"><span class="rank">#7</span><span class="name">Uddiawan</span><div class="bar-wrap"><div class="bar" data-width="46"></div></div><span class="pop">4,217</span></div>
-                        <div class="barangay-row"><span class="rank">#8</span><span class="name">Bascaran</span><div class="bar-wrap"><div class="bar" data-width="42"></div></div><span class="pop">3,845</span></div>
-                        <div class="barangay-row"><span class="rank">#9</span><span class="name">Aggub</span><div class="bar-wrap"><div class="bar" data-width="34"></div></div><span class="pop">3,101</span></div>
-                        <div class="barangay-row"><span class="rank">#10</span><span class="name">San Luis</span><div class="bar-wrap"><div class="bar" data-width="29"></div></div><span class="pop">2,668</span></div>
+                        <div class="barangay-row" data-rank="1"><span class="rank">#1</span><span class="name">Muzon</span><div class="bar-wrap"><div class="bar" data-width="100"></div></div><span class="pop">127,506</span></div>
+                        <div class="barangay-row" data-rank="2"><span class="rank">#2</span><span class="name">Gaya-Gaya</span><div class="bar-wrap"><div class="bar" data-width="45"></div></div><span class="pop">56,896</span></div>
+                        <div class="barangay-row" data-rank="3"><span class="rank">#3</span><span class="name">Santo Cristo</span><div class="bar-wrap"><div class="bar" data-width="39"></div></div><span class="pop">49,579</span></div>
+                        <div class="barangay-row"><span class="rank">#4</span><span class="name">Kaypian</span><div class="bar-wrap"><div class="bar" data-width="36"></div></div><span class="pop">46,045</span></div>
+                        <div class="barangay-row"><span class="rank">#5</span><span class="name">Minuyan Proper</span><div class="bar-wrap"><div class="bar" data-width="36"></div></div><span class="pop">46,171</span></div>
+                        <div class="barangay-row"><span class="rank">#6</span><span class="name">Graceville</span><div class="bar-wrap"><div class="bar" data-width="33"></div></div><span class="pop">42,207</span></div>
+                        <div class="barangay-row"><span class="rank">#7</span><span class="name">Citrus</span><div class="bar-wrap"><div class="bar" data-width="18"></div></div><span class="pop">22,893</span></div>
+                        <div class="barangay-row"><span class="rank">#8</span><span class="name">Tungkong Mangga</span><div class="bar-wrap"><div class="bar" data-width="13"></div></div><span class="pop">16,324</span></div>
+                        <div class="barangay-row"><span class="rank">#9</span><span class="name">San Pedro</span><div class="bar-wrap"><div class="bar" data-width="13"></div></div><span class="pop">16,439</span></div>
+                        <div class="barangay-row"><span class="rank">#10</span><span class="name">Francisco Homes-Mulawin</span><div class="bar-wrap"><div class="bar" data-width="9"></div></div><span class="pop">11,226</span></div>
                     </div>
                 </div>
 
                 <details class="more-barangays">
-                    <summary>View all 22 barangays</summary>
+                    <summary>View more barangays (62 total)</summary>
                     <div class="distribution-list distribution-list-full">
-                        <div class="barangay-row"><span class="rank">#11</span><span class="name">Communal</span><div class="bar-wrap"><div class="bar" data-width="28"></div></div><span class="pop">2,586</span></div>
-                        <div class="barangay-row"><span class="rank">#12</span><span class="name">Lactawan</span><div class="bar-wrap"><div class="bar" data-width="23"></div></div><span class="pop">2,109</span></div>
-                        <div class="barangay-row"><span class="rank">#13</span><span class="name">San Juan</span><div class="bar-wrap"><div class="bar" data-width="22"></div></div><span class="pop">1,965</span></div>
-                        <div class="barangay-row"><span class="rank">#14</span><span class="name">Concepcion</span><div class="bar-wrap"><div class="bar" data-width="21"></div></div><span class="pop">1,954</span></div>
-                        <div class="barangay-row"><span class="rank">#15</span><span class="name">Dadap</span><div class="bar-wrap"><div class="bar" data-width="15"></div></div><span class="pop">1,409</span></div>
-                        <div class="barangay-row"><span class="rank">#16</span><span class="name">Wacal</span><div class="bar-wrap"><div class="bar" data-width="15"></div></div><span class="pop">1,398</span></div>
-                        <div class="barangay-row"><span class="rank">#17</span><span class="name">Bangaan</span><div class="bar-wrap"><div class="bar" data-width="14"></div></div><span class="pop">1,284</span></div>
-                        <div class="barangay-row"><span class="rank">#18</span><span class="name">Tucal</span><div class="bar-wrap"><div class="bar" data-width="14"></div></div><span class="pop">1,244</span></div>
-                        <div class="barangay-row"><span class="rank">#19</span><span class="name">Bangar</span><div class="bar-wrap"><div class="bar" data-width="13"></div></div><span class="pop">1,146</span></div>
-                        <div class="barangay-row"><span class="rank">#20</span><span class="name">Pilar D. Galima</span><div class="bar-wrap"><div class="bar" data-width="13"></div></div><span class="pop">1,146</span></div>
-                        <div class="barangay-row"><span class="rank">#21</span><span class="name">Poblacion North</span><div class="bar-wrap"><div class="bar" data-width="11"></div></div><span class="pop">970</span></div>
-                        <div class="barangay-row"><span class="rank">#22</span><span class="name">Poblacion South</span><div class="bar-wrap"><div class="bar" data-width="9"></div></div><span class="pop">817</span></div>
+                        <div class="barangay-row"><span class="rank">#11</span><span class="name">San Manuel</span><div class="bar-wrap"><div class="bar" data-width="9"></div></div><span class="pop">11,432</span></div>
+                        <div class="barangay-row"><span class="rank">#12</span><span class="name">Dulong Bayan</span><div class="bar-wrap"><div class="bar" data-width="9"></div></div><span class="pop">11,008</span></div>
+                        <div class="barangay-row"><span class="rank">#13</span><span class="name">Gumaoc West</span><div class="bar-wrap"><div class="bar" data-width="7"></div></div><span class="pop">8,885</span></div>
+                        <div class="barangay-row"><span class="rank">#14</span><span class="name">Francisco Homes-Narra</span><div class="bar-wrap"><div class="bar" data-width="7"></div></div><span class="pop">8,293</span></div>
+                        <div class="barangay-row"><span class="rank">#15</span><span class="name">San Rafael II</span><div class="bar-wrap"><div class="bar" data-width="6"></div></div><span class="pop">8,139</span></div>
+                        <div class="barangay-row"><span class="rank">#16</span><span class="name">Bagong Buhay I</span><div class="bar-wrap"><div class="bar" data-width="6"></div></div><span class="pop">7,264</span></div>
+                        <div class="barangay-row"><span class="rank">#17</span><span class="name">Francisco Homes-Guijo</span><div class="bar-wrap"><div class="bar" data-width="5"></div></div><span class="pop">6,972</span></div>
+                        <div class="barangay-row"><span class="rank">#18</span><span class="name">San Rafael IV</span><div class="bar-wrap"><div class="bar" data-width="5"></div></div><span class="pop">6,447</span></div>
+                        <div class="barangay-row"><span class="rank">#19</span><span class="name">Minuyan II</span><div class="bar-wrap"><div class="bar" data-width="5"></div></div><span class="pop">5,977</span></div>
+                        <div class="barangay-row"><span class="rank">#20</span><span class="name">Sapang Palay Proper</span><div class="bar-wrap"><div class="bar" data-width="5"></div></div><span class="pop">5,804</span></div>
+                        <div class="barangay-row"><span class="rank"></span><span class="name" style="font-style: italic; color: #666;">+ 42 more barangays</span><div class="bar-wrap"><div class="bar" data-width="0"></div></div><span class="pop"></span></div>
                     </div>
                 </details>
 
-                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a> - 2024 Census</p>
+                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a> - 2020 Census</p>
             </div>
         </section>
 
@@ -355,23 +453,23 @@
                     <div class="economy-card">
                         <div class="economy-icon"><i class="bi bi-shop"></i></div>
                         <div class="economy-content">
-                            <div class="economy-value" data-count="1200">0</div>
+                            <div class="economy-value" data-count="15000">0</div>
                             <div class="economy-label">Registered Businesses</div>
-                            <div class="economy-trend"><i class="bi bi-arrow-up"></i> +8% from last year</div>
+                            <div class="economy-trend"><i class="bi bi-arrow-up"></i> Growing commercial sector</div>
                         </div>
                     </div>
                     <div class="economy-card">
                         <div class="economy-icon"><i class="bi bi-tree-fill"></i></div>
                         <div class="economy-content">
-                            <div class="economy-value">8,500 ha</div>
+                            <div class="economy-value">2,800 ha</div>
                             <div class="economy-label">Agricultural Land</div>
-                            <div class="economy-trend">Rice & Corn Production</div>
+                            <div class="economy-trend">Rice, Corn & Root Crops</div>
                         </div>
                     </div>
                     <div class="economy-card">
                         <div class="economy-icon"><i class="bi bi-person-check-fill"></i></div>
                         <div class="economy-content">
-                            <div class="economy-value">94.2%</div>
+                            <div class="economy-value">92.3%</div>
                             <div class="economy-label">Employment Rate</div>
                             <div class="economy-trend">Labor Force Participation</div>
                         </div>
@@ -382,25 +480,25 @@
                     <h4>Economic Sectors</h4>
                     <div class="sector-bars">
                         <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Agriculture</span><span class="sector-pct">45%</span></div>
+                            <div class="sector-info"><span class="sector-name">Trade & Commerce</span><span class="sector-pct">45%</span></div>
                             <div class="sector-bar-bg"><div class="sector-bar" data-width="45"></div></div>
                         </div>
                         <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Trade & Commerce</span><span class="sector-pct">30%</span></div>
+                            <div class="sector-info"><span class="sector-name">Services</span><span class="sector-pct">30%</span></div>
                             <div class="sector-bar-bg"><div class="sector-bar" data-width="30"></div></div>
                         </div>
                         <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Services</span><span class="sector-pct">20%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="20"></div></div>
+                            <div class="sector-info"><span class="sector-name">Industry</span><span class="sector-pct">15%</span></div>
+                            <div class="sector-bar-bg"><div class="sector-bar" data-width="15"></div></div>
                         </div>
                         <div class="sector-item">
-                            <div class="sector-info"><span class="sector-name">Industry</span><span class="sector-pct">5%</span></div>
-                            <div class="sector-bar-bg"><div class="sector-bar" data-width="5"></div></div>
+                            <div class="sector-info"><span class="sector-name">Agriculture</span><span class="sector-pct">10%</span></div>
+                            <div class="sector-bar-bg"><div class="sector-bar" data-width="10"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">Bureau of Local Government Finance (BLGF)</a> - 2023</p>
+                <p class="data-source"><i class="bi bi-info-circle"></i> Source: LGU SJDM Estimates - 2024</p>
             </div>
         </section>
 
@@ -410,45 +508,45 @@
                 <div class="section-header-minimal">
                     <span class="section-tag"><i class="bi bi-graph-down-arrow"></i> Poverty</span>
                     <h2>Poverty Statistics</h2>
-                    <p>2021 City and Municipal Level Poverty Estimates</p>
+                    <p>2021 City Level Poverty Estimates</p>
                 </div>
 
                 <div class="poverty-comparison">
                     <div class="poverty-card poverty-card-2018">
                         <span class="poverty-year">2018</span>
                         <div class="poverty-rate">
-                            <span class="rate-value">7.0</span>
+                            <span class="rate-value">4.64</span>
                             <span class="rate-symbol">%</span>
                         </div>
-                        <div class="poverty-bar"><div class="poverty-fill" data-width="7"></div></div>
-                        <span class="poverty-ci">90% CI: 4.7% - 9.2%</span>
+                        <div class="poverty-bar"><div class="poverty-fill" data-width="4.64"></div></div>
+                        <span class="poverty-ci">Small Area Estimate</span>
                     </div>
                     <div class="poverty-arrow">
                         <i class="bi bi-arrow-right"></i>
-                        <span class="poverty-change">-0.6%</span>
+                        <span class="poverty-change">+10.85%</span>
                     </div>
                     <div class="poverty-card poverty-card-2021">
                         <span class="poverty-year">2021</span>
                         <div class="poverty-rate">
-                            <span class="rate-value">6.4</span>
+                            <span class="rate-value">15.49</span>
                             <span class="rate-symbol">%</span>
                         </div>
-                        <div class="poverty-bar"><div class="poverty-fill" data-width="6.4"></div></div>
-                        <span class="poverty-ci">90% CI: 4.7% - 8.1%</span>
-                        <span class="poverty-badge"><i class="bi bi-check-circle-fill"></i> Improved</span>
+                        <div class="poverty-bar"><div class="poverty-fill" data-width="15.49"></div></div>
+                        <span class="poverty-ci">Small Area Estimate</span>
+                        <span class="poverty-badge" style="background: #DC3545;"><i class="bi bi-exclamation-triangle-fill"></i> Increased</span>
                     </div>
                 </div>
 
                 <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a> - 2021 Poverty Estimates</p>
             </div>
         </section>
-        
+
 <!-- Competitive Index Section -->
         <section class="stats-section stats-competitive animate-on-scroll" id="competitive-index">
             <div class="container">
                 <div class="section-header-minimal">
                     <span class="section-tag"><i class="bi bi-trophy-fill"></i> Competitiveness</span>
-                    <h2>Solano Competitive Index</h2>
+                    <h2>San Jose del Monte Competitive Index</h2>
                     <p>Cities and Municipalities Competitiveness Index (CMCI) Performance 2016-2024</p>
                 </div>
 
@@ -469,31 +567,31 @@
                             <div class="pillar-icon"><i class="bi bi-graph-up-arrow"></i></div>
                             <h4>Economic Dynamism</h4>
                             <div class="pillar-score">0.23</div>
-                            <div class="pillar-trend trend-up"><i class="bi bi-arrow-up"></i> +12%</div>
+                            <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -16%</div>
                         </div>
                         <div class="cmci-pillar-card" data-pillar="government-efficiency">
                             <div class="pillar-icon"><i class="bi bi-building-check"></i></div>
                             <h4>Government Efficiency</h4>
                             <div class="pillar-score">1.17</div>
-                            <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -8%</div>
+                            <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -14%</div>
                         </div>
                         <div class="cmci-pillar-card" data-pillar="infrastructure">
                             <div class="pillar-icon"><i class="bi bi-building-gear"></i></div>
                             <h4>Infrastructure</h4>
                             <div class="pillar-score">0.40</div>
-                            <div class="pillar-trend trend-up"><i class="bi bi-arrow-up"></i> +5%</div>
+                            <div class="pillar-trend trend-down"><i class="bi bi-arrow-down"></i> -2%</div>
                         </div>
                         <div class="cmci-pillar-card" data-pillar="resiliency">
                             <div class="pillar-icon"><i class="bi bi-shield-check"></i></div>
                             <h4>Resiliency</h4>
                             <div class="pillar-score">1.08</div>
-                            <div class="pillar-trend trend-stable"><i class="bi bi-dash"></i> Stable</div>
+                            <div class="pillar-trend trend-up"><i class="bi bi-arrow-up"></i> +14%</div>
                         </div>
                         <div class="cmci-pillar-card" data-pillar="innovation">
                             <div class="pillar-icon"><i class="bi bi-lightbulb"></i></div>
                             <h4>Innovation</h4>
                             <div class="pillar-score">0.68</div>
-                            <div class="pillar-trend trend-up"><i class="bi bi-arrow-up"></i> +25%</div>
+                            <div class="pillar-trend trend-stable"><i class="bi bi-dash"></i> Stable</div>
                         </div>
                     </div>
 
@@ -510,28 +608,28 @@
                     <div class="cmci-indicator-grid">
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-currency-exchange"></i> Local Economy Size</div>
-                            <div class="indicator-value">0.0259</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="2.59"></div></div>
+                            <div class="indicator-value">0.1336</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="13.36"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-graph-up"></i> Local Economy Growth</div>
-                            <div class="indicator-value">0.0318</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="3.18"></div></div>
+                            <div class="indicator-value">0.0106</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="1.06"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-shop"></i> Active Establishments</div>
-                            <div class="indicator-value">0.4994</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="49.94"></div></div>
+                            <div class="indicator-value">0.7730</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="77.30"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-shield-check"></i> Safety Compliant Business</div>
-                            <div class="indicator-value">0.2235</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="22.35"></div></div>
+                            <div class="indicator-value">0.7397</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="73.97"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-people"></i> Employment Generation</div>
-                            <div class="indicator-value">0.3835</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="38.35"></div></div>
+                            <div class="indicator-value">0.1068</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="10.68"></div></div>
                         </div>
                     </div>
                     <div class="cmci-chart-container">
@@ -547,28 +645,28 @@
                     <div class="cmci-indicator-grid">
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-cash-coin"></i> Cost of Living</div>
-                            <div class="indicator-value">1.1919</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="47.68"></div></div>
+                            <div class="indicator-value">0.0000</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.00"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-briefcase"></i> Cost of Doing Business</div>
-                            <div class="indicator-value">1.5599</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="62.40"></div></div>
+                            <div class="indicator-value">1.6390</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="65.56"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-bank"></i> Financial Deepening</div>
-                            <div class="indicator-value">0.8288</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="33.15"></div></div>
+                            <div class="indicator-value">0.6324</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="25.30"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-speedometer2"></i> Productivity</div>
-                            <div class="indicator-value">0.3297</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="32.97"></div></div>
+                            <div class="indicator-value">0.0632</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="6.32"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-check2-square"></i> Compliance to Directives</div>
-                            <div class="indicator-value">1.9600</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="78.40"></div></div>
+                            <div class="indicator-value">2.0000</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="80.00"></div></div>
                         </div>
                     </div>
                     <div class="cmci-chart-container">
@@ -584,28 +682,28 @@
                     <div class="cmci-indicator-grid">
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-signpost-2"></i> Road Network</div>
-                            <div class="indicator-value">0.0016</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.16"></div></div>
+                            <div class="indicator-value">0.0079</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.79"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-geo-alt"></i> Distance to Ports</div>
-                            <div class="indicator-value">1.5281</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="61.12"></div></div>
+                            <div class="indicator-value">1.6056</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="64.22"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-lightning-charge"></i> Basic Utilities</div>
-                            <div class="indicator-value">0.3560</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="14.24"></div></div>
+                            <div class="indicator-value">1.5258</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="61.03"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-truck"></i> Transportation</div>
-                            <div class="indicator-value">0.0959</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="9.59"></div></div>
+                            <div class="indicator-value">0.1205</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="12.05"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-wifi"></i> IT Capacity</div>
-                            <div class="indicator-value">0.0155</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="1.55"></div></div>
+                            <div class="indicator-value">0.4742</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="47.42"></div></div>
                         </div>
                     </div>
                     <div class="cmci-chart-container">
@@ -621,23 +719,23 @@
                     <div class="cmci-indicator-grid">
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-file-earmark-text"></i> DRR Plan</div>
-                            <div class="indicator-value">1.9783</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="79.13"></div></div>
+                            <div class="indicator-value">1.9091</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="76.36"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-calendar-event"></i> Annual Disaster Drill</div>
-                            <div class="indicator-value">1.0023</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="40.09"></div></div>
+                            <div class="indicator-value">1.3636</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="54.54"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-bell"></i> Early Warning System</div>
-                            <div class="indicator-value">1.0397</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="41.59"></div></div>
+                            <div class="indicator-value">2.0000</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="80.00"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-piggy-bank"></i> DRRMP Budget</div>
-                            <div class="indicator-value">0.0020</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.20"></div></div>
+                            <div class="indicator-value">0.0446</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="4.46"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-clipboard-data"></i> Risk Assessments</div>
@@ -663,8 +761,8 @@
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-search"></i> R&D Expenditures</div>
-                            <div class="indicator-value">0.0006</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.06"></div></div>
+                            <div class="indicator-value">0.0018</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="0.18"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-laptop"></i> E-BPLS Software</div>
@@ -673,13 +771,13 @@
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-mortarboard"></i> STEM Graduates</div>
-                            <div class="indicator-value">0.0181</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="1.81"></div></div>
+                            <div class="indicator-value">0.1294</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="12.94"></div></div>
                         </div>
                         <div class="cmci-indicator-card">
                             <div class="indicator-header"><i class="bi bi-rocket-takeoff"></i> Innovation Facilities</div>
-                            <div class="indicator-value">0.0227</div>
-                            <div class="indicator-bar"><div class="indicator-fill" data-value="2.27"></div></div>
+                            <div class="indicator-value">0.3218</div>
+                            <div class="indicator-bar"><div class="indicator-fill" data-value="32.18"></div></div>
                         </div>
                     </div>
                     <div class="cmci-chart-container">
@@ -700,14 +798,14 @@
                 <div class="section-header-minimal">
                     <span class="section-tag"><i class="bi bi-bar-chart-fill"></i> Visual</span>
                     <h2>Population Bar Chart</h2>
-                    <p>Comparative view of all 22 barangays</p>
+                    <p>Top 20 barangays of 62 total</p>
                 </div>
 
                 <div class="chart-wrapper chart-wrapper-bar">
                     <canvas id="populationBarChart"></canvas>
                 </div>
 
-                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a> - 2024 Census</p>
+                <p class="data-source"><i class="bi bi-info-circle"></i> Source: <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer">Philippine Statistics Authority (PSA)</a> - 2020 Census</p>
             </div>
         </section>
     </main>
@@ -716,19 +814,17 @@
         <div class="container">
             <div class="footer-main-new">
                 <div class="footer-brand">
-                    <img src="../assets/images/logo/better-solano-logo-white.svg" alt="Better Solano logo" class="footer-logo">
-                    <p class="footer-tagline">Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.</p>
+                    <img src="../assets/images/logo/better-sjdm-logo-white.png" alt="Better SJDM logo" class="footer-logo">
+                    <p class="footer-tagline">Empowering the people of San Jose del Monte City with transparent access to the services, programs, and public funds of LGU SJDM.</p>
                     <div class="footer-social-new">
-                        <a href="https://www.facebook.com/bettersolano.org" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/company/bettersolano/" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://discord.com/invite/qeSu7RJkjQ" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://www.facebook.com/bettersjdm" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul class="footer-links-new">
                         <li><a href="../sitemap/">Sitemap</a></li>
-                        <li><a href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
+                        <li><a href="https://csjdm.gov.ph/wp-content/uploads/2024/05/CSJDM-CC-2024-1st-EDITION-COMPLETE.pdf" target="_blank" rel="noopener noreferrer">Citizen's Charter</a></li>
                         <li><a href="../terms/">Terms of Use</a></li>
                         <li><a href="../privacy/">Privacy Policy</a></li>
                         <li><a href="../accessibility/">Accessibility</a></li>
@@ -740,25 +836,24 @@
                     <ul class="footer-links-new">
                         <li><a href="https://data.gov.ph" target="_blank" rel="noopener noreferrer">Open Data Philippines</a></li>
                         <li><a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer">Freedom of Information</a></li>
-                        <li><a href="https://solano.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU Solano Portal</a></li>
-                        <li><a href="https://sangguniangbayan.solano.gov.ph/" target="_blank" rel="noopener noreferrer">Sangguniang Bayan</a></li>
-                        <li><a href="https://www.facebook.com/OfficialLguSolanoFanpage/" target="_blank" rel="noopener noreferrer">LGU Solano Facebook</a></li>
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                        <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <div class="footer-cost" role="status" aria-label="Cost to the People of Solano: Zero Pesos">
-                        Cost to the People of Solano = <span class="footer-cost-value">₱0</span>
+                    <div class="footer-cost" role="status" aria-label="Cost to the People of SJDM: Zero Pesos">
+                        Cost to the People of SJDM = <span class="footer-cost-value">₱0</span>
                     </div>
-                    <a href="mailto:volunteer@bettersolano.org" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
-                    <a href="https://github.com/BetterSolano/bettersolano" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
+                    <a href="mailto:jeraldabihaypascual@gmail.com" class="footer-contribute"><i class="bi bi-envelope-heart"></i> Volunteer with us</a>
+                    <a href="https://github.com/BetterSJDM/bettersjdm" class="footer-contribute" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Contribute code with us</a>
                 </div>
             </div>
             <div class="footer-bottom-new">
                 <div class="footer-copyright">
-                    <span>&copy; <span id="copyright-year">2025</span> Better Solano. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
-                    <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.8</span>
+                    <span>&copy; <span id="copyright-year">2025</span> Better SJDM. MIT | CC BY 4.0 All public information sourced from official government portals.</span>
+                    <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 2.0.0</span>
                 </div>
             </div>
         </div>
@@ -770,5 +865,6 @@
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js"></script>
     <script defer src="../assets/js/statistics-new.js"></script>
+    <script defer src="../assets/js/search.js"></script>
 </body>
 </html>
