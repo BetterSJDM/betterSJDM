@@ -41,9 +41,9 @@
         .stat-card i { font-size: 1rem; color: var(--color-primary); margin-bottom: 4px; }
         .stat-card h4 { font-size: 0.625rem; color: var(--color-text-light); margin-bottom: 2px; font-weight: 500; text-transform: uppercase; }
         .stat-card p { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); margin: 0; }
-        .process-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); font-size: 0.75rem; }
+        .process-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); font-size: 0.75rem; table-layout: fixed; }
         .process-table th { background: var(--color-primary); color: white; padding: 10px 12px; text-align: left; font-weight: 600; font-size: 0.6875rem; text-transform: uppercase; }
-        .process-table td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.04); vertical-align: top; }
+        .process-table td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.04); vertical-align: top; word-wrap: break-word; overflow-wrap: break-word; }
         .process-table tr:last-child td { border-bottom: none; }
         .process-table tr:hover { background: rgba(0,50,160,0.02); }
         .step-badge { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--color-primary); color: white; font-size: 0.625rem; font-weight: 700; border-radius: 4px; margin-right: 6px; }
@@ -171,7 +171,7 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
         </div></div>
-    
+
             <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
                 <i class="bi bi-list"></i>
             </button>

@@ -65,9 +65,23 @@
         .staff-card { background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; padding: 12px; }
         .staff-card h4 { font-size: 0.75rem; font-weight: 600; color: var(--color-text); margin-bottom: 2px; }
         .staff-card p { font-size: 0.6875rem; color: var(--color-text-light); margin: 0; }
+        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
         @media (max-width: 992px) { .staff-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .quick-stats { grid-template-columns: repeat(2, 1fr); } .process-table { font-size: 0.6875rem; } .process-table th, .process-table td { padding: 8px; } }
-        @media (max-width: 575px) { .quick-stats, .staff-grid { grid-template-columns: 1fr; } .service-tabs { flex-direction: column; } .service-tab { text-align: center; } }
+        @media (max-width: 768px) {
+            .quick-stats { grid-template-columns: repeat(2, 1fr); }
+            .process-table { font-size: 0.6875rem; }
+            .process-table th, .process-table td { padding: 8px; }
+            .grid.grid-2 { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 1rem; flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 575px) {
+            .quick-stats, .staff-grid { grid-template-columns: 1fr; }
+            .service-tabs { flex-direction: column; }
+            .service-tab { text-align: center; width: 100%; }
+            .section-header { text-align: center; }
+            .section-header h2 { justify-content: center !important; }
+            .req-box h4 { flex-direction: column; align-items: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -166,7 +180,7 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
         </div></div>
-    
+
             <button type="button" class="mobile-menu-toggle" aria-label="Open menu">
                 <i class="bi bi-list"></i>
             </button>
@@ -300,8 +314,8 @@
                                     <td>Obligation Request</td>
                                     <td><span class="time-tag">3 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Aldrin Edwin Nabong</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Job Order Employee</span>
+                                        <span class="personnel-tag">Budget Staff</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Receiving Clerk</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -310,8 +324,8 @@
                                     <td>—</td>
                                     <td><span class="time-tag">3 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Sheryl Amador</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Administrative Officer IV</span>
+                                        <span class="personnel-tag">Budget Staff</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Administrative Officer</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -320,18 +334,18 @@
                                     <td>Checked/validated Obligation Request (ObR)</td>
                                     <td><span class="time-tag">2 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Norman Glenn Mapa</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Administrative Officer II</span>
+                                        <span class="personnel-tag">Budget Staff</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Administrative Officer</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><span class="step-badge">4</span></td>
-                                    <td>Certification by the MBO of the availability of appropriation and allotment</td>
+                                    <td>Certification by the CBO of the availability of appropriation and allotment</td>
                                     <td>ObR with assigned account code</td>
                                     <td><span class="time-tag">2 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Ana D. Sucgang</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">City Budget Officer</span>
+                                        <span class="personnel-tag">City Budget Officer</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">CBO</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -340,8 +354,8 @@
                                     <td>ObR duly signed by the City Budget Officer</td>
                                     <td><span class="time-tag">3 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Aldrin Edwin Nabong</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Job Order Employee</span>
+                                        <span class="personnel-tag">Budget Staff</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Records Clerk</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -354,7 +368,7 @@
                                 <tr>
                                     <td><span class="step-badge">7</span></td>
                                     <td>Release of ObR</td>
-                                    <td>Official Receipt</td>
+                                    <td>Receiving copy / Logbook signature</td>
                                     <td><span class="time-tag">2 minutes</span></td>
                                     <td>—</td>
                                 </tr>
@@ -408,8 +422,8 @@
                                     </td>
                                     <td><span class="time-tag">5 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Aldrin Edwin Nabong</span><br>
-                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Job Order Employee</span>
+                                        <span class="personnel-tag">Budget Staff</span><br>
+                                        <span style="font-size: 0.625rem; color: var(--color-text-light);">Receiving Clerk</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -418,7 +432,7 @@
                                     <td>—</td>
                                     <td><span class="time-tag">15 minutes</span></td>
                                     <td>
-                                        <span class="personnel-tag">Sheryl Amador</span><br>
+                                        <span class="personnel-tag">Budget Staff</span><br>
                                         <span style="font-size: 0.625rem; color: var(--color-text-light);">Administrative Officer IV</span>
                                     </td>
                                 </tr>
@@ -522,11 +536,10 @@
                         <li><a href="../faq/">FAQ</a></li>
                     </ul>
                 </div>
-                        <ul class="req-list">
-                            <li><i class="bi bi-check-circle"></i> Ensure all documents are complete before submission</li>
-                            <li><i class="bi bi-check-circle"></i> Barangay & SK budgets must be submitted within 10 days of approval</li>
-                            <li><i class="bi bi-check-circle"></i> Processing times may vary based on workload</li>
-                        </ul>a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
+                <div class="footer-column">
+                    <h4>External Resources</h4>
+                    <ul class="footer-links-new">
+                        <li><a href="https://csjdm.gov.ph/" target="_blank" rel="noopener noreferrer">Official LGU SJDM Portal</a></li>
                         <li><a href="https://www.facebook.com/CityofSJDM/" target="_blank" rel="noopener noreferrer">LGU SJDM Facebook</a></li>
                         <li><a href="https://blgf.gov.ph/" target="_blank" rel="noopener noreferrer">BLGF Portal</a></li>
                         <li><a href="https://cmci.dti.gov.ph/" target="_blank" rel="noopener noreferrer">CMCI DTI Portal</a></li>

@@ -12,7 +12,7 @@
     },
     {
       "id": "property-tax-q1",
-      "date": "2026-01-15",
+      "date": "2026-03-31",
       "title": "Property Tax Deadline Q1",
       "type": "deadline",
       "category": "tax",
@@ -102,7 +102,7 @@
     },
     {
       "id": "property-tax-q2",
-      "date": "2026-04-15",
+      "date": "2026-06-30",
       "title": "Property Tax Deadline Q2",
       "type": "deadline",
       "category": "tax",
@@ -154,17 +154,17 @@
     },
     {
       "id": "eid-al-adha-2026",
-      "date": "2026-06-24",
+      "date": "2026-05-27",
       "title": "Eid al-Adha",
       "type": "holiday",
       "category": "regular",
-      "description": "Islamic Holiday - Festival of Sacrifice",
+      "description": "Islamic Holiday - Festival of Sacrifice (Subject to proclamation)",
       "isClassSuspended": true,
       "isWorkSuspended": true
     },
     {
       "id": "property-tax-q3",
-      "date": "2026-07-15",
+      "date": "2026-09-30",
       "title": "Property Tax Deadline Q3",
       "type": "deadline",
       "category": "tax",
@@ -296,7 +296,7 @@
     },
     {
       "id": "property-tax-q4",
-      "date": "2026-10-15",
+      "date": "2026-12-31",
       "title": "Property Tax Deadline Q4",
       "type": "deadline",
       "category": "tax",

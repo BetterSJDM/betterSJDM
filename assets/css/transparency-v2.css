@@ -927,11 +927,14 @@
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.06);
     overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Table */
 .dpwh-table {
     width: 100%;
+    min-width: 800px;
     border-collapse: collapse;
     font-size: 0.8125rem;
     table-layout: auto;
@@ -965,7 +968,7 @@
 }
 
 /* Column Widths */
-.dpwh-table .col-desc { width: 38%; }
+.dpwh-table .col-desc { width: 38%; word-wrap: break-word; overflow-wrap: break-word; }
 .dpwh-table .col-contractor { width: 22%; }
 .dpwh-table .col-cost { width: 16%; }
 .dpwh-table .col-status { width: 12%; }
@@ -1046,9 +1049,8 @@
     font-size: 0.8125rem;
     line-height: 1.35;
     margin-bottom: 3px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .dpwh-proj-location {
@@ -1071,9 +1073,8 @@
     color: var(--color-text);
     font-size: 0.8125rem;
     line-height: 1.35;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .dpwh-contractor-id {
